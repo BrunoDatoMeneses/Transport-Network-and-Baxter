@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(communication)
+
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  message_generation
+)
+
+
+
+generate_messages(DEPENDENCIES std_msgs)
+
+
+catkin_package(CATKIN_DEPENDS roscpp rospy std_msgs message_runtime)
+
+include_directories(${catkin_INCLUDE_DIRS})
+
+
+add_executable(communication src/main_communication.cpp src/communication.cpp)
+
+add_dependencies(communication communication_generate_messages_cpp)
+
+target_link_libraries(communication ${catkin_LIBRARIES})

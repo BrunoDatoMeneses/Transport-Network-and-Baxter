@@ -1,0 +1,8 @@
+prefix=/home/etudiant/M1_ISTR/Ligne_tansitique_MONTRAC/ros_ws/devel
+
+Name: vrep_common
+Description: Description of vrep_common
+Version: 3.1.2
+Cflags: -I/home/etudiant/M1_ISTR/Ligne_tansitique_MONTRAC/ros_ws/devel/include
+Libs: -L/home/etudiant/M1_ISTR/Ligne_tansitique_MONTRAC/ros_ws/devel/lib 
+Requires: message_runtime

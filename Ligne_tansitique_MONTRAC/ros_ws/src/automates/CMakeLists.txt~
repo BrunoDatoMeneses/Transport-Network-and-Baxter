@@ -1,0 +1,29 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(automates)
+
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  message_generation
+)
+
+add_message_files(FILES Entrees.msg Sorties.msg)
+
+generate_messages(DEPENDENCIES std_msgs)
+
+
+catkin_package(CATKIN_DEPENDS roscpp rospy std_msgs message_runtime)
+
+include_directories(${catkin_INCLUDE_DIRS})
+
+add_executable(automates src/automates.cpp src/API_schneider.cpp)
+
+add_dependencies(automates automates_generate_messages_cpp)
+
+target_link_libraries(automates ${catkin_LIBRARIES} modbus)
+
+
+#add_executable(code_client src/code_client.cpp)
+#add_dependencies(code_client scenario1_gencpp)
+#target_link_libraries(code_client ${catkin_LIBRARIES} modbus)

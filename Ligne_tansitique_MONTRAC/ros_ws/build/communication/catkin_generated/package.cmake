@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "communication")
+set(communication_MAINTAINER "etudiant <etudiant@todo.todo>")
+set(communication_DEPRECATED "")
+set(communication_VERSION "0.0.0")
+set(communication_BUILD_DEPENDS "message_generation" "roscpp" "rospy" "std_msgs")
+set(communication_RUN_DEPENDS "message_runtime" "roscpp" "rospy" "std_msgs")
+set(communication_BUILDTOOL_DEPENDS "catkin")

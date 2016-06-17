@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+  <name>commande_ligne_transitique</name>
+  <version>0.0.0</version>
+  <description>commande_ligne_transitique node</description>
+  <maintainer email="etudiants-ups@univ-tlse3.fr">Dato Bruno</maintainer>
+
+  <author>Abdellah, Bruno et Eugène</author>
+
+  <license>BSD</license>
+
+
+  <build_depend>message_generation</build_depend> 
+ 
+  <run_depend>message_runtime</run_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>libopencv-dev</build_depend>
+  <build_depend>vrep_common</build_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

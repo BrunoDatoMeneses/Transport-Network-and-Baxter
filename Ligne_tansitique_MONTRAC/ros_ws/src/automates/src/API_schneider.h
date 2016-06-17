@@ -1,0 +1,33 @@
+#ifndef API_sch
+#define API_sch
+
+#include <ros/ros.h>
+#include <string>
+#include <iostream>
+#include "automates/Entrees.h"
+#include "automates/Sorties.h"
+
+class API_schneider
+{
+private:
+
+	ros::Publisher pub_entrees;
+	ros::Subscriber sub_sorties;
+	const char* adresse_ip;
+	uint16_t entrees,sorties;
+
+public:
+
+	
+	API_schneider(ros::NodeHandle noeud,const std::string num_API,const char* adresse_ip_api) ;
+	~API_schneider();	
+	uint16_t get_register(int adresse_registre, int nombre_registres);
+	void write_register(int adresse_registre, int nombre_registres,uint16_t registre);
+	void Callback(const automates::Sorties msg);
+	void publish();
+
+};
+
+//uint16_t MASK(uint16_t registre,int voie);
+
+#endif

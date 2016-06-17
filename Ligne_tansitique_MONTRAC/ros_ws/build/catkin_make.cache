@@ -1,0 +1,2 @@
+automates:commande:commande_ligne_transitique:commande_locale:commande_simulation:communication:vrep_common
+-DCATKIN_DEVEL_PREFIX=/home/etudiant/M1_ISTR/Ligne_tansitique_MONTRAC/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/etudiant/M1_ISTR/Ligne_tansitique_MONTRAC/ros_ws/install -G Unix Makefiles
