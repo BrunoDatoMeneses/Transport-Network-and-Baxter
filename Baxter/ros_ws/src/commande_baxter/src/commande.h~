@@ -1,0 +1,36 @@
+#ifndef CMD
+#define CMD
+
+#include "baxter.h"
+#include "baxter_left_arm.h" 
+#include "baxter_right_arm.h" 
+
+void Position_attente(Baxter_left_arm *Bras_gauche, Baxter_right_arm *Bras_droit);
+
+
+bool Pince_fermee(Baxter_right_arm Bras_droit);
+bool Pince_fermee_pos(Baxter_right_arm Bras_droit);
+bool Pince_ouverte(Baxter_right_arm Bras_droit);
+
+void Prise(Baxter_right_arm *Bras_droit);
+void Pose(Baxter_right_arm *Bras_droit);
+
+void Position_prise(Baxter_right_arm *Bras_droit);
+void Position_pose(Baxter_right_arm *Bras_droit);
+
+void Descente_prise(Baxter_right_arm *Bras_droit);
+void Descente_pose(Baxter_right_arm *Bras_droit);
+
+void Prise_effectuee(Baxter_right_arm *Bras_droit);
+
+
+bool vitesse_nulle(Baxter_left_arm Bras_gauche, Baxter_right_arm Bras_droit);
+bool Position(Baxter_right_arm Bras_droit,float x, float y, float z);
+bool Position_prise_OK(Baxter_right_arm Bras_droit);
+bool Position_pose_OK(Baxter_right_arm Bras_droit);
+bool Descente_pose_OK(Baxter_right_arm Bras_droit);
+bool Descente_prise_OK(Baxter_right_arm Bras_droit);
+
+bool Prise_demmandee(Baxter_right_arm* Bras_droit);
+
+#endif

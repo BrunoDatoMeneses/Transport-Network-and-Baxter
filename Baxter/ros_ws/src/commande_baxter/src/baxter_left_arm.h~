@@ -1,0 +1,82 @@
+#ifndef LEFT_ARM
+#define LEFT_ARM
+
+#include <ros/ros.h>
+
+
+#include "baxter_core_msgs/JointCommand.h"
+#include "baxter_core_msgs/EndEffectorCommand.h"
+
+#include "sensor_msgs/Range.h"
+#include "sensor_msgs/JointState.h"
+#include "baxter_core_msgs/EndpointState.h"
+#include "baxter_core_msgs/EndEffectorState.h"
+
+#include "baxter_core_msgs/SolvePositionIK.h"
+
+class Baxter_left_arm 
+{
+		// Atributs //
+
+private:
+
+	//Publishers
+	ros::Publisher pub_joint_cmd , pub_gripper_cmd;
+
+	//Subscribers
+	ros::Subscriber sub_joint_states , sub_endpoint_state , sub_gripper_state , sub_ir_range;
+
+	//Client
+	ros::ServiceClient client_inverse_kinematics ;
+
+public:
+
+	// Commande	
+
+	baxter_core_msgs::JointCommand msg_JointCommand ;
+	baxter_core_msgs::EndEffectorCommand msg_EndEffectorCommand;
+
+	// Capteurs
+
+	sensor_msgs::JointState jointState ;
+	baxter_core_msgs::EndpointState endpointState ;
+	baxter_core_msgs::EndEffectorState endEffectorState;
+
+	
+		// Méthodes //
+
+	
+	Baxter_left_arm(ros::NodeHandle noeud);
+	~Baxter_left_arm();
+
+	// Callbacks
+
+	void Callback_joint_states(const sensor_msgs::JointState& msg);
+	void Callback_endpoint_state(const baxter_core_msgs::EndpointState& msg);
+	void Callback_gripper_state(const baxter_core_msgs::EndEffectorState& msg);
+	void Callback_ir_range(const sensor_msgs::Range& msg);
+
+	// Commande bras
+
+	void IK(float x, float y, float z, float psy, float teta, float phi);
+
+	void Position(float left_s0, float left_s1, float left_e0, float left_e1, float left_w0, float left_w1, float left_w2);
+	void Effort(float left_s0, float left_s1, float left_e0, float left_e1, float left_w0, float left_w1, float left_w2);
+	void Position_sinu(float position,float compteur);
+	void Position(float angle,int num);
+	void Effort(float effort,int num);
+
+
+
+	// Commande pince
+
+	void Grip();
+	void Release();
+
+	// Envoi des commandes
+
+	void Update();
+};
+
+
+#endif
