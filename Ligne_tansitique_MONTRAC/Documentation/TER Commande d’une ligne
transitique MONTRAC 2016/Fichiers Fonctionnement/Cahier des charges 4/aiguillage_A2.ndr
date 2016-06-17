@@ -1,0 +1,37 @@
+p 100.0 130.0 PA2_2 0 nw {[D2;R2D;]} w
+p 355.0 130.0 PA2_5 0 ne {[D2;R2g;]} e
+t 355.0 205.0 t5 c 0 w n {[D2G;]} e
+t 100.0 205.0 t1 c 0 w n {[D2D;]} w
+p 100.0 285.0 PA2_3 0 nw {[V2;ST5;]} w
+p 355.0 285.0 PA2_6 0 ne {[V2;ST4;]} e
+t 355.0 365.0 t6 c 0 w n {[not PS4;]} e
+t 100.0 365.0 t2 c 0 w n {[not  PS5;]} w
+p 100.0 450.0 PA2_4 0 w
+p 355.0 450.0 PA2_7 0 e
+t 355.0 530.0 t7 c 0 w n {[PS6;]} e
+t 100.0 50.0 t0 c 0 w n {[PS5;]} w
+p 220.0 50.0 PA2_1 1 n
+t 355.0 50.0 t4 c 0 w n {[PS4 and not PS5;]} e
+p 225.0 470.0 P_navette 0 n
+t 100.0 530.0 t3 c 0 w n {[PS6;]} e
+e PA2_1 t0 1 n
+e t0 PA2_2 1 n
+e PA2_2 t1 1 n
+e t1 PA2_3 1 n
+e PA2_3 t2 1 n
+e t2 PA2_4 1 n
+e PA2_4 t3 1 n
+e t3 0.1452937765 111.2115102 PA2_1 0.7388103788 142.3516772 1 n
+e PA2_1 t4 1 n
+e t4 PA2_5 1 n
+e PA2_5 t5 1 n
+e t5 PA2_6 1 n
+e PA2_6 t6 1 n
+e t6 PA2_7 1 n
+e PA2_7 t7 1 n
+e t7 0.3689807926 130.9083649 PA2_1 0.7592160588 138.2316896 1 n
+e t7 P_navette 1 n
+e t3 P_navette 1 n
+h aiguillage_A2
+
+

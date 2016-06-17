@@ -1,0 +1,106 @@
+﻿!
+(*-------Codage de RDP en ST décomposé en blocs FMG------------*)
+
+
+IF(Init)THEN
+(*-------Initialisation------------*)
+	P1p:=2;P4p:=0;P9p:=0;P10p:=0;P11p:=0;P12p:=0;P5p:=0;P6p:=0;
+	P7p:=0;P3p:=0;P2p:=1;P8p:=0;P13p:=0;
+	P1s:=2;P4s:=0;P9s:=0;P10s:=0;P11s:=0;P12s:=0;P5s:=0;P6s:=0;
+	P7s:=0;P3s:=0;P2s:=1;P8s:=0;P13s:=0;
+ELSE
+
+(*-------BLOC F------------*)
+IF((P2p>=1)AND(P2p>=1)AND(Cp1))THEN
+	P2s:=P2s-1;
+	P1s:=P1s-1;
+	P4s:=P4s+1;
+	P3s:=P3s+1;
+END_IF;
+
+IF((P9p>=1)AND(Ps2))THEN
+	P9s:=P9s-1;
+	P10s:=P10s+1;
+	START Tempo2;
+END_IF;
+
+IF((P10p>=1)AND(Tempo2.Q))THEN
+	P10s:=P10s-1;
+	P11s:=P11s+1;
+	DOWN Tempo2;
+END_IF;
+
+IF((P11p>=1)AND(NOT Ps2))THEN
+	P11s:=P11s-1;
+	P12s:=P12s+1;
+END_IF;
+
+IF((P4p>=1)AND(Ps3))THEN
+	P4s:=P4s-1;
+	P9s:=P9s+1;
+END_IF;
+
+IF((P4p>=1)AND((NOT Ps3)AND Ps2))THEN
+	P4s:=P4s-1;
+	P5s:=P5s+1;
+END_IF;
+
+IF((P5p>=1)AND(NOT Ps2))THEN
+	P5s:=P5s-1;
+	P6s:=P6s+1;
+END_IF;
+
+IF((P6p>=1)AND(Ps3))THEN
+	P6s:=P6s-1;
+	P7s:=P7s+1;
+	START Tempo1;
+END_IF;
+
+IF((P3p>=1)AND(NOT Cp1))THEN
+	P3s:=P3s-1;
+	P2s:=P2s+1;
+END_IF;
+
+IF((P12p>=1)AND(Ps3))THEN
+	P12s:=P12s-1;
+	P13s:=P13s+1;
+END_IF;
+
+IF((P7p>=1)AND(Tempo1.Q))THEN
+	P7s:=P7s-1;
+	P8s:=P8s+1;
+	DOWN Tempo1;
+END_IF;
+
+IF((P8p>=1)AND(NOT Ps3))THEN
+	P8s:=P8s-1;
+	P1s:=P1s+1;
+END_IF;
+
+IF((P13p>=1)AND(NOT Ps3))THEN
+	P13s:=P13s-1;
+	P1s:=P1s+1;
+END_IF;
+
+(*-------BLOC M------------*)
+
+	P1p:=P1s;
+	P4p:=P4s;
+	P9p:=P9s;
+	P10p:=P10s;
+	P11p:=P11s;
+	P12p:=P12s;
+	P5p:=P5s;
+	P6p:=P6s;
+	P7p:=P7s;
+	P3p:=P3s;
+	P2p:=P2s;
+	P8p:=P8s;
+	P13p:=P13s;
+
+(*-------BLOC G------------*)
+
+St2:=(P11p>=1)OR(P5p>=1);
+St3:=(P8p>=1)OR(P13p>=1);
+
+END_IF;
