@@ -1,0 +1,42 @@
+(*Application 1 AP1*)
+
+
+
+IF(Etat_present=0 AND Ps1)THEN Etat_suivant:=1;
+	END_IF;
+IF(Etat_present=1 AND D1d)THEN Etat_suivant:=2;
+	END_IF;
+IF(Etat_present=2 AND Ps5)THEN Etat_suivant:=3;
+	END_IF;
+IF(Etat_present=3 AND D2d)THEN Etat_suivant:=4;
+	END_IF;
+IF(Etat_present=4 AND Ps6)THEN Etat_suivant:=5;
+	END_IF;
+IF(Etat_present=5 AND Ps1)THEN Etat_suivant:=6;
+	END_IF;
+IF(Etat_present=6 AND D1g)THEN Etat_suivant:=7;
+	END_IF;
+IF(Etat_present=7 AND Ps4)THEN Etat_suivant:=8;
+	END_IF;
+IF(Etat_present=8 AND D2g)THEN Etat_suivant:=9;
+	END_IF;
+IF(Etat_present=9 AND Ps6)THEN Etat_suivant:=0;
+	END_IF;
+
+Etat_present:=Etat_suivant;
+
+IF(Raz)THEN Etat_suivant:=0;
+END_IF;
+
+
+R1d:=(Etat_present=1);
+R1g:=(Etat_present=6);
+V1:=(Etat_present=2)OR(Etat_present=7);
+D1:=(Etat_present=1)OR(Etat_present=6);
+R2d:=(Etat_present=3);
+R2g:=(Etat_present=8);
+V2:=(Etat_present=4)OR(Etat_present=9);
+D2:=(Etat_present=3)OR(Etat_present=8);
+St1:=(Etat_present=2)OR(Etat_present=7);
+St4:=(Etat_present=9);
+St5:=(Etat_present=4);

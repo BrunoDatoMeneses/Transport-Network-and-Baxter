@@ -1,0 +1,273 @@
+//bloc F
+U EP0
+UN(
+O "D5G"
+O "D6G"
+)
+= ES0
+
+U EP0
+U "D5G"
+U "D6G"
+=ES1
+
+U EP1
+O
+U EP16
+U "CP5"
+O
+U EP7
+U "D5G"
+O
+U EP2
+UN "PS8"
+=ES2
+
+U EP2
+U "PS8"
+O
+U EP3
+UN( 
+ON Postelibre
+O Postelibre
+)
+=ES3
+
+U EP3
+U Postelibre
+O
+U EP4
+UN "D5D"
+=ES4
+
+U EP4
+U "D5D"
+O
+U EP5
+U "PS8"
+=ES5
+
+U EP5
+UN "PS8"
+O
+U EP6
+UN "CP4"
+=ES6
+
+U EP6
+U "CP4"
+O
+U EP7
+UN "D5G"
+=ES7
+
+U EP7
+U "D5G"
+O
+U EP8
+UN "PS9"
+=ES8
+
+U EP8
+U "PS9"
+O
+U EP9
+UN TEMPO_FINIE
+=ES9
+
+U EP9
+U TEMPO_FINIE
+O
+U EP10
+UN "PS12"
+=ES10
+
+U EP10
+U "PS12"
+U EP14
+O
+U EP11
+UN "D6D"
+=ES11
+
+U EP11
+U "D6D"
+O
+U EP12
+U "PS13"
+=ES12
+
+U EP12
+U "PS13"
+=ES13
+
+U EP13
+O
+U EP18
+U "PS13"
+O
+U EP14
+UN(
+O "PS12"
+O(
+U "PS11"
+UN "PS12"
+)
+)
+=ES14
+
+U EP3
+U Postelibre
+O
+U EP15
+U "PS8"
+=ES15
+
+U EP15
+UN "PS8"
+O
+U EP16
+UN "CP5"
+=ES16
+
+U EP14
+U(
+U "PS11"
+UN "PS12"
+)
+O
+U EP17
+UN "D6G"
+=ES17
+
+U EP17
+U "D6G"
+O
+U EP18
+UN "PS13"
+=ES18
+
+//bloc M
+ES1
+=EP1
+
+ES2
+=EP2
+
+ES3
+=EP3
+
+ES4
+=EP4
+
+ES5
+=EP5
+
+ES6
+=EP6
+
+ES7
+=EP7
+
+ES8
+=EP8
+
+ES9
+=EP9
+
+ES10
+=EP10
+
+ES11
+=EP11
+
+ES12
+=EP12
+
+ES13
+=EP13
+
+ES14
+=EP14
+
+ES15
+=EP15
+
+ES16
+=EP16
+
+ES17
+=EP17
+
+ES18
+=EP18
+
+ES0
+=EP0
+
+//bloc G
+U EP0
+O EP4
+O EP7
+= "D5"
+
+U EP0
+O EP11
+O EP17
+= "D6"
+
+U EP1
+O EP2
+O EP5
+O EP8
+= "V5"
+
+U EP1
+O EP12
+O EP18
+= "V6"
+
+U EP15
+O EP5
+= "ST8"
+
+U EP0
+O EP7
+= "R5G"
+
+U EP0
+O EP17
+= "R6G"
+
+U EP4
+= "R5D"
+
+U EP11
+= "R6D"
+
+U EP10
+= "ST9"
+
+U EP10
+= "ST10"
+
+U EP12
+= "ST12"
+
+U EP18
+= "ST11"
+
+//gestion poste libre
+U EP4
+R Postelibre
+
+U EP13
+S Postelibre
+
+//gestion tempo
+U  EP9
+L  S5T#2S
+SE T1
+
+U  T1
+=  TEMPO_FINIE

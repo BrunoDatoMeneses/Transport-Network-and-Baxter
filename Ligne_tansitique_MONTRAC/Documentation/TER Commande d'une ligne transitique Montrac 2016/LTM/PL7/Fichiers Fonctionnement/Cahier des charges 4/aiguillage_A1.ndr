@@ -1,0 +1,36 @@
+p 300.0 125.0 PA1_1 1 n
+t 435.0 125.0 t4 c 0 w n {[PS1 and demande>0;]} e
+p 180.0 205.0 PA1_2 0 nw {[D1;R1G;]} w
+p 435.0 205.0 PA1_5 0 ne {[D1;R1D;demande--;]} e
+t 435.0 280.0 t5 c 0 w n {[D1D;]} e
+t 180.0 280.0 t1 c 0 w n {[D1G;]} w
+p 180.0 360.0 PA1_3 0 nw {[V1;ST1;]} w
+p 435.0 360.0 PA1_6 0 ne {[V1;ST1;]} e
+t 435.0 440.0 t6 c 0 w n {[not PS1;]} e
+t 180.0 440.0 t2 c 0 w n {[not  PS1;]} w
+p 180.0 525.0 PA1_4 0 nw
+p 435.0 525.0 PA1_7 0 n
+t 435.0 605.0 t7 c 0 w n {[CP1]} e
+t 180.0 595.0 t3 c 0 w n {[CP2;]} e
+p 570.0 50.0 P_navette 2 n
+t 180.0 125.0 t0 c 0 w n {[PS1 and demande=0;]} w
+e PA1_1 t0 1 n
+e t0 PA1_2 1 n
+e PA1_2 t1 1 n
+e t1 PA1_3 1 n
+e PA1_3 t2 1 n
+e t2 PA1_4 1 n
+e PA1_4 t3 1 n
+e t3 0.1452937765 111.2115102 PA1_1 0.7388103788 142.3516772 1 n
+e PA1_1 t4 1 n
+e t4 PA1_5 1 n
+e PA1_5 t5 1 n
+e t5 PA1_6 1 n
+e PA1_6 t6 1 n
+e t6 PA1_7 1 n
+e PA1_7 t7 1 n
+e t7 0.3689807928 130.908365 PA1_1 0.7592160596 138.2316896 1 n
+e P_navette t4 1 n
+h aiguillage_A1
+
+

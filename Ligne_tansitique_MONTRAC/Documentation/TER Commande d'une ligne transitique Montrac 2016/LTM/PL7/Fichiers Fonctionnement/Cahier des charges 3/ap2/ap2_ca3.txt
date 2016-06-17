@@ -1,0 +1,93 @@
+!
+IF(Init)THEN
+	P_0s:=1;
+	P_1s:=0;P_2s:=0;P_3s:=0;P_4s:=0;P_5s:=0;P_6s:=0;P_7s:=0;P_8s:=0;P_9s:=0;P_10s:=0;
+	P_11s:=0;
+	P_12s:=0;P_13s:=0;P_14s:=1;P_15s:=0;P_16s:=0;P_17s:=0;P_18s:=0;P_19s:=0;
+	Poste_libre:=1;
+	
+	
+END_IF;
+
+P_0p:=P_0s;
+P_1p:=P_1s;P_2p:=P_2s;P_3p:=P_3s;P_4p:=P_4s;P_5p:=P_5s;
+P_6p:=P_6s;P_7p:=P_7s;P_8p:=P_8s;P_9p:=P_9s;P_10p:=P_10s;
+P_11p:=P_11s;P_12p:=P_12s;P_13p:=P_13s;P_14p:=P_14s;P_15p:=P_15s;
+P_16p:=P_16s;P_17p:=P_17s;P_18p:=P_18s;P_19p:=P_19s;
+	
+
+
+IF(P_0p=1 AND D11g AND D12g)THEN P_0s:=P_0s-1;P_1s:=P_1s+1;
+	END_IF;
+IF(P_1p=1)THEN P_1s:=P_1s-1;P_2s:=P_2s+1;
+	END_IF;
+IF(P_2p=1 AND Ps20)THEN P_2s:=P_2s-1;P_3s:=P_3s+1;
+	END_IF;
+IF(P_3p=1 AND Poste_libre=0)THEN P_3s:=P_3s-1;P_15s:=P_15s+1;
+	END_IF;
+IF(P_3p=1 AND Poste_libre=1)THEN P_3s:=P_3s-1;P_4s:=P_4s+1;Poste_libre:=Poste_libre-1;
+	END_IF;
+IF(P_4p=1 AND D11d)THEN P_4s:=P_4s-1;P_5s:=P_5s+1;
+	END_IF;
+IF(P_5p=1 AND NOT Ps20)THEN P_5s:=P_5s-1;P_6s:=P_6s+1;
+	END_IF;	
+IF(P_6p=1 AND Cp9)THEN P_6s:=P_6s-1;P_7s:=P_7s+1;
+	END_IF;
+IF(P_7p=1 AND D11g)THEN P_7s:=P_7s-1;P_8s:=P_8s+1;P_2s:=P_2s+1;
+	END_IF;
+IF(P_8p=1 AND Ps21)THEN P_8s:=P_8s-1;P_9s:=P_9s+1;START Temp;
+	END_IF;
+IF(P_9p=1 AND Temp.Q)THEN P_9s:=P_9s-1;P_10s:=P_10s+1;
+	END_IF;
+IF(P_10p=1 AND P_14p=1 AND Ps24)THEN P_10s:=P_10s-1;P_11s:=P_11s+1;P_14s:=P_14s-1;DOWN Temp;
+	END_IF;
+IF(P_11p=1 AND D12d)THEN P_11s:=P_11s-1;P_12s:=P_12s+1;
+	END_IF;
+IF(P_12p=1 AND Ps1)THEN P_12s:=P_12s-1;P_13s:=P_13s+1;
+	END_IF;
+IF(P_13p=1 AND NOT Ps1)THEN P_13s:=P_13s-1;P_14s:=P_14s+1;Poste_libre:=Poste_libre+1;
+	END_IF;
+IF(P_14p=1 AND Ps23 AND NOT Ps24)THEN P_14s:=P_14s-1;P_17s:=P_17s+1;
+	END_IF;
+IF(P_17p=1 AND D12g)THEN P_17s:=P_17s-1;P_18s:=P_18s+1;
+	END_IF;
+IF(P_18p=1 AND Ps1)THEN P_18s:=P_18s-1;P_19s:=P_19s+1;
+	END_IF;
+IF(P_19p=1 AND NOT Ps1)THEN P_19s:=P_19s-1;P_14s:=P_14s+1;
+	END_IF;
+IF(P_15p=1 AND NOT Ps20)THEN P_15s:=P_15s-1;P_16s:=P_16s+1;
+	END_IF;
+IF(P_16p=1 AND Cp10)THEN P_16s:=P_16s-1;P_2s:=P_2s+1;
+	END_IF;
+
+R11d:=P_4p=1;
+R11g:=P_0p=1 OR P_7p=1;
+V12:=P_1p=1 OR P_12p=1 OR P_18p=1;
+V11:=P_1p=1 OR P_2p=1 OR P_5p=1 OR P_8p=1;
+D11:=P_0p=1 OR P_4p=1 OR P_7p=1;
+R12d:=P_11p=1;
+R12g:=P_0p=1 OR P_17p=1;
+D12:=P_0p=1 OR P_11p=1 OR P_17p=1;
+
+St20:=P_5p=1 OR P_15p=1;
+St21:=P_10p=1;
+St22:=P_10p=1;
+St23:=P_18p=1;
+St24:=P_12p=1;
+
+(*  visualisation variables *)
+
+R12g:=R12g;
+R12d:=R12d;
+R11d:=R11d;
+R11g:=R11g;
+D11:=D11;
+D12:=D12;
+V12:=V12;
+V11:=V11;
+
+D11g:=D11g;
+D11d:=D11d;
+
+D12g:=D12g;
+D12d:=D12d;

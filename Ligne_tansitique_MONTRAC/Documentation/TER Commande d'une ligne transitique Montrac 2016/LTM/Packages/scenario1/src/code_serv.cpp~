@@ -1,0 +1,68 @@
+#include "ros/ros.h"
+#include <sstream>
+#include <stdio.h>
+
+// On inclue le service et la librairie
+#include "scenario1/DemandeTrajet.h"
+#include <modbus/modbus.h>
+
+// On définie l'adresse de la case "demande" dans l'automate (valeur testée dans la MAE)
+#define ADDR_DEMANDE 50
+
+// On déclare la fonction "traitement" : ses paramètres son ceux du service DemandeTrajet
+bool traitement(scenario1::DemandeTrajet::Request  &req,
+                scenario1::DemandeTrajet::Response &res)
+{
+	// On déclare ce qui est utile pour Modbus : l'adresse de l'automate à joindre et la valeur des demandes à écrire
+	modbus_t *ap1;
+	ap1 = modbus_new_tcp("192.168.0.101", 502);
+
+	uint16_t demande11, demande12;
+	demande11 = 11;
+	demande12 = 12;
+
+	// On ouvre la liaison Modbus avec l'automate
+	modbus_connect(ap1);
+
+	// On va tester la demande faite dans le service et écrire la valeur correspondante dans la bonne case mémoire de l'automate
+	// On renvoie aussi un aquittement positif si on a reussi à écrire sur l'automate, 0 sinon
+	// Les paramètres de modbus_write_registers sont : l'adresse à joindre, la première case où écrire, le nombre de cases où écrire et la valeur à écrire
+	if (req.demande == 11) {
+		if (modbus_write_registers (ap1, ADDR_DEMANDE, 1, &demande11))	
+			res.ack = 1;
+		else    
+			res.ack = 0;			
+	}
+
+	if (req.demande == 12) {
+		if (modbus_write_registers (ap1, ADDR_DEMANDE, 1, &demande12))	
+			res.ack = 1;	
+		else    	
+			res.ack = 0;
+	}	
+
+	// On ouvre la liaison Modbus avec l'automate
+	modbus_close(ap1);
+	modbus_free(ap1);
+	
+	// On affiche l'aquittement à l'écran (juste au cas où car ce n'est pas nécessaire au fonctionnement)
+  	ROS_INFO("Ack: %ld", (long int)res.ack);
+
+	return TRUE;
+}
+
+
+int main(int argc, char **argv)
+{
+  // On initialise et déclare le noeud
+  ros::init(argc, argv, "code_serv");
+  ros::NodeHandle n;
+
+  // On abonne le noeud au service "demande_trajet" et indique que la fonction "traitement" sera appelée à chaque demande
+  ros::ServiceServer service = n.advertiseService("demande_trajet", traitement);
+
+  // On rentre dans un boucle
+  ros::spin();
+
+  return 0;
+}

@@ -1,0 +1,18 @@
+t 60.0 125.0 VII c 0 w n {[PS19;]} e
+p 60.0 200.0 p37 0 w {[D10,R10D]} e
+t 60.0 270.0 t97 c 0 w n {[!PS8 & D4D;]} e
+p 60.0 350.0 p38 0 w {[V10,ST19]} e
+p 60.0 515.0 p36 0 w
+t 60.0 610.0 VIII c 0 w n {[PS20;]} e
+t 60.0 435.0 t98 c 0 w n {[!PS19;]} e
+p 60.0 50.0 p10 1 n A10 w
+e VII p37 1 n
+e p37 t97 1 n
+e t97 p38 1 n
+e p38 t98 1 n
+e p36 VIII 1 n
+e t98 p36 1 n
+e p10 VII 1 n
+h reseau_7
+
+
