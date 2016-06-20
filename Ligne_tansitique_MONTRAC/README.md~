@@ -12,7 +12,7 @@
 1. **in ~/.bashrc, add these lines :**
 	- source /opt/ros/jade/setup.bash
 	- export VREP_ROOT_DIR=~/ ... /Ligne_transitique_MONTRAC/V-Rep/
-	- source ~/CelluleFlexible/catkin_ws/devel/setup.bash
+
 
 2. **In /Projet_Long/catkin_ws**
 	- catkin_make

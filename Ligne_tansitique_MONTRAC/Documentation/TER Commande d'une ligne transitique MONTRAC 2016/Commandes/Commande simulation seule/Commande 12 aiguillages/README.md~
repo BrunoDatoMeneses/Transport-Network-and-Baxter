@@ -1,6 +1,6 @@
 # TER M1 ISTR Université Paul Sabatier Toulouse France 2016
 
-> Command of a transport network and it simulation
+> Command of the simulation
 
 ## Auteurs
 - __Bruno DATO__ -- bruno.dato.meneses@gmail.com
@@ -9,7 +9,11 @@
 
 ## TO DO
 
-1. **in ~/.bashrc, add these lines :**
+1. **in ~/ ... /Ligne_transitique_MONTRAC/ros_ws/src/commande/src :**
+	- replace the "file main_commande.cpp" by "main_commande 12 aiguillages 6 navettes.cpp"
+
+
+
 	- source /opt/ros/jade/setup.bash
 	- export VREP_ROOT_DIR=~/ ... /Ligne_transitique_MONTRAC/V-Rep/
 
