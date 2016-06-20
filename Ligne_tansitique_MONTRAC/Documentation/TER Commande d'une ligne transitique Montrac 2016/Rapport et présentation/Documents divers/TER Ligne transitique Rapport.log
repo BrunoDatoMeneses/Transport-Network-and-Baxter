@@ -1,0 +1,1884 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.11)  27 MAY 2016 12:24
+entering extended mode
+**TER*Ligne*transitique*Rapport*8.tex
+
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\TER Ligne tr
+ansitique Rapport 8.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\book.cls"
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\bk10.clo"
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\frenchb.ldf"
+Language: frenchb 2009/03/16 v2.3d French support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+Package babel Info: Making : an active character on input line 120.
+Package babel Info: Making ; an active character on input line 121.
+Package babel Info: Making ! an active character on input line 122.
+Package babel Info: Making ? an active character on input line 123.
+\FB@Mht=\dimen104
+\std@mcc=\count89
+\dec@mcc=\count90
+\parindentFFN=\dimen105
+
+*************************************
+* Local config file frenchb.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\frenchb.cfg")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\carlisle\scalefnt.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count91
+\Gm@cntv=\count92
+\c@Gm@tempcnt=\count93
+\Gm@bindingoffset=\dimen106
+\Gm@wd@mp=\dimen107
+\Gm@odd@mp=\dimen108
+\Gm@even@mp=\dimen109
+\Gm@layoutwidth=\dimen110
+\Gm@layoutheight=\dimen111
+\Gm@layouthoffset=\dimen112
+\Gm@layoutvoffset=\dimen113
+\Gm@dimlist=\toks17
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count94
+))
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\realboxes\realboxes.sty"
+Package: realboxes 2011/08/08 v0.2 Change box commands to read there content as
+ real boxes
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box26
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+\XKV@depth=\count95
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read1
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\moreverb\moreverb.sty"
+Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
+\tab@position=\count96
+\tab@size=\count97
+\listing@line=\count98
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks22
+\ex@=\dimen116
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen117
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count99
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count100
+\leftroot@=\count101
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count102
+\DOTSCASE@=\count103
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen118
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count104
+\c@MaxMatrixCols=\count105
+\dotsspace@=\muskip10
+\c@parentequation=\count106
+\dspbrk@lvl=\count107
+\tag@help=\toks23
+\row@=\count108
+\column@=\count109
+\maxfields@=\count110
+\andhelp@=\toks24
+\eqnshift@=\dimen119
+\alignsep@=\dimen120
+\tagshift@=\dimen121
+\tagwidth@=\dimen122
+\totwidth@=\dimen123
+\lineht@=\dimen124
+\@envbody=\toks25
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks27
+\thm@bodyfont=\toks28
+\thm@headfont=\toks29
+\thm@notefont=\toks30
+\thm@headpunct=\toks31
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks32
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xy.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xy.tex" Bootstrap'ing:
+catcodes, docmode,
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyrecat.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyidioms.tex")
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen125
+\Y@c=\dimen126
+\U@c=\dimen127
+\D@c=\dimen128
+\L@c=\dimen129
+\R@c=\dimen130
+\Edge@c=\toks33
+\X@p=\dimen131
+\Y@p=\dimen132
+\U@p=\dimen133
+\D@p=\dimen134
+\L@p=\dimen135
+\R@p=\dimen136
+\Edge@p=\toks34
+\X@origin=\dimen137
+\Y@origin=\dimen138
+\X@xbase=\dimen139
+\Y@xbase=\dimen140
+\X@ybase=\dimen141
+\Y@ybase=\dimen142
+\X@min=\dimen143
+\Y@min=\dimen144
+\X@max=\dimen145
+\Y@max=\dimen146
+\lastobjectbox@=\box29
+\zerodotbox@=\box30
+\almostz@=\dimen147
+ direction,
+\d@X=\dimen148
+\d@Y=\dimen149
+\K@=\count111
+\KK@=\count112
+\Direction=\count113
+\K@dXdY=\dimen150
+\K@dYdX=\dimen151
+\xyread@=\read2
+\xywrite@=\write3
+\csp@=\count114
+\quotPTK@=\dimen152
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks35
+\connectobjectbox@@=\box31
+ objects,
+\styletoks@=\toks36
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyall.tex"
+ Xy-pic option: All features v.3.8
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xycurve.tex"
+ Xy-pic option: Curve and Spline extension v.3.12 curve,
+\crv@cnt@=\count115
+\crvpts@=\toks37
+\splinebox@=\box32
+\splineval@=\dimen153
+\splinedepth@=\dimen154
+\splinetol@=\dimen155
+\splinelength@=\dimen156
+ circles,
+\L@=\dimen157
+ loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyframe.tex"
+ Xy-pic option: Frame and Bracket extension v.3.14 loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xycmtip.tex"
+ Xy-pic option: Computer Modern tip extension v.3.7
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xytips.tex"
+ Xy-pic option: More Tips extension v.3.11 loaded) loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyline.tex"
+ Xy-pic option: Line styles extension v.3.10
+\xylinethick@=\dimen158
+ loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyrotate.tex"
+ Xy-pic option: Rotate and Scale extension v.3.8 loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xycolor.tex"
+ Xy-pic option: Colour extension v.3.11 loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xymatrix.tex"
+ Xy-pic option: Matrix feature v.3.14
+\Row=\count116
+\Col=\count117
+\queue@=\toks38
+\queue@@=\toks39
+\qcount@=\count118
+\qcount@@=\count119
+\matrixsize@=\count120
+ loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyarrow.tex"
+ Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xygraph.tex"
+ Xy-pic option: Graph feature v.3.11 loaded) loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf.tex"
+ Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf-co.tex" loaded)
+Xy-pic pdf driver: `curve' extension support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf-cu.tex" loaded)
+Xy-pic pdf driver: `frame' extension support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf-fr.tex" loaded)
+Xy-pic pdf driver: `line' extension support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf-li.tex" loaded)
+Xy-pic pdf driver: `rotate' extension support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf-ro.tex" loaded)
+loaded)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count121
+\float@exts=\toks40
+\float@box=\box33
+\@float@everytoks=\toks41
+\@floatcapt=\box34
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count122
+\FV@InFile=\read3
+\FV@TabBox=\box35
+\c@FancyVerbLine=\count123
+\FV@StepNumber=\count124
+\FV@OutFile=\write4
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count125
+\mult@box=\box36
+\multicol@leftmargin=\dimen159
+\c@unbalance=\count126
+\c@collectmore=\count127
+\doublecol@number=\count128
+\multicoltolerance=\count129
+\multicolpretolerance=\count130
+\full@width=\dimen160
+\page@free=\dimen161
+\premulticols=\dimen162
+\postmulticols=\dimen163
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box37
+\last@line=\box38
+\mult@rightbox=\box39
+\mult@grightbox=\box40
+\mult@gfirstbox=\box41
+\mult@firstbox=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\c@columnbadness=\count131
+\c@finalcolumnbadness=\count132
+\last@try=\dimen164
+\multicolovershoot=\dimen165
+\multicolundershoot=\dimen166
+\mult@nat@firstbox=\box60
+\colbreak@box=\box61
+\multicol@sort@counter=\count133
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\framed\framed.sty"
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip51
+\fb@frw=\dimen167
+\fb@frh=\dimen168
+\FrameRule=\dimen169
+\FrameSep=\dimen170
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count134
+\lst@gtempboxa=\box62
+\lst@token=\toks42
+\lst@length=\count135
+\lst@currlwidth=\dimen171
+\lst@column=\count136
+\lst@pos=\count137
+\lst@lostspace=\dimen172
+\lst@width=\dimen173
+\lst@newlines=\count138
+\lst@lineno=\count139
+\lst@maxwidth=\dimen174
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count140
+\lst@skipnumbers=\count141
+\lst@framebox=\box63
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen175
+\captionmargin@=\dimen176
+\captionwidth=\dimen177
+\caption@tempdima=\dimen178
+\caption@indent=\dimen179
+\caption@parindent=\dimen180
+\caption@hangindent=\dimen181
+)
+\c@ContinuedFloat=\count142
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+\c@KVtest=\count143
+\sf@farskip=\skip52
+\sf@captopadj=\dimen182
+\sf@capskip=\skip53
+\sf@nearskip=\skip54
+\c@subfigure=\count144
+\c@subfigure@save=\count145
+\c@lofdepth=\count146
+\c@subtable=\count147
+\c@subtable@save=\count148
+\c@lotdepth=\count149
+\sf@top=\skip55
+\sf@bottom=\skip56
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen183
+\WF@size=\dimen184
+\c@WF@wrappedlines=\count150
+\WF@box=\box64
+\WF@everypar=\toks43
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen185
+\Hy@linkcounter=\count151
+\Hy@pagecounter=\count152
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count153
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count154
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen186
+\Fld@menulength=\count155
+\Field@Width=\dimen187
+\Fld@charsize=\dimen188
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count156
+\c@Item=\count157
+\c@Hfootnote=\count158
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count159
+\c@bookmark@seq@number=\count160
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip57
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 29.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\TER Ligne tr
+ansitique Rapport 8.aux"
+
+LaTeX Warning: Label `config_ap12' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 73.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Info: Redefining \degres on input line 73.
+LaTeX Info: Redefining \dots on input line 73.
+LaTeX Info: Redefining \up on input line 73.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-45.43198pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=115.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count161
+\scratchdimen=\dimen189
+\scratchbox=\box65
+\nofMPsegments=\count162
+\nofMParguments=\count163
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count164
+\MPscratchDim=\dimen190
+\MPnumerator=\count165
+\makeMPintoPDFobject=\count166
+\everyMPtoPDFconversion=\toks45
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 73.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 73.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 73.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+Package xypdf Info: Line width: 0.39998pt on input line 73.
+\c@lstlisting=\count167
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box66
+Package hyperref Info: Link coloring ON on input line 73.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count168
+)
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \nameref on input line 73.
+
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\TER Ligne tr
+ansitique Rapport 8.out")
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\TER Ligne tr
+ansitique Rapport 8.out")
+\@outlinefile=\write5
+ <Logo_UPS.png, id=31, 415.5525pt x 114.4275pt>
+File: Logo_UPS.png Graphic file (type png)
+
+<use Logo_UPS.png>
+Package pdftex.def Info: Logo_UPS.png used on input line 82.
+(pdftex.def)             Requested size: 207.77574pt x 57.21361pt.
+ <parge_garde.png, id=33, 944.7797pt x 458.46281pt>
+File: parge_garde.png Graphic file (type png)
+
+<use parge_garde.png>
+Package pdftex.def Info: parge_garde.png used on input line 98.
+(pdftex.def)             Requested size: 377.90518pt x 183.38187pt.
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Bruno/Documents/
+FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/Logo_UPS.png> <C:/Users/Bruno/Documents
+/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/parge_garde.png>] [2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+[3] [4
+
+]
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\TER Ligne tr
+ansitique Rapport 8.toc")
+\tf@toc=\write6
+ [5] [6
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+[7] <Gantt.jpg, id=137, 915.42pt x 256.70906pt>
+File: Gantt.jpg Graphic file (type jpg)
+ <use Gantt.jpg>
+Package pdftex.def Info: Gantt.jpg used on input line 162.
+(pdftex.def)             Requested size: 915.41777pt x 256.70842pt.
+
+Overfull \vbox (33.10117pt too high) has occurred while \output is active []
+
+
+[8 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/Gantt.jpg>
+]
+Chapitre 1.
+<halle.jpg, id=143, 506.89375pt x 298.11375pt>
+File: halle.jpg Graphic file (type jpg)
+ <use halle.jpg>
+Package pdftex.def Info: halle.jpg used on input line 177.
+(pdftex.def)             Requested size: 202.7539pt x 119.24338pt.
+
+Overfull \hbox (9.27509pt too wide) in paragraph at lines 177--178
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
+ []
+
+[9
+
+ <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/halle.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
+
+ []
+
+<zone_travail.png, id=153, 718.93594pt x 398.23781pt>
+File: zone_travail.png Graphic file (type png)
+ <use zone_travail.png>
+Package pdftex.def Info: zone_travail.png used on input line 211.
+(pdftex.def)             Requested size: 467.30283pt x 258.8515pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+[10 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/zone_trav
+ail.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+[11] <maquette.png, id=176, 998.9822pt x 443.40656pt>
+File: maquette.png Graphic file (type png)
+ <use maquette.png>
+Package pdftex.def Info: maquette.png used on input line 302.
+(pdftex.def)             Requested size: 998.97977pt x 443.40547pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Overfull \vbox (20.0308pt too high) has occurred while \output is active []
+
+
+[13 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/maquette.
+png>] <simulation2.png, id=189, 883.04906pt x 733.99219pt>
+File: simulation2.png Graphic file (type png)
+
+<use simulation2.png>
+Package pdftex.def Info: simulation2.png used on input line 314.
+(pdftex.def)             Requested size: 441.52344pt x 366.9952pt.
+
+Overfull \hbox (22.4155pt too wide) in paragraph at lines 327--332
+ [] 
+ []
+
+[14 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/simulatio
+n2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--362
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+
+ []
+
+<solution.png, id=204, 590.95781pt x 396.7322pt>
+File: solution.png Graphic file (type png)
+ <use solution.png>
+Package pdftex.def Info: solution.png used on input line 369.
+(pdftex.def)             Requested size: 236.37894pt x 158.69006pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
+
+ []
+
+[15 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/solution.
+png>] <topic.png, id=214, 697.8572pt x 309.40594pt>
+File: topic.png Graphic file (type png)
+ <use topic.png>
+Package pdftex.def Info: topic.png used on input line 388.
+(pdftex.def)             Requested size: 279.13792pt x 123.76018pt.
+ [16 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/topic.pn
+g>]
+Chapitre 2.
+<communication.png, id=220, 538.26094pt x 514.17094pt>
+File: communication.png Graphic file (type png)
+ <use communication.png>
+Package pdftex.def Info: communication.png used on input line 405.
+(pdftex.def)             Requested size: 269.1298pt x 257.08484pt.
+
+[17
+
+ <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/communicatio
+n.png>] <Configuration_materielle.png, id=228, 248.42813pt x 191.21437pt>
+File: Configuration_materielle.png Graphic file (type png)
+
+<use Configuration_materielle.png>
+Package pdftex.def Info: Configuration_materielle.png used on input line 424.
+(pdftex.def)             Requested size: 198.74277pt x 152.9717pt.
+
+<Configuration_logicielle.png, id=229, 308.65312pt x 193.47281pt>
+File: Configuration_logicielle.png Graphic file (type png)
+
+<use Configuration_logicielle.png>
+Package pdftex.def Info: Configuration_logicielle.png used on input line 426.
+(pdftex.def)             Requested size: 246.92282pt x 154.77846pt.
+
+<reseau.png, id=233, 535.2497pt x 331.99031pt>
+File: reseau.png Graphic file (type png)
+ <use reseau.png>
+Package pdftex.def Info: reseau.png used on input line 461.
+(pdftex.def)             Requested size: 428.20033pt x 265.59259pt.
+
+Underfull \vbox (badness 5985) has occurred while \output is active []
+
+ [18 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/Configur
+ation_materielle.png> <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rend
+u/2.0/CR/Configuration_logicielle.png>] <navigateur.png, id=250, 164.11313pt x 
+288.3272pt>
+File: navigateur.png Graphic file (type png)
+
+<use navigateur.png>
+Package pdftex.def Info: navigateur.png used on input line 481.
+(pdftex.def)             Requested size: 139.4968pt x 245.07925pt.
+ <memoire.png, id=251, 253.69781pt x 365.86688pt>
+File: memoire.png Graphic file (type png)
+
+<use memoire.png>
+Package pdftex.def Info: memoire.png used on input line 483.
+(pdftex.def)             Requested size: 190.27289pt x 274.39948pt.
+ <prog.png, id=252, 115.18031pt x 397.485pt>
+File: prog.png Graphic file (type png)
+ <use prog.png>
+Package pdftex.def Info: prog.png used on input line 485.
+(pdftex.def)             Requested size: 80.62564pt x 278.2376pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/reseau.p
+ng>]
+<ping.png, id=262, 495.35063pt x 325.96782pt>
+File: ping.png Graphic file (type png)
+ <use ping.png>
+Package pdftex.def Info: ping.png used on input line 498.
+(pdftex.def)             Requested size: 346.74307pt x 228.1759pt.
+ [20 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/navigate
+ur.png> <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/memoi
+re.png> <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/prog.
+png> <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/ping.png
+>]
+<animee.png, id=276, 472.76625pt x 299.61937pt>
+File: animee.png Graphic file (type png)
+ <use animee.png>
+Package pdftex.def Info: animee.png used on input line 514.
+(pdftex.def)             Requested size: 378.2135pt x 239.69582pt.
+ [21 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/animee.p
+ng>]
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
+
+ []
+
+<communication_ROS.png, id=285, 762.59906pt x 557.83406pt>
+File: communication_ROS.png Graphic file (type png)
+
+<use communication_ROS.png>
+Package pdftex.def Info: communication_ROS.png used on input line 533.
+(pdftex.def)             Requested size: 457.56297pt x 334.703pt.
+ [22 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/communic
+ation_ROS.png>]
+<noeud_automates_modbus.png, id=291, 342.5297pt x 381.67593pt>
+File: noeud_automates_modbus.png Graphic file (type png)
+
+<use noeud_automates_modbus.png>
+Package pdftex.def Info: noeud_automates_modbus.png used on input line 543.
+(pdftex.def)             Requested size: 137.00945pt x 152.66766pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
+
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 550--551
+[]\T1/cmr/m/n/10 Modbus TCP/IP (ou Mod-bus TCP) est un pro-to-cole de com-
+ []
+
+
+Underfull \hbox (badness 6445) in paragraph at lines 550--551
+\T1/cmr/m/n/10 mu-ni-ca-tion avec une in-ter-face TCP c'est à dire qui fonc-tio
+nne
+ []
+
+
+Underfull \hbox (badness 2134) in paragraph at lines 550--551
+\T1/cmr/m/n/10 sur Ether-net. Il fonc-tionne sur le mode Client/-Ser-veur. Les 
+clients
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 550--551
+\T1/cmr/m/n/10 sont tous ac-tifs, le ser-veur est com-plè-te-ment pas-sif. Chaq
+ue client
+ []
+
+
+Underfull \hbox (badness 5374) in paragraph at lines 550--551
+\T1/cmr/m/n/10 lit et écrit dans le ser-veur. Chaque trame contient la fonc-tio
+n
+ []
+
+
+Underfull \hbox (badness 7451) in paragraph at lines 550--551
+\T1/cmr/m/n/10 à trai-ter (écri-ture, lec-ture) et la don-née. L'adresse du ser
+-veur
+ []
+
+
+Underfull \hbox (badness 3492) in paragraph at lines 550--551
+\T1/cmr/m/n/10 concerné est son adresse IP. C'est un pro-to-cole très ré-pandu 
+de
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 550--551
+\T1/cmr/m/n/10 part sa sim-pli-cité, sont coût nul et le peut de ma-té-riel re-
+quis. De
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 550--551
+\T1/cmr/m/n/10 même, il est très uti-lisé pour gé-rer les en-trées et sor-ties 
+de sys-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
+
+ []
+
+
+Overfull \hbox (20.31133pt too wide) in paragraph at lines 561--563
+\T1/cmr/m/n/10 Elle per-met d'éta-blir la connexion avec en pa-ra-mètre le poin
+-teur ren-voyé par la fonc-tion \T1/cmr/bx/n/10 mod-bus_new_tcp()\T1/cmr/m/n/10
+ .
+ []
+
+<noeud_automates_topic.png, id=296, 755.07094pt x 158.84344pt>
+File: noeud_automates_topic.png Graphic file (type png)
+
+<use noeud_automates_topic.png>
+Package pdftex.def Info: noeud_automates_topic.png used on input line 583.
+(pdftex.def)             Requested size: 377.53455pt x 79.42152pt.
+
+Underfull \vbox (badness 4805) has occurred while \output is active []
+
+ [23 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/noeud_au
+tomates_modbus.png>] [24 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte r
+endu/2.0/CR/noeud_automates_topic.png>]
+<noeud_communication.png, id=317, 758.08218pt x 268.75406pt>
+File: noeud_communication.png Graphic file (type png)
+
+<use noeud_communication.png>
+Package pdftex.def Info: noeud_communication.png used on input line 641.
+(pdftex.def)             Requested size: 379.04016pt x 134.3767pt.
+ [25 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/noeud_co
+mmunication.png>] [26]
+Chapitre 3.
+<noeud_commande_simu_topic.png, id=338, 753.5653pt x 234.1247pt>
+File: noeud_commande_simu_topic.png Graphic file (type png)
+
+<use noeud_commande_simu_topic.png>
+Package pdftex.def Info: noeud_commande_simu_topic.png used on input line 746.
+(pdftex.def)             Requested size: 376.78172pt x 117.06206pt.
+
+<noeud_commande.png, id=341, 759.58781pt x 134.75343pt>
+File: noeud_commande.png Graphic file (type png)
+
+<use noeud_commande.png>
+Package pdftex.def Info: noeud_commande.png used on input line 760.
+(pdftex.def)             Requested size: 379.79297pt x 67.37654pt.
+
+Underfull \vbox (badness 2020) has occurred while \output is active []
+
+ [27
+
+ <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/noeud_comman
+de_simu_topic.png>] <noeud_commande_gen_topic.png, id=349, 756.57657pt x 405.76
+593pt>
+File: noeud_commande_gen_topic.png Graphic file (type png)
+
+<use noeud_commande_gen_topic.png>
+Package pdftex.def Info: noeud_commande_gen_topic.png used on input line 774.
+(pdftex.def)             Requested size: 378.28735pt x 202.88246pt.
+
+Overfull \hbox (2.9114pt too wide) in paragraph at lines 796--797
+\T1/cmr/m/n/10 tran-si-tique (\T1/cmr/bx/n/10 LIGNE\T1/cmr/m/n/10 =1 et \T1/cmr
+/bx/n/10 SI-MU-LA-TION\T1/cmr/m/n/10 =0) ou avec la si-mu-la-tion (\T1/cmr/bx/n
+/10 SIMULATION\T1/cmr/m/n/10 =1 et \T1/cmr/bx/n/10 LIGNE\T1/cmr/m/n/10 =0). 
+ []
+
+[28 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/noeud_com
+mande.png> <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/no
+eud_commande_gen_topic.png>]
+Overfull \hbox (6.87883pt too wide) in paragraph at lines 837--838
+[]\T1/cmr/bx/n/10 pub_actionneurs_simu_aguillages \T1/cmr/m/n/10 : Per-met de p
+u-blier sur le to-pic \T1/cmr/m/it/10 Si-mu-la-tion Ac-tion-neurs_aiguillages
+ []
+
+
+Overfull \hbox (0.89607pt too wide) in paragraph at lines 850--852
+\T1/cmr/m/n/10 C'est le construc-teurs de la classe, il as-signe les at-tri-but
+s \T1/cmr/bx/n/10 pub_actionneurs_ligne\T1/cmr/m/n/10 , \T1/cmr/bx/n/10 pub_act
+ionneurs_ 
+ []
+
+
+Overfull \hbox (8.70963pt too wide) in paragraph at lines 859--861
+\T1/cmr/m/n/10 Cette mé-thode pu-blie les mes-sages \T1/cmr/m/it/10 Stop-Con-tr
+ol \T1/cmr/m/n/10 et \T1/cmr/m/it/10 Sw-ti-ch-Con-trol \T1/cmr/m/n/10 sur les t
+o-pics \T1/cmr/m/it/10 Si-mu-la-tion Ac-tion-neurs_stops
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 890--891
+
+ []
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 902--903
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 906--907
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--909
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 910--911
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
+
+ []
+
+<RdP/RDP1.png, id=373, 2018.29031pt x 3132.45282pt>
+File: RdP/RDP1.png Graphic file (type png)
+ <use RdP/RDP1.png>
+Package pdftex.def Info: RdP/RDP1.png used on input line 918.
+(pdftex.def)             Requested size: 403.65091pt x 626.47948pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+<RdP/RDP2.png, id=382, 1999.47pt x 2463.2025pt>
+File: RdP/RDP2.png Graphic file (type png)
+ <use RdP/RDP2.png>
+Package pdftex.def Info: RdP/RDP2.png used on input line 926.
+(pdftex.def)             Requested size: 499.86627pt x 615.79912pt.
+
+Overfull \hbox (16.1694pt too wide) in paragraph at lines 926--927
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/RdP/RDP1
+.png>]
+<RdP/RDP3.png, id=388, 2101.8525pt x 3089.5425pt>
+File: RdP/RDP3.png Graphic file (type png)
+ <use RdP/RDP3.png>
+Package pdftex.def Info: RdP/RDP3.png used on input line 934.
+(pdftex.def)             Requested size: 420.36305pt x 617.89757pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/RdP/RDP2
+.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 944--945
+
+ []
+
+[34 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/RdP/RDP3.
+png>]
+Underfull \hbox (badness 10000) in paragraph at lines 946--947
+
+ []
+
+<RdP/RDP4.png, id=400, 1854.93pt x 2866.71pt>
+File: RdP/RDP4.png Graphic file (type png)
+ <use RdP/RDP4.png>
+Package pdftex.def Info: RdP/RDP4.png used on input line 952.
+(pdftex.def)             Requested size: 370.97943pt x 573.33185pt.
+ [35 <C:/Users/Bruno/Documents/FAC/M1 EEA ISTR/TER/Compte rendu/2.0/CR/RdP/RDP4
+.png>] [36
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 965--966
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 967--968
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 969--970
+
+ []
+
+[37] [38
+
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 983.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+[39] [40
+
+]
+Annexe A.
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1067
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1164
+
+ []
+
+[43] [44]
+Annexe B.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1202--1203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1204--1205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
+
+ []
+
+[45
+
+] [46
+
+]
+Annexe C.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+)
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\API_schneide
+r.h")
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\API_schneide
+r.cpp" [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48])
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\automates.cp
+p" [49])
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\Entrees.c")
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\Sorties.c")
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\communicatio
+n_API_schneider.h")
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\communicatio
+n_commande.h" [50])
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\communicatio
+n.cpp" [51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52])
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\main_communi
+cation.cpp")
+Underfull \vbox (badness 6741) has occurred while \output is active []
+
+ [53]
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\Msg_SensorSt
+ate.c")
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\Msg_StopCont
+rol.c")
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\Msg_SwitchCo
+ntrol.c")
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\actionneurs.
+h" [54])
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\capteurs.h"
+[55])
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\commande.h")
+
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\actionneurs.
+cpp" [56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57])
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\capteurs.cpp
+" [58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60])
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\commande.cpp
+" [61]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
+
+! Package inputenc Error: Unicode char \u8:ême not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 ...met de mettre la simulation dans la même 
+                                                  configuration que la ligne...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\main_command
+e.cpp" [63]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65])
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\Capteurs.c")
+
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\Actionneurs.
+c")
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1342.
+ [66]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1342.
+
+("C:\Users\Bruno\Documents\FAC\M1 EEA ISTR\TER\Compte rendu\2.0\CR\TER Ligne tr
+ansitique Rapport 8.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1342.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1342.
+
+Package rerunfilecheck Info: File `TER*Ligne*transitique*Rapport*8.out' has not
+ changed.
+(rerunfilecheck)             Checksum: <no file>.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1342.
+ ) 
+Here is how much of TeX's memory you used:
+ 16889 strings out of 493921
+ 243856 string characters out of 3144876
+ 641637 words of memory out of 3000000
+ 18517 multiletter control sequences out of 15000+200000
+ 26506 words of font info for 65 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 61i,13n,100p,3274b,1955s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Bruno\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ectt1000.pk> <C:\Users\Bruno\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbi1200.pk> <C:\Users\Bruno\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecbx0800.pk> <C:\Users\Bruno\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Bruno\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Bruno\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Bruno\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk> <C:\Us
+ers\Bruno\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.
+pk> <C:\Users\Bruno\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecbx2074.pk> <C:\Users\Bruno\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecsl1000.pk> <C:\Users\Bruno\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\Bruno\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Bruno\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Bruno\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Bruno
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\U
+sers\Bruno\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728
+.pk> <C:\Users\Bruno\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecrm2488.pk> <C:\Users\Bruno\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecrm1000.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/symbols/msam7.pfb>
+Output written on "TER Ligne transitique Rapport 8.pdf" (66 pages, 4888847 byte
+s).
+PDF statistics:
+ 2602 PDF objects out of 2984 (max. 8388607)
+ 1281 named destinations out of 1440 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
+
