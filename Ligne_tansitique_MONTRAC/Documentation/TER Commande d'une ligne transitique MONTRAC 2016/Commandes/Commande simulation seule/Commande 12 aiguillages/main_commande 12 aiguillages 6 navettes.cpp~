@@ -87,8 +87,8 @@ int main(int argc, char **argv)
 	{
 		
 		cout <<"~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
-		if (Capteurs.SIMULATION) cout <<"~      SIMULATION ON    ~"<<endl; 
-		else cout <<"~    SIMULATION OFF     ~"<<endl;
+		if (Capteurs.SIMULATION) cout <<"~      Simulation ON    ~"<<endl; 
+		else cout <<"~    Simulation OFF     ~"<<endl;
 
 		if (Capteurs.LIGNE) cout <<"~  LIGNE TRANSITIQUE ON ~"<<endl;
 		else cout <<"~ LIGNE TRANSITIQUE OFF ~"<<endl;
