@@ -1,0 +1,54 @@
+#include "ros/ros.h"
+#include "std_msgs/String.h"
+#include <sstream>
+#include <stdio.h>
+#include "scenario1/DemandeTrajet.h"
+#include <modbus/modbus.h>
+
+
+bool traitement(scenario1::DemandeTrajet::Request  &req,
+                scenario1::DemandeTrajet::Response &res)
+{
+	modbus_t *ctx;
+	int i;
+	int retour;
+	uint16_t salut1, salut2;
+
+salut1 =11;
+salut2 = 12;
+
+	ctx = modbus_new_tcp("192.168.0.101", 502);
+	modbus_connect(ctx);
+
+	
+	if (req.demande == 11)
+	{
+		modbus_write_registers (ctx, 50, 1, &salut1);
+
+	}
+	if (req.demande == 12)
+	{
+		modbus_write_registers (ctx, 50, 1, &salut2);
+	}	
+		
+	res.ack = 1;
+
+		modbus_close(ctx);
+	modbus_free(ctx);
+return TRUE;
+}
+
+
+int main(int argc, char **argv)
+{
+
+
+  ros::init(argc, argv, "code");
+  ros::NodeHandle n;
+
+  ros::ServiceServer service = n.advertiseService("demande_trajet", traitement);
+  ROS_INFO("Ready to add two ints.");
+  ros::spin();
+
+  return 0;
+}

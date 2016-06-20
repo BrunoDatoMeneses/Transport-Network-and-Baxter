@@ -1,0 +1,6 @@
+mac 34:17:eb:9c:4e:0b
+ip 192.168.0.159
+broadcast 192.168.0.255
+netmask 255.255.255.0
+ipv6 fe80.3617.ebff.fe9c.4e0b
+
