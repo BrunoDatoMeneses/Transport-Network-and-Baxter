@@ -1,7 +1,7 @@
 # TER M1 ISTR Université Paul Sabatier Toulouse France 2016
 
 > Command of the simulation.
-> All the switches and 6 shuttles.
+> 2 switches and 3 shuttles.
 > Description : each time a shuttle arrives at a switch, the switch will position in the oposite direction depending on the previous position. Therefore, 2 consecutives shuttles won't take the same path.
 
 ## Authors
@@ -13,8 +13,8 @@
 
 1. **In ~/ ... /Ligne_transitique_MONTRAC/ros_ws/src/commande/src :**
 
-	- replace the file *main_commande.cpp* by *main_commande 12 aiguillages 6 navettes.cpp*
-	- rename *main_commande 12 aiguillages 6 navettes.cpp* by *main_commande.cpp*
+	- replace the file *main_commande.cpp* by *main_commande_2_Aiguillages.cpp*
+	- rename *main_commande_2_Aiguillages.cpp* by *main_commande.cpp*
 
 
 2. **In a terminal, launch roscore if you haven't done it yet**
@@ -26,13 +26,18 @@
 	- $ catkin_make
 
 
-4. **In a new terminal, in ~/ ... /Ligne_transitique_MONTRAC**
+4. **If you are using the real transport network, ignore this step. To run the simulation, in a new terminal, in ~/ ... /Ligne_transitique_MONTRAC**
 
-	- $ ./simulation 1 2 3 4 5 6 	(we use all the shuttles for this command)
+	- $ ./simulation 2 4 6		(we use 3 shuttles for this command)
 	- if the simulation doesn't lauch successfully try a second time before restarting all the steps
 
 
-5. **In a new terminal, in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
+5. **If you are using the simulation, ignore this step. To run the real transport network, in a new terminal, in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
+
+	- $ source devel/setup.bash	(only the first time you open the terminal)
+	- $ 
+
+6. **In a new terminal, in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
 
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun commande run

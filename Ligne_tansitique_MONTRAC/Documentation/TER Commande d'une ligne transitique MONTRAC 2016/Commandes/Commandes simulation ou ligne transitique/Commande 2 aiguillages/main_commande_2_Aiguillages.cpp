@@ -15,6 +15,9 @@
 using namespace std;
 
 #define NOMBRE_PLACE 18
+#define RESET   "\033[0m"
+#define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
+#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
 
 int main(int argc, char **argv)
 {	
@@ -29,7 +32,7 @@ int main(int argc, char **argv)
 
 	Actionneurs Actionneurs(noeud);
 
-	ros::Rate loop_rate(20); //fréquence de la boucle (25Hz)
+	ros::Rate loop_rate(30); //fréquence de la boucle (25Hz)
 
 
 // Déclaration des variables pour la MEF ou le RdP //
@@ -71,11 +74,11 @@ int main(int argc, char **argv)
 	{
 		
 		cout <<"~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
-		if (Capteurs.SIMULATION) cout <<"~      Simulation ON    ~"<<endl; 
-		else cout <<"~    Simulation OFF     ~"<<endl;
+		if (Capteurs.SIMULATION) cout <<"~      SIMULATION "<< BOLDGREEN <<"ON"<< RESET <<"    ~"<<endl; 
+		else cout <<"~    SIMULATION "<< BOLDRED <<"OFF"<< RESET <<"     ~"<<endl;
 
-		if (Capteurs.LIGNE) cout <<"~  LIGNE TRANSITIQUE ON ~"<<endl;
-		else cout <<"~ LIGNE TRANSITIQUE OFF ~"<<endl;
+		if (Capteurs.LIGNE) cout <<"~  LIGNE TRANSITIQUE "<< BOLDGREEN <<"ON"<< RESET <<" ~"<<endl;
+		else cout <<"~ LIGNE TRANSITIQUE "<< BOLDRED <<"OFF"<< RESET <<" ~"<<endl;
 		cout <<"~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl<<endl;
 
 		// Déplacement des navettes si on utilise la simulation
@@ -139,17 +142,23 @@ int main(int argc, char **argv)
 
                 // ACTIONNEURS
 
-       		
+       		// Déverrouiller
 		Dx[1]   = M[2]  || M[3] ;
 		Dx[2]   = M[9]  || M[10] ;
+
+		// Verrouiller
 		Vx[1]   = M[4]  || M[5] ;
 		Vx[2]   = M[11] || M[12] ;
 
+		// Aiguillage à droite
 		RxD[1]  = M[3] ;
 		RxD[2]  = M[10] ;
+
+		// Aiguillage à gauche
 		RxG[1]  = M[2] ;
 		RxG[2]  = M[9] ;
 
+		// Stops
 		STx[1]  = M[4] || M[5] ; 
 		STx[2]  = M[8] ; 
 		STx[3]  = M[8] ; 
@@ -160,8 +169,6 @@ int main(int argc, char **argv)
 		STx[22] = M[17] ; 
 		STx[23] = M[17] ;
 		STx[24] = M[17] ;
-		
-		
 
 
  		//////////////////////////////////////////////////
@@ -182,8 +189,5 @@ int main(int argc, char **argv)
 		ros::spinOnce(); //permet aux fonction callback de ros dans les objets d'êtres appelées
 		loop_rate.sleep(); //permet de synchroniser la boucle while. Il attend le temps qu'il reste pour faire le 25Hz (ou la fréquence indiquée dans le loop_rate)
 	}
-
 	return 0;
-
-
 }

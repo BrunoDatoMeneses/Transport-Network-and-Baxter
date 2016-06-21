@@ -1,7 +1,7 @@
 # TER M1 ISTR Université Paul Sabatier Toulouse France 2016
 
-> Command of the simulation
-> All the switches and 6 shuttles
+> Command of the simulation.
+> All the switches and 6 shuttles.
 > Description : each time a shuttle arrives at a switch, the switch will position in the oposite direction depending on the previous position. Therefore, 2 consecutives shuttles won't take the same path.
 
 ## Authors
@@ -26,13 +26,13 @@
 	- $ catkin_make
 
 
-4. **In ~/ ... /Ligne_transitique_MONTRAC**
+4. **In a new terminal, in ~/ ... /Ligne_transitique_MONTRAC**
 
 	- $ ./simulation 1 2 3 4 5 6 	(we use all the shuttles for this command)
 	- if the simulation doesn't lauch successfully try a second time before restarting all the steps
 
 
-4. **In a new terminal, in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
+5. **In a new terminal, in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
 
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun commande run
