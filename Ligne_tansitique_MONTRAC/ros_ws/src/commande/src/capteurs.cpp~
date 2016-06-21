@@ -118,7 +118,7 @@ void Capteurs::Callback_capteurs_simulation(const commande_locale::Msg_SensorSta
 	for(int i=1;i<13;i++) DxD[i]=msg->DD[i];
 	for(int i=1;i<13;i++) DxG[i]=msg->DG[i];
 	for(int i=1;i<11;i++) CPx[i]=msg->CP[i];
-	//for(int i=1;i<9;i++) CPIx[i]=msg->CPI[i];
+	for(int i=1;i<9;i++) CPIx[i]=msg->CPI[i];
 }
 
 
