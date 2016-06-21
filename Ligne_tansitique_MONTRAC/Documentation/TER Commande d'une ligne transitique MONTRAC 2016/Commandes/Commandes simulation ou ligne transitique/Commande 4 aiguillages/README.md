@@ -2,7 +2,7 @@
 
 > Command of the simulation.
 > 2 switches and 3 shuttles.
-> Description : each time a shuttle arrives at a switch (A1 or A2), the switch will position itself in the oposite direction depending on the previous position. Therefore, 2 consecutives shuttles won't take the same path.
+> Description : each time a shuttle arrives at a switch (A1, A2, A11 or A12), the switch will position itself in the oposite direction depending on the previous position. Therefore, 2 consecutives shuttles won't take the same path.
 
 ## Authors
 - __Bruno DATO__ -- bruno.dato.meneses@gmail.com
@@ -13,8 +13,8 @@
 
 1. **In ~/ ... /Ligne_transitique_MONTRAC/ros_ws/src/commande/src :**
 
-	- replace the file *main_commande.cpp* by *main_commande_2_Aiguillages.cpp*
-	- rename *main_commande_2_Aiguillages.cpp* by *main_commande.cpp*
+	- replace the file *main_commande.cpp* by *main_commande LT 4 aiguillages 3 navettes.cpp*
+	- rename *main_commande LT 4 aiguillages 3 navettes.cpp* by *main_commande.cpp*
 
 
 2. **In a terminal, launch roscore if you haven't done it yet**

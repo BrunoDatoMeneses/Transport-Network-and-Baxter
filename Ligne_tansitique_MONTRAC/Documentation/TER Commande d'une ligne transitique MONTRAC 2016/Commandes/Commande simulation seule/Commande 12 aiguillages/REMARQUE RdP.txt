@@ -1,0 +1,8 @@
+REMARQUE IMPORTANTE CONCERNANT LES RDP
+
+Il est possible qu'il y ai certaines différences entre les RdP du rapport et ceux dans les fichiers de commande.
+
+En effet, nous nous sommes rendus compte à la fin du projet que lorsque les navettes sont arrêtées au niveau de certains STOPS,
+elles sont encore sur l'aiguillages qu'elles viennent de passer, il ne faut donc absolument pas bouger l'aiguillage dans ces cas là.
+
+Ainsi, dans certains cas, la disponibilité des aiguillages est rendue plus tard (particulièrement A6 et A12).

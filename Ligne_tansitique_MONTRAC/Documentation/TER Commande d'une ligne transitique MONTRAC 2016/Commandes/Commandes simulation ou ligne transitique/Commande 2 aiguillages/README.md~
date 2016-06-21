@@ -46,8 +46,7 @@
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun commande run
 
-	- if your are using the simulation, once it is detected :  SIMULATION ON and LIGNE TRANSITIQUE OFF
-	- press play on the simulation	(try not to be too long)
+	- if your are using the simulation, once it is detected :  SIMULATION ON and LIGNE TRANSITIQUE OFF, press play on the simulation (try not to be too long)
 	- it will take long to start the command, it's normal 
 	- if the shuttles don't stop on at the initilization point, change the positions *24* by *22* in the fonction *Deplacer_navettes(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,24)* line 91, save and restart all the steps.
 
