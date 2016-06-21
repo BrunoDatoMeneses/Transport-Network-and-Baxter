@@ -50,11 +50,11 @@
 
 	- if your are using the simulation, once it is detected :  SIMULATION ON and LIGNE TRANSITIQUE OFF, press play on the simulation (try not to be too long)
 	- it will take long to start the command, it's normal 
-	- if the shuttles don't stop on at the initilization point, change the positions *24* by *22* in the fonction *Deplacer_navettes(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,24)* line 91, save and restart all the steps.
+	- if the shuttles don't stop at the initilization point, change the positions *24* by *22* in the fonction *Deplacer_navettes(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,24)* line 91, save and restart all the steps.
 
 	- if your are using the real transport network, you have to put on the tracks the 3 shuttles on the working station number 2 and power on them by connecting them to the tracks and turning on the yellow button on their right side.
 
-
+	- if a shuttle is stuck on a stop, it is probably because of an error reading the value of a sensor, you can gently push the shuttle so it will continue its way. Don't wait too loog before pushing it because if it happends in a curve the others shuttles will bump in the stucked shuttle (the sensor proximity on each shuttle is not very efficient in the curves).
 
 
 ## License

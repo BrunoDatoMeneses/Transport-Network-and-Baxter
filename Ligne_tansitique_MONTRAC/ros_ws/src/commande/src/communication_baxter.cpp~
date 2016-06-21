@@ -81,6 +81,7 @@ void Communication_Baxter::Prise_demandee_bras_gauche()
 void Communication_Baxter::Update()
 {
 	pub_prise_demandee_bras_droit.publish(msg_prise_demandee_bras_droit);
+	pub_prise_demandee_bras_gauche.publish(msg_prise_demandee_bras_gauche);
 }
 
 

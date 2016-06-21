@@ -26,6 +26,11 @@
 	- $ catkin_make
 
 
+
+
+ROS_MASTER_URI=http://baxter.local:11311
+
+
 4. **If you are using the real transport network, ignore this step. To run the simulation, in a new terminal, in ~/ ... /Ligne_transitique_MONTRAC**
 
 	- $ ./simulation 2 4 6		(we use 3 shuttles for this command)

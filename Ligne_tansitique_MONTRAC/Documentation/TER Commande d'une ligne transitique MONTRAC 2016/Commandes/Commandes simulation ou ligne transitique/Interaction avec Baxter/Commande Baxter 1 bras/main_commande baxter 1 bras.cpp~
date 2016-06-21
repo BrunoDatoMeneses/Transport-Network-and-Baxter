@@ -16,6 +16,9 @@
 using namespace std;
 
 #define NOMBRE_PLACE 20
+#define RESET   "\033[0m"
+#define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
+#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
 
 int main(int argc, char **argv)
 {	
@@ -32,7 +35,7 @@ int main(int argc, char **argv)
 
 	Communication_Baxter Baxter(noeud);
 
-	ros::Rate loop_rate(30); //fréquence de la boucle 
+	ros::Rate loop_rate(25); //fréquence de la boucle 
 
 
 // Déclaration des variables pour la MEF ou le RdP //

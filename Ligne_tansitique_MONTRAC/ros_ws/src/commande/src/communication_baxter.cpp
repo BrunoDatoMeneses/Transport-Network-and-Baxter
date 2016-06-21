@@ -67,12 +67,12 @@ bool Communication_Baxter::Prise_effectuee_bras_gauche()
 	else return false ;
 }
 
-void Communication_Baxter::Prise_demandee_bras_droit()
+void Communication_Baxter::Demander_prise_bras_droit()
 {
 	msg_prise_demandee_bras_droit.data = true ;
 }
 
-void Communication_Baxter::Prise_demandee_bras_gauche()
+void Communication_Baxter::Demander_prise_bras_gauche()
 {
 	msg_prise_demandee_bras_gauche.data = true ;
 }

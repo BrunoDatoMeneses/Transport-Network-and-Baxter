@@ -29,8 +29,8 @@ public:
 	bool Prise_effectuee_bras_droit();
 	bool Prise_effectuee_bras_gauche();
 
-	void Prise_demandee_bras_droit();
-	void Prise_demandee_bras_gauche();
+	void Demander_prise_bras_droit();
+	void Demander_prise_bras_gauche();
 
 
 	void Update();
