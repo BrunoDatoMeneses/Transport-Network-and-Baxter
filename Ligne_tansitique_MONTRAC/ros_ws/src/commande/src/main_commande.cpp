@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 		if(Capteurs.SIMULATION==true && Deplacement_effectue==0)
 		{
 			// Déplacement des navettes devant le stop 24 pour l'initialisation
-			Deplacer_navettes(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,24);
+			Deplacer_navettes(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,22);
 	
 			// Configuration de la simulation comme la ligne transitique
 			Mode_ligne(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx);

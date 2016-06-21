@@ -20,7 +20,7 @@
 2. **In a terminal, launch roscore if you haven't done it yet**
 
 
-3. **In a new terminal (CTRL + SHIFT + T), in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
+3. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
 
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ catkin_make
