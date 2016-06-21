@@ -2,7 +2,7 @@
 
 > Command of the simulation.
 > 2 switches and 3 shuttles.
-> Description : each time a shuttle arrives at a switch (A1 or A2), the switch will position in the oposite direction depending on the previous position. Therefore, 2 consecutives shuttles won't take the same path.
+> Description : each time a shuttle arrives at a switch (A1 or A2), the switch will position itself in the oposite direction depending on the previous position. Therefore, 2 consecutives shuttles won't take the same path.
 
 ## Authors
 - __Bruno DATO__ -- bruno.dato.meneses@gmail.com
