@@ -1,7 +1,7 @@
 # TER M1 ISTR Université Paul Sabatier Toulouse France 2016
 
-> Command of the simulation
-> All the switches and 6 shuttles
+> Command of the simulation.
+> All the switches and 6 shuttles.
 > Description : each time a shuttle arrives at a switch, the switch will position in the oposite direction depending on the previous position. Therefore, 2 consecutives shuttles won't take the same path.
 
 ## Authors
