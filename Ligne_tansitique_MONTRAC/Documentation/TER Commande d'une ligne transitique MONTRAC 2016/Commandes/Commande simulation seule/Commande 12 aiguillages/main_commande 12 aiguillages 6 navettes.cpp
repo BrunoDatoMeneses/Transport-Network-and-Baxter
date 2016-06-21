@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 
 	Actionneurs Actionneurs(noeud);
 
-	ros::Rate loop_rate(30); //fréquence de la boucle 
+	ros::Rate loop_rate(25); //fréquence de la boucle 
 
 
 // Déclaration des variables pour la MEF ou le RdP //

@@ -24,6 +24,3 @@ add_dependencies(automates automates_generate_messages_cpp)
 target_link_libraries(automates ${catkin_LIBRARIES} modbus)
 
 
-#add_executable(code_client src/code_client.cpp)
-#add_dependencies(code_client scenario1_gencpp)
-#target_link_libraries(code_client ${catkin_LIBRARIES} modbus)

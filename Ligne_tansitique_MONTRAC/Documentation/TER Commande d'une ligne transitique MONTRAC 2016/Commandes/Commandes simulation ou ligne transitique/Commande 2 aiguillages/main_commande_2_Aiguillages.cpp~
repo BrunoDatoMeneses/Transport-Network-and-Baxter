@@ -158,6 +158,7 @@ int main(int argc, char **argv)
 		RxG[1]  = M[2] ;
 		RxG[2]  = M[9] ;
 
+		// Stops
 		STx[1]  = M[4] || M[5] ; 
 		STx[2]  = M[8] ; 
 		STx[3]  = M[8] ; 

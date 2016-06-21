@@ -85,30 +85,30 @@ void Deplacer_navettes(Actionneurs Actionneurs,bool STx[],bool RxD[],bool RxG[],
 	
 	switch(numero_stop)
 	{
-		case 1 : 	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1; break;
-		case 2 : 	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1; break;	
-		case 3 :	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1; break;
-		case 4 :	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[1]=1; break;
-		case 5 :	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1; break;
-		case 6 :	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1; break;
-		case 7 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1; break;	
-		case 8 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1; break;
-		case 9 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1; break;
-		case 10 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1; break;
-		case 11 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1;RxG[5]=1; break;
-		case 12 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1; break;
-		case 13 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1; break;
-		case 14 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1; break;
-		case 15 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1; break;
-		case 16 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1;RxG[7]=1; break;
-		case 17 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1; break;
-		case 18 :	RxG[11]=1;RxG[12]=1;RxG[1]=1;RxG[2]=1; break;
-		case 19 : 	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1; break;
-		case 20 : 	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1; break;
-		case 21 : 	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1; break;
-		case 22 : 	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1; break;
-		case 23 : 	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1; break;
-		case 24 : 	RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1; break;
+		case 1 : 	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 2 : 	RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;	
+		case 3 :	RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 4 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 5 :	RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 6 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 7 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;	
+		case 8 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 9 :	RxG[1]=1;RxG[2]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 10 :	RxG[1]=1;RxG[2]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 11 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 12 :	RxG[1]=1;RxG[2]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 13 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 14 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 15 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 16 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 17 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 18 :	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 19 : 	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 20 : 	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 21 : 	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[12]=1; break;
+		case 22 : 	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[12]=1; break;
+		case 23 : 	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[11]=1;RxG[12]=1; break;
+		case 24 : 	RxG[1]=1;RxG[2]=1;RxG[5]=1;RxG[6]=1;RxG[7]=1;RxG[8]=1;RxG[12]=1; break;
 	}
 	Actionneurs.Envoyer(STx,RxD,RxG,Vx,Dx,PIx);
 	Afficher_actionneurs(STx,RxD,RxG,Vx,Dx,PIx);
@@ -124,7 +124,7 @@ void Deplacer_navettes(Actionneurs Actionneurs,bool STx[],bool RxD[],bool RxG[],
 	STx[numero_stop]=0;
 	Actionneurs.Envoyer(STx,RxD,RxG,Vx,Dx,PIx);
 	Afficher_actionneurs(STx,RxD,RxG,Vx,Dx,PIx);
-	usleep(20000000);
+	usleep(40000000);
 
 	for(int i=0;i<25;i++) STx[i]=0;
 	for(int i=0;i<13;i++) RxD[i]=0;
@@ -139,22 +139,22 @@ void Deplacer_navettes(Actionneurs Actionneurs,bool STx[],bool RxD[],bool RxG[],
 
 void Mode_ligne(Actionneurs Actionneurs,bool STx[],bool RxD[],bool RxG[],bool Vx[],bool Dx[],bool PIx[])
 {
-	Dx[3]=1;Dx[10]=1;
+	Dx[1]=1;Dx[2]=1;Dx[3]=1;Dx[10]=1;Dx[11]=1;Dx[12]=1;
 	Actionneurs.Envoyer(STx,RxD,RxG,Vx,Dx,PIx);
 	usleep(500000);
 
-	RxG[3]=1;RxG[10]=1;
+	RxD[1]=1;RxD[2]=1;RxG[3]=1;RxG[10]=1;RxD[11]=1;RxD[12]=1;
 	Actionneurs.Envoyer(STx,RxD,RxG,Vx,Dx,PIx);
 	usleep(4000000);
 
-	Dx[3]=0;Dx[10]=0;
-	Vx[3]=1;Vx[10]=1;
+	Dx[1]=0;Dx[2]=0;Dx[3]=0;Dx[10]=0;Dx[11]=0;Dx[12]=0;
+	Vx[1]=1;Vx[2]=1;Vx[3]=1;Vx[10]=1;Vx[11]=1;Vx[12]=1;
 
 	Actionneurs.Envoyer(STx,RxD,RxG,Vx,Dx,PIx);
 	usleep(500000);
 
-	RxG[3]=0;RxG[10]=0;
-	Vx[3]=1;Vx[10]=1;STx[6]=1;
+	RxD[1]=0;RxD[2]=0;RxG[3]=0;RxG[10]=0;RxD[11]=0;RxD[12]=0;
+	Vx[1]=1;Vx[2]=1;Vx[3]=1;Vx[10]=1;Vx[11]=1;Vx[12]=1;STx[6]=1;
 	Actionneurs.Envoyer(STx,RxD,RxG,Vx,Dx,PIx);	
 	usleep(500000);
 }
@@ -168,8 +168,6 @@ void Deplacer_navettes_2(bool STx[],bool RxD[],bool RxG[],bool Vx[],bool Dx[],bo
 
 	Afficher_actionneurs(STx,RxD,RxG,Vx,Dx,PIx);
 	Actionneurs.Envoyer(STx,RxD,RxG,Vx,Dx,PIx);
-
-	
 
 	usleep(15000000);
 	

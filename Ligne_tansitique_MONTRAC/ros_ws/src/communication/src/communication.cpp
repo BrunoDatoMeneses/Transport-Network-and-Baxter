@@ -46,9 +46,6 @@ void Communication_API_schneider::publish()
 }
 
 
-//int Communication_API_schneider::Get_Entrees() {return ENTREES;}
-//void Communication_API_schneider::Set_Sorties(int Sorties) {SORTIES=Sorties;}
-
 
 ////// Classe Communication_commande //////
 
@@ -96,10 +93,6 @@ void Communication_commande::Decoupe_sorties(Communication_API_schneider *AP1,Co
 {
 	AP1->sorties_api=ACTIONNEURS &(0xFFFF);
 	AP2->sorties_api=(ACTIONNEURS &(0xFFFF0000))>>16;
-	/*
-	Cmd_AP1.Set_Sorties(ACTIONNEURS &(0xFFFF));
-	Cmd_AP2.Set_Sorties((ACTIONNEURS &(0xFFFF0000))>>16);
-	*/
 }
 
 ////// Autres fonctions //////

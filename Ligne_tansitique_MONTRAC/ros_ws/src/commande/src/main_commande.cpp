@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 
 	Actionneurs Actionneurs(noeud);
 
-	ros::Rate loop_rate(30); //fréquence de la boucle (25Hz)
+	ros::Rate loop_rate(25); //fréquence de la boucle 
 
 
 // Déclaration des variables pour la MEF ou le RdP //
@@ -91,7 +91,7 @@ int main(int argc, char **argv)
 			Deplacer_navettes(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,24);
 	
 			// Configuration de la simulation comme la ligne transitique
-			Mode_ligne(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,24);
+			Mode_ligne(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx);
 
 			Deplacement_effectue=1;
 		}

@@ -280,19 +280,6 @@ _automates_generate_messages_check_deps_Sorties/fast:
 .PHONY : _automates_generate_messages_check_deps_Sorties/fast
 
 #=============================================================================
-# Target rules for targets named automates
-
-# Build rule for target.
-automates: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 automates
-.PHONY : automates
-
-# fast build rule for target.
-automates/fast:
-	$(MAKE) -f automates/CMakeFiles/automates.dir/build.make automates/CMakeFiles/automates.dir/build
-.PHONY : automates/fast
-
-#=============================================================================
 # Target rules for targets named automates_gencpp
 
 # Build rule for target.
@@ -408,6 +395,19 @@ automates_genpy: cmake_check_build_system
 automates_genpy/fast:
 	$(MAKE) -f automates/CMakeFiles/automates_genpy.dir/build.make automates/CMakeFiles/automates_genpy.dir/build
 .PHONY : automates_genpy/fast
+
+#=============================================================================
+# Target rules for targets named connect
+
+# Build rule for target.
+connect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 connect
+.PHONY : connect
+
+# fast build rule for target.
+connect/fast:
+	$(MAKE) -f automates/CMakeFiles/connect.dir/build.make automates/CMakeFiles/connect.dir/build
+.PHONY : connect/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
@@ -566,19 +566,6 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named communication
-
-# Build rule for target.
-communication: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 communication
-.PHONY : communication
-
-# fast build rule for target.
-communication/fast:
-	$(MAKE) -f communication/CMakeFiles/communication.dir/build.make communication/CMakeFiles/communication.dir/build
-.PHONY : communication/fast
-
-#=============================================================================
 # Target rules for targets named communication_gencpp
 
 # Build rule for target.
@@ -694,6 +681,19 @@ communication_genpy: cmake_check_build_system
 communication_genpy/fast:
 	$(MAKE) -f communication/CMakeFiles/communication_genpy.dir/build.make communication/CMakeFiles/communication_genpy.dir/build
 .PHONY : communication_genpy/fast
+
+#=============================================================================
+# Target rules for targets named start
+
+# Build rule for target.
+start: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 start
+.PHONY : start
+
+# fast build rule for target.
+start/fast:
+	$(MAKE) -f communication/CMakeFiles/start.dir/build.make communication/CMakeFiles/start.dir/build
+.PHONY : start/fast
 
 #=============================================================================
 # Target rules for targets named _vrep_common_generate_messages_check_deps_ForceSensorData
@@ -2785,7 +2785,6 @@ help:
 	@echo "... gtest_main"
 	@echo "... _automates_generate_messages_check_deps_Entrees"
 	@echo "... _automates_generate_messages_check_deps_Sorties"
-	@echo "... automates"
 	@echo "... automates_gencpp"
 	@echo "... automates_generate_messages"
 	@echo "... automates_generate_messages_cpp"
@@ -2795,6 +2794,7 @@ help:
 	@echo "... automates_geneus"
 	@echo "... automates_genlisp"
 	@echo "... automates_genpy"
+	@echo "... connect"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
@@ -2807,7 +2807,6 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... communication"
 	@echo "... communication_gencpp"
 	@echo "... communication_generate_messages"
 	@echo "... communication_generate_messages_cpp"
@@ -2817,6 +2816,7 @@ help:
 	@echo "... communication_geneus"
 	@echo "... communication_genlisp"
 	@echo "... communication_genpy"
+	@echo "... start"
 	@echo "... _vrep_common_generate_messages_check_deps_ForceSensorData"
 	@echo "... _vrep_common_generate_messages_check_deps_JointSetStateData"
 	@echo "... _vrep_common_generate_messages_check_deps_ObjectGroupData"

@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 
 	Actionneurs Actionneurs(noeud);
 
-	ros::Rate loop_rate(30); //fréquence de la boucle (25Hz)
+	ros::Rate loop_rate(25); //fréquence de la boucle 
 
 
 // Déclaration des variables pour la MEF ou le RdP //
@@ -57,7 +57,10 @@ int main(int argc, char **argv)
 
 	for (int i=0;i<=NOMBRE_PLACE;i++) M[i] = 0 ;
 
-	M[17] = 3 ; //Nombre de navettes
+	//Nombre de navettes (3)
+	M[17] = 3 ; 
+
+	// 2 aiguillages 
 	M[16] = 1 ;
 	M[15] = 1 ;
 	
@@ -84,9 +87,11 @@ int main(int argc, char **argv)
 		// Déplacement des navettes si on utilise la simulation
 		if(Capteurs.SIMULATION==true && Deplacement_effectue==0)
 		{
+			// Déplacement des navettes devant le stop 24 pour l'initialisation
 			Deplacer_navettes(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,24);
-
-			Mode_ligne(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,24);
+	
+			// Configuration de la simulation comme la ligne transitique
+			Mode_ligne(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx);
 
 			Deplacement_effectue=1;
 		}
