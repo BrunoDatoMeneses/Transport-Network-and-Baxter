@@ -26,6 +26,7 @@ Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
 	pub_joint_cmd = noeud.advertise<baxter_core_msgs::JointCommand>("/robot/limb/left/joint_command", 1);
 	pub_gripper_cmd = noeud.advertise<baxter_core_msgs::EndEffectorCommand>("/robot/end_effector/left_gripper/command", 1);
 	pub_prise_effectuee = noeud.advertise<std_msgs::Bool>("/pont_BaxterLigneTransitique/left_arm/prise_effectuee", 1);
+	pub_attente_prise = noeud.advertise<std_msgs::Bool>("/pont_BaxterLigneTransitique/left_arm/attente_prise", 1);
 
 	//Sub
 	sub_joint_states = noeud.subscribe("/robot/joint_states", 1, &Baxter_left_arm::Callback_joint_states,this);
@@ -74,7 +75,8 @@ Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
 	}
 
 	msg_prise_demandee.data = false ;
-	msg_prise_effectuee.data = false ;   
+	msg_prise_effectuee.data = false ;  
+	msg_attente_prise.data = false ; 
 }
 
 
@@ -126,6 +128,7 @@ void Baxter_left_arm::Update()
 	pub_joint_cmd.publish(msg_JointCommand);
 	pub_gripper_cmd.publish(msg_EndEffectorCommand);
 	pub_prise_effectuee.publish(msg_prise_effectuee);
+	pub_attente_prise.publish(msg_attente_prise);
 }
 
 
@@ -233,6 +236,7 @@ void Baxter_left_arm::Position_attente()
 void Baxter_left_arm::Position_prise()
 {
 	IK(0.5,+0.2,0.5,PI,0,0);
+	msg_attente_prise.data = false ;
 }
 
 
@@ -269,7 +273,10 @@ void Baxter_left_arm::Pose()
 }
 
 
-
+void Baxter_left_arm::Attente_prise()
+{
+	msg_attente_prise.data = true ;
+}
 
 
 

@@ -1,13 +1,12 @@
-# TER M1 ISTR Université Paul Sabatier Toulouse France 2016
+# STAGE M1 ISTR Université Paul Sabatier Toulouse France 2016
 
 > Command of the robot Baxter and the transport network.
-> One arm of Baxter, 2 shuttles.
+> Baxter's right arm, 3 shuttles.
 > Description : each time a shuttle arrives at the stop number 22, Baxter's right arm will take a virtual object and put it away.
 
-## Authors
+## Author
+
 - __Bruno DATO__ -- bruno.dato.meneses@gmail.com
-- __Abdellah ELGOURAIN__ -- elgourain@gmail.com
-- __Evgeny SHULGA__ -- hlebovod@mail.ru
 
 ## TO DO
 
@@ -37,8 +36,8 @@
 4. **To run the simulation using Baxter's master, in a new terminal, in ~/ ... /Ligne_transitique_MONTRAC**
 
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
-	- $ ./simulation  4 6		(we use 2 shuttles for this command)
-	- if the simulation doesn't lauch successfully stop it by doing CTRL+C try a second time "$ ./simulation 2 4 " before restarting all the steps
+	- $ ./simulation  2 4 6		(we use 3 shuttles for this command)
+	- if the simulation doesn't lauch successfully stop it by doing CTRL+C try a second time "$ ./simulation 2 4 6" before restarting all the steps
 
 
 ## IF YOU USE THE REAL TRANSPORT NETWORK

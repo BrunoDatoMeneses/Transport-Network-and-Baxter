@@ -84,7 +84,7 @@ int main(int argc, char **argv)
 
 		switch (EP1)
     		{
-        		case 1: Baxter.Bras_droit.Position_attente(); break;
+        		case 1: Baxter.Bras_droit.Position_attente(); Baxter.Bras_droit.Attente_prise(); break;
         		case 2: Baxter.Bras_droit.Position_prise(); break;
         		case 3: Baxter.Bras_droit.Descente_prise(); break;
         		case 4: Baxter.Bras_droit.Prise(); break;
@@ -99,7 +99,7 @@ int main(int argc, char **argv)
 
 		switch (EP2)
     		{
-        		case 1: Baxter.Bras_gauche.Position_attente(); break;
+        		case 1: Baxter.Bras_gauche.Position_attente(); Baxter.Bras_gauche.Attente_prise(); break;
         		case 2: Baxter.Bras_gauche.Position_prise(); break;
         		case 3: Baxter.Bras_gauche.Descente_prise(); break;
         		case 4: Baxter.Bras_gauche.Prise(); break;

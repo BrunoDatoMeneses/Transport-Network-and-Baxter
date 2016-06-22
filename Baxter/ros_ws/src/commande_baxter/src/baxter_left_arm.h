@@ -23,7 +23,7 @@ class Baxter_left_arm
 private:
 
 	//Publishers
-	ros::Publisher pub_joint_cmd , pub_gripper_cmd, pub_prise_effectuee ;
+	ros::Publisher pub_joint_cmd , pub_gripper_cmd, pub_prise_effectuee, pub_attente_prise ;
 
 	//Subscribers
 	ros::Subscriber sub_joint_states , sub_endpoint_state , sub_gripper_state , sub_ir_range , sub_prise_demandee ;
@@ -37,7 +37,7 @@ public:
 
 	baxter_core_msgs::JointCommand msg_JointCommand ;
 	baxter_core_msgs::EndEffectorCommand msg_EndEffectorCommand;
-	std_msgs::Bool msg_prise_demandee , msg_prise_effectuee;
+	std_msgs::Bool msg_prise_demandee , msg_prise_effectuee, msg_attente_prise;
 
 	// Capteurs
 
@@ -84,6 +84,7 @@ public:
 	void Descente_pose();
 
 	void Prise_effectuee();
+	void Attente_prise();
 
 	bool Prise_demmandee();
 	bool vitesse_nulle();

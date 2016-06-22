@@ -1,20 +1,20 @@
 # STAGE M1 ISTR Université Paul Sabatier Toulouse France 2016
 
 > Command of the robot Baxter and the transport network.
-> Baxter's right arm, 3 shuttles.
+> Baxter's arms, 3 shuttles.
 > Description : each time a shuttle arrives at the stop number 22, Baxter's right arm will take a virtual object and put it away.
 
-## Authors
+## Author
+
 - __Bruno DATO__ -- bruno.dato.meneses@gmail.com
-- __Abdellah ELGOURAIN__ -- elgourain@gmail.com
-- __Evgeny SHULGA__ -- hlebovod@mail.ru
+
 
 ## TO DO
 
 1. **In ~/ ... /Ligne_transitique_MONTRAC/ros_ws/src/commande/src :**
 
-	- replace the file *main_commande.cpp* by *main_commande baxter 1 bras.cpp*
-	- rename *main_commande baxter 1 bras.cpp* by *main_commande.cpp*
+	- replace the file *main_commande.cpp* by *main_commande baxter 2 bras.cpp*
+	- rename *main_commande baxter 2 bras.cpp* by *main_commande.cpp*
 
 
 2. **Don't launch roscore this time, you will use the master of Baxter which is always running once he is turned on**

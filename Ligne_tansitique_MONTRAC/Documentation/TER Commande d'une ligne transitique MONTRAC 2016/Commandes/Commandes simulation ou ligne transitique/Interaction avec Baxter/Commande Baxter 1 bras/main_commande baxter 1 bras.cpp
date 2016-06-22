@@ -15,7 +15,7 @@
 
 using namespace std;
 
-#define NOMBRE_PLACE 20
+#define NOMBRE_PLACE 10
 #define RESET   "\033[0m"
 #define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
 #define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
@@ -61,10 +61,10 @@ int main(int argc, char **argv)
 			for (int i=0;i<=NOMBRE_PLACE;i++) M[i] = 0 ;
 
 			//Nombre de navettes
-			M[4]=2;
+			M[1]=3; 
 
 			// Disponibilité aiguilllages
-	
+			M[10]=1;
 			
 			// Disponibilité bras baxter
 
@@ -98,9 +98,16 @@ int main(int argc, char **argv)
 		// Déplacement des navettes si on utilise la simulation
 		if(Capteurs.SIMULATION==true && Deplacement_effectue==0)
 		{
-			//Deplacer_navettes_2(STx,RxD,RxG,Vx,Dx,PIx,Actionneurs,4,4);
-			Deplacer_navettes(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,4);
+			Deplacer_navettes(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx,5);
 
+			Mode_ligne(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx);
+
+			Deplacement_effectue=1;
+		}
+
+		// Initialisation de la ligne transitique
+		if(Capteurs.LIGNE==true && Deplacement_effectue==0)
+		{
 			Mode_ligne(Actionneurs,STx,RxD,RxG,Vx,Dx,PIx);
 
 			Deplacement_effectue=1;
@@ -117,66 +124,46 @@ int main(int argc, char **argv)
 		////////////////////// RdP //////////////////////
 		/////////////////////////////////////////////////
 
-		if(M[1]>=1){ if(PSx[1]) {M[1]--; M[2]++;}}			//t1
+		if(M[1]>=1 && M[10]>=1){ if(PSx[5] && !PSx[20]) {M[1]--;M[10]--;M[2]++;}}		//t1
+
+		if(M[2]>=1){ if(!PSx[5]) {M[2]--;M[3]++;}}						//t2
+
+		if(M[3]>=1){ if(PSx[20] && !PSx[21]) {M[3]--;M[4]++;M[10]++;}}				//t3
+
+		if(M[4]>=1){ if(!PSx[20]) {M[4]--;M[5]++;}}						//t4
+
+		if(M[5]>=1){ if(PSx[21] && !PSx[22]) {M[5]--;M[6]++;}}					//t5
+
+		if(M[6]>=1){ if(!PSx[21]) {M[6]--;M[7]++;}}						//t6
+
+		if(M[7]>=1){ if(PSx[22]) {M[7]--;M[8]++;}}						//t7
+
+		if(M[8]>=1){ if(Baxter.Prise_effectuee_bras_droit() && !PSx[24]) {M[8]--;M[9]++;}}	//t8
+
+		if(M[9]>=1){ if(!PSx[22]) {M[9]--;M[1]++;}}						//t9
+
+
 	
-		if(M[2]>=1){ if(DxG[1] && !CPx[2]) {M[2]--; M[3]++;}}		//t2
-
-		if(M[3]>=1){ if(!PSx[1]) {M[3]--; M[4]++;}}			//t3
-
-		if(M[4]>=1){ if(PSx[4]) {M[4]--; M[5]++;}}			//t4
-
-		if(M[5]>=1){ if(DxG[2] && !PSx[20]) {M[5]--; M[6]++;}}		//t5
-
-		if(M[6]>=1){ if(!PSx[4]) {M[6]--; M[7]++;}}			//t6
-
-		if(M[7]>=1){ if(PSx[20]) {M[7]--; M[8]++;}}			//t7
-
-		if(M[8]>=1){ if(DxD[11] && !CPx[9]) {M[8]--; M[9]++;}}		//t8
-
-		if(M[9]>=1){ if(PSx[21] && !PSx[22]) {M[9]--; M[10]++;}}	//t9
-
-		if(M[10]>=1){ if(PSx[22]) {M[10]--; M[11]++; Baxter.Prise_demandee_bras_droit();}}	//t10
-
-		if(M[11]>=1){ if(Baxter.Prise_effectuee_bras_droit() && !PSx[24]) {M[11]--; M[12]++;}}	//t11
-
-		if(M[12]>=1){ if(PSx[24]) {M[12]--; M[13]++;}}			//t12
-
-		if(M[13]>=1){ if(DxD[12] && !PSx[1]) {M[13]--; M[1]++;}}	//t13
+		
 
                
 
 		
       		// ACTIONNEURS //
-
-		// Déverrouiller
-                Dx[1]   = M[2]   ;
-		Dx[2]   = M[5]   ;
-                Dx[11]  = M[8]   ;
-		Dx[12]  = M[13]   ;
-
-		// Verrouiller
-		Vx[1]   = M[3]   ;
-		Vx[2]   = M[6]   ;
-                Vx[11]  = M[9]   ;
-                Vx[12]  = M[1]   ;
-
-		// Aiguillage à droite
-		RxD[11] = M[8] ;
-		RxD[12] = M[13] ;
-
-		// Aiguillage à gauche
-                RxG[1]  = M[2] ;
-		RxG[2]  = M[5] ;
 		
 		// Stops		
-		STx[1]  = M[3] ;
-		STx[4]  = M[6] ;
-		STx[6]  = M[7] ;
-		STx[20] = M[9] ;
-		STx[21] = M[10] ;
-		STx[22] = M[12] ;
+		STx[1]  = M[1] ;
+		STx[2]  = M[1] ;
+		STx[3]  = M[1] ;
+		STx[5]  = M[2] ;
+		STx[6]  = M[3] ;
+		STx[20] = M[4] ;
+		STx[21] = M[6] ;
+		STx[22] = M[9] ;
 		STx[24] = M[1] ;
 		
+		// Baxter
+		if(M[8]) Baxter.Demander_prise_bras_droit();
 		
 
 
