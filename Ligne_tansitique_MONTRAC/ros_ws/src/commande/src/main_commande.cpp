@@ -15,7 +15,7 @@
 
 using namespace std;
 
-#define NOMBRE_PLACE 20
+#define NOMBRE_PLACE 10
 #define RESET   "\033[0m"
 #define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
 #define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
@@ -116,31 +116,27 @@ int main(int argc, char **argv)
 		////////////////////// RdP //////////////////////
 		/////////////////////////////////////////////////
 
-		if(M[1]>=1){ if(PSx[1]) {M[1]--; M[2]++;}}			//t1
+		if(M[1]>=1){ if(PSx[5] && !PSx[20]) {M[1]--;M[2]++;}}					//t1
+
+		if(M[2]>=1){ if(!PSx[5]) {M[2]--;M[3]++;}}						//t2
+
+		if(M[3]>=1){ if(PSx[20] && !PSx[21]) {M[3]--;M[4]++;}}					//t3
+
+		if(M[4]>=1){ if(!PSx[20]) {M[4]--;M[5]++;}}						//t4
+
+		if(M[5]>=1){ if(PSx[21] && !PSx[22]) {M[5]--;M[6]++;}}					//t5
+
+		if(M[6]>=1){ if(!PSx[21]) {M[6]--;M[7]++;}}						//t6
+
+		if(M[7]>=1){ if(PSx[22]) {M[7]--;M[8]++;}}						//t7
+
+		if(M[8]>=1){ if(Baxter.Prise_effectuee_bras_droit() && !PSx[24]) {M[8]--;M[9]++;}}	//t8
+
+		if(M[9]>=1){ if(!PSx[22]) {M[9]--;M[1]++;}}						//t9
+
+
 	
-		if(M[2]>=1){ if(DxG[1] && !CPx[2]) {M[2]--; M[3]++;}}		//t2
-
-		if(M[3]>=1){ if(!PSx[1]) {M[3]--; M[4]++;}}			//t3
-
-		if(M[4]>=1 && M[14]>=1){ if(PSx[4]) {M[4]--;M[14]--; M[5]++;}}	//t4
-
-		if(M[5]>=1){ if(DxG[2] && !PSx[20]) {M[5]--; M[6]++;}}		//t5
-
-		if(M[6]>=1){ if(!PSx[4]) {M[6]--; M[7]++;}}			//t6
-
-		if(M[7]>=1){ if(PSx[20]) {M[7]--; M[8]++;M[14]++;}}		//t7
-
-		if(M[8]>=1){ if(DxD[11] && !CPx[9]) {M[8]--; M[9]++;}}		//t8
-
-		if(M[9]>=1){ if(PSx[21] && !PSx[22]) {M[9]--; M[10]++;}}	//t9
-
-		if(M[10]>=1){ if(PSx[22]) {M[10]--; M[11]++;}}			//t10
-
-		if(M[11]>=1){ if(Baxter.Prise_effectuee_bras_droit() && !PSx[24]) {M[11]--; M[12]++;}}	//t11
-
-		if(M[12]>=1){ if(PSx[24]) {M[12]--; M[13]++;}}			//t12
-
-		if(M[13]>=1){ if(DxD[12] && !PSx[1]) {M[13]--; M[1]++;}}	//t13
+		
 
                
 
