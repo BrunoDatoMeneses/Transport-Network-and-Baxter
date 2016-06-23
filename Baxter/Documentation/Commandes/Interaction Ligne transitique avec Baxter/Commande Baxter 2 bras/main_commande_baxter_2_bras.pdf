@@ -4,7 +4,7 @@
 <</Type /Page
 /Parent 2 0 R
 /Resources 3 0 R
-/MediaBox [0 0 1374 768]
+/MediaBox [0 0 1367 768]
 /Contents [5 0 R]
 >>
 endobj
@@ -22,11 +22,11 @@ q
 0 J
 0 j
 10.433 M
-1.014771 0 0 -1.014771 -8.118 779.162 cm
+1.014848 0 0 -1.014848 -8.119 779.163 cm
 8 11 m
 8 759 l
-1362 759 l
-1362 11 l
+1355 759 l
+1355 11 l
 W
 n
 q
@@ -1190,19 +1190,6 @@ BT
 ET
 Q
 q
-0 0 0 rg
-BT
-/Courier-Bold 13 Tf
-0 Tr
-13 TL
-/Courier-Bold 11.762 Tf
-0 Tr
-11.762 TL
-1 0 0 -1 1116 175.06 Tm
-([PriseEffectueeBrasGauche & !PS24;]) Tj
-ET
-Q
-q
 0 0 0 RG
 1 1 1 rg
 2 w
@@ -1480,6 +1467,19 @@ q
 980 497.239 982.239 495 985 495 c
 987.761 495 990 497.239 990 500 c
 b
+Q
+q
+0 0 0 rg
+BT
+/Courier-Bold 13 Tf
+0 Tr
+13 TL
+/Courier-Bold 11.765 Tf
+0 Tr
+11.765 TL
+1 0 0 -1 1116 175.059 Tm
+([PriseEffectueeBrasDroit & !PS24;]) Tj
+ET
 Q
 Q
 

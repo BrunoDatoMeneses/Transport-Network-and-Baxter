@@ -14,7 +14,7 @@
 	- export VREP_ROOT_DIR=~/ ... /Ligne_transitique_MONTRAC/V-Rep/
 
 
-2. **In /Projet_Long/catkin_ws**
+2. **In ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
 	- catkin_make
 
 3. **Don't forget to launch roscore before launching any application**
