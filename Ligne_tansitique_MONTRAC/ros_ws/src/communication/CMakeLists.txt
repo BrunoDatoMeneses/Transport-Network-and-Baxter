@@ -19,7 +19,5 @@ include_directories(${catkin_INCLUDE_DIRS})
 
 
 add_executable(start src/main_communication.cpp src/communication.cpp)
-
 add_dependencies(start communication_generate_messages_cpp)
-
 target_link_libraries(start ${catkin_LIBRARIES})

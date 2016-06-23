@@ -17,9 +17,11 @@ include_directories(include ${OpenCV_INCLUDE_DIRS})
 set(EXECUTABLE_OUTPUT_PATH ../../../)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
+
 add_executable(simulation src/commande_locale.cpp src/UI.cpp src/inOutController.cpp src/vrepController.cpp) 
 target_link_libraries(simulation ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 add_dependencies(simulation vrep_common_generate_messages_cpp)
+
 add_message_files(
 	FILES
 	Msg_SensorState.msg

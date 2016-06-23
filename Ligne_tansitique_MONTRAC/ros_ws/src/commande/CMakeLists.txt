@@ -9,15 +9,14 @@ find_package(catkin REQUIRED COMPONENTS
 	message_generation)
 
 add_message_files(FILES Capteurs.msg Actionneurs.msg)
-generate_messages(DEPENDENCIES std_msgs)
 
+generate_messages(DEPENDENCIES std_msgs)
 include_directories(${catkin_INCLUDE_DIRS})
 include_directories(include ${OpenCV_INCLUDE_DIRS})
+#catkin_package(CATKIN_DEPENDS roscpp rospy std_msgs message_runtime)
 
-set(EXECUTABLE_OUTPUT_PATH ../../../)
-set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib) 
-
-
+#set(EXECUTABLE_OUTPUT_PATH ../../../)
+#set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib) 
 
 add_executable(run src/main_commande.cpp  src/commande.cpp src/capteurs.cpp src/actionneurs.cpp src/communication_baxter.cpp) 
 target_link_libraries(run ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
