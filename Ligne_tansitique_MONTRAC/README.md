@@ -2,25 +2,33 @@
 
 > Command of a transport network and it simulation
 
-## Auteurs
+## Authors
 - __Bruno DATO__ -- bruno.dato.meneses@gmail.com
 - __Abdellah ELGOURAIN__ -- elgourain@gmail.com
 - __Evgeny SHULGA__ -- hlebovod@mail.ru
 
 
+# TO DO
+
+## Install ROS 
+
+0. **To install the latest version of ROS, go to http://wiki.ros.org/ROS/Installation and install the appropiate version for your platform**
 
 
-# Install the workspace
+## Create the workspace
 
 
+1. **In ~/ Create a folder named for example "Folder", it will contain your workspace**
+	- in this folder, copy the folders *img* and *V-REP* and the file *Simulation.ttt* (you can find them in ~/.../Ligne_transitique_MONTRAC)
 
 
 1. **in ~/.bashrc, add these lines :**
-	- source /opt/ros/jade/setup.bash
-	- export VREP_ROOT_DIR=~/ ... /Ligne_transitique_MONTRAC/V-Rep/
+	- source /opt/ros/<ROS_version>/setup.bash
+	- export VREP_ROOT_DIR=~/ ... /Folder/V-Rep/
 
 
 2. **In ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
+	- source devel/setup.bash
 	- catkin_make
 
 
