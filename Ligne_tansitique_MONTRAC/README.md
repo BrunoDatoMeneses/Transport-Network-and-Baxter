@@ -7,7 +7,10 @@
 - __Abdellah ELGOURAIN__ -- elgourain@gmail.com
 - __Evgeny SHULGA__ -- hlebovod@mail.ru
 
-## Install the workspace
+
+
+
+# Install the workspace
 
 
 
@@ -20,8 +23,19 @@
 2. **In ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
 	- catkin_make
 
+
+## Run the simulation
+
 3. **Don't forget to launch roscore before launching any application**
 	- ~/ ... /Ligne_transitique_MONTRAC/simulation 1 2 5 6 (or any number of shuttle between 1 and 6 seperated with a space)
+
+
+## Run the tranport network
+
+
+
+## Run a command
+
 
 ## MORE INFOS
 

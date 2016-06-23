@@ -7,7 +7,10 @@
 - __Abdellah ELGOURAIN__ -- elgourain@gmail.com
 - __Evgeny SHULGA__ -- hlebovod@mail.ru
 
-## TO DO
+## Install the workspace
+
+
+
 
 1. **in ~/.bashrc, add these lines :**
 	- source /opt/ros/jade/setup.bash
