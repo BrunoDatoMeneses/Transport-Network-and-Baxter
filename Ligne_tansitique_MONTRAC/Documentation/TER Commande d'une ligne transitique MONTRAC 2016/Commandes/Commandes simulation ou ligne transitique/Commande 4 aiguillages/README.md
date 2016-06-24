@@ -37,7 +37,7 @@
 	- Before executing the following programs, make sure that you have configured all the PLC (Programmable Logic Controller, API in french) using PL7 PRO (see README at ~/ ... /Ligne_transitique_MONTRAC/Documentation/TER Commande d'une ligne transitique MONTRAC 2016/PL7)
 	- in a new terminal, in ~/ ... /Ligne_transitique_MONTRAC/ros_ws
 	- $ source devel/setup.bash	(only the first time you open the terminal)
-	- $ rosrun automate connect
+	- $ rosrun automates connect
 	- in a new terminal, still in ~/ ... /Ligne_transitique_MONTRAC/ros_ws 
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun communication start
