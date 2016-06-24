@@ -1,0 +1,55 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(commande_baxter)
+
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  xacro
+  actionlib
+  sensor_msgs
+  control_msgs
+  trajectory_msgs
+  cv_bridge
+  dynamic_reconfigure
+  baxter_core_msgs
+  baxter_interface
+)
+
+ generate_messages(DEPENDENCIES std_msgs)
+
+
+catkin_package(
+  CATKIN_DEPENDS
+  rospy
+  roscpp
+  xacro
+  actionlib
+  sensor_msgs
+  control_msgs
+  trajectory_msgs
+  cv_bridge
+  dynamic_reconfigure
+  baxter_core_msgs
+  baxter_interface
+)
+
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
+
+
+add_executable(run src/main_commande.cpp src/baxter_left_arm.cpp src/baxter_right_arm.cpp src/baxter.cpp)
+target_link_libraries(run ${catkin_LIBRARIES})
+add_dependencies(run tests_generate_messages_cpp)
+
+
+
+
+
+
+
+
+
+

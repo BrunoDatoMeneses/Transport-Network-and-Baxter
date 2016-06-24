@@ -11,7 +11,7 @@
 
 ## TO DO
 
-1. **In ~/ ... /Ligne_transitique_MONTRAC/ros_ws/src/commande/src :**
+1. **In ~/ ... /Working_Folder_Montrac/ros_ws/src/commande/src :**
 
 	- replace the file *main_commande.cpp* by *main_commande LT 4 aiguillages 3 navettes.cpp*
 	- rename *main_commande LT 4 aiguillages 3 navettes.cpp* by *main_commande.cpp*
@@ -20,13 +20,13 @@
 2. **In a terminal, launch roscore if you haven't done it yet**
 
 
-3. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
+3. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Working_Folder_Montrac/ros_ws**
 
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ catkin_make
 
 
-4. **If you are using the real transport network, ignore this step. To run the simulation, in a new terminal, in ~/ ... /Ligne_transitique_MONTRAC**
+4. **If you are using the real transport network, ignore this step. To run the simulation, in a new terminal, in ~/ ... /Working_Folder_Montrac**
 
 	- $ ./simulation 2 4 6		(we use 3 shuttles for this command)
 	- if the simulation doesn't lauch successfully stop it by doing CTRL+C try a second time "$ ./simulation 2 4 6" before restarting all the steps
@@ -35,15 +35,15 @@
 5. **If you are using the simulation, ignore this step. To run the real transport network**
 
 	- Before executing the following programs, make sure that you have configured all the PLC (Programmable Logic Controller, API in french) using PL7 PRO (see README at ~/ ... /Ligne_transitique_MONTRAC/Documentation/TER Commande d'une ligne transitique MONTRAC 2016/PL7)
-	- in a new terminal, in ~/ ... /Ligne_transitique_MONTRAC/ros_ws
+	- in a new terminal, in ~/ ... /Working_Folder_Montrac/ros_ws
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun automates connect
-	- in a new terminal, still in ~/ ... /Ligne_transitique_MONTRAC/ros_ws 
+	- in a new terminal, still in ~/ ... /Working_Folder_Montrac/ros_ws 
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun communication start
 	
 
-6. **DO NOT MAKE THIS STEP IF BOTH THE SIMULATION AND THE REAL TRANSPORT NETWORK ARE RUNNING !!! In a new terminal, in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
+6. **DO NOT MAKE THIS STEP IF BOTH THE SIMULATION AND THE REAL TRANSPORT NETWORK ARE RUNNING !!! In a new terminal, in ~/ ... /Working_Folder_Montrac/ros_ws**
 
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun commande run
