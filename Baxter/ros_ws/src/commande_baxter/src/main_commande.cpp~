@@ -45,12 +45,12 @@ int main(int argc, char **argv)
 	while (ros::ok())
 	{
 
-		//std::cout<<EP<<<<std::endl;
+		//std::cout<<EP1<<<<std::endl;
+		//std::cout<<EP2<<<<std::endl;
 		
 		switch (EP1)
     		{
-        		case 1: //if(Baxter.Bras_droit.Prise_demmandee()) ES1=2; break; 
-				if(compteur>1) ES1=2; break; //
+        		case 1: if(compteur > 5) ES1=2; break; 
         		case 2: if(Baxter.Bras_droit.Position_prise_OK()) ES1=3; break;
         		case 3: if(Baxter.Bras_droit.Descente_prise_OK()) ES1=4; break;
         		case 4: if(Baxter.Bras_droit.Pince_fermee_pos()) ES1=5; break;
@@ -65,8 +65,7 @@ int main(int argc, char **argv)
 
 		switch (EP2)
     		{
-        		case 1: if(Baxter.Bras_gauche.Prise_demmandee()) ES2=2; break; 
-				//if(compteur >= 7) ES2=2; break; //
+        		case 1: if(compteur > 5) ES2=2; break; 
         		case 2: if(Baxter.Bras_gauche.Position_prise_OK()) ES2=3; break;
         		case 3: if(Baxter.Bras_gauche.Descente_prise_OK()) ES2=4; break;
         		case 4: if(Baxter.Bras_gauche.Pince_fermee_pos()) ES2=5; break;

@@ -1,0 +1,42 @@
+p 330.0 60.0 p2 0 n {[ST5]} s
+p 175.0 150.0 p3 0 n {[ST6]} se
+p 120.0 340.0 p4 0 n {[ST20]} e
+p 745.0 490.0 p7 0 sw
+t 635.0 555.0 t6 c 0 w n {[!PS21;]} s
+p 500.0 610.0 p6 0 se {[ST21]} n
+t 370.0 590.0 t5 c 0 w n {[PS21 & !PS22;]} sw
+p 250.0 535.0 p5 0 ne
+t 160.0 475.0 t4 c 0 w n {[!PS20;]} w
+t 140.0 245.0 t3 c 0 w n {[PS20 & !PS21;]} nw
+p 555.0 65.0 p1 6 n {[ST1,ST2,ST3,ST24]} s
+t 450.0 50.0 t1 c 0 w n {[PS5 & !PS20;]} n
+t 775.0 395.0 t7 c 0 w n {[PS22;]} e
+p 780.0 305.0 p8 0 se {[DemanderPrise]} w
+p 720.0 150.0 p9 0 n {[ST22]} w
+t 650.0 100.0 t9 c 0 w n {[!PS22;]} ne
+t 765.0 220.0 t8 c 0 w n {[PriseEffectuee & !PS24;]} e
+t 255.0 100.0 t2 c 0 w n {[!PS5;]} nw
+p 455.0 335.0 p10 1 e
+e t3 p10 1 n
+e p10 t1 1 n
+e t1 p2 1 n
+e p1 t1 1 n
+e p8 t8 1 n
+e t7 p8 1 n
+e p7 t7 1 n
+e t6 p7 1 n
+e p6 t6 1 n
+e t5 p6 1 n
+e p5 t5 1 n
+e t4 p5 1 n
+e p4 t4 1 n
+e t3 p4 1 n
+e p3 t3 1 n
+e t2 p3 1 n
+e p2 t2 1 n
+e t8 p9 1 n
+e p9 t9 1 n
+e t9 p1 1 n
+h main_commande_baxter_1_bras
+
+

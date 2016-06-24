@@ -1,0 +1,21 @@
+s 265.0 55.0 1 c {[PositionAttente,AttentePrise]} nw
+s 140.0 195.0 2 c {[PositionPrise]} w
+s 515.0 50.0 9 c {[PositionPose]} ne
+s 140.0 390.0 3 c {[DescentePrise]} nw
+s 265.0 535.0 4 c {[Prise]} sw
+s 475.0 590.0 5 c {[PositionPrise]} s
+s 665.0 500.0 6 c {PriseEffectuee,PositionPose]} e
+s 735.0 330.0 7 c {[DescentePose]} e
+s 680.0 165.0 8 c {[Pose]} e
+e 8 0.4031240879 50.2804634 9 0.9017498647 198.6680649 {[PinceOuverte;]} w
+e 7 0.3012081912 43.48131782 8 0.8009095894 168.5496959 {[DescentePose;]} w
+e 6 0.1878329582 45.96194078 7 0.6883946191 169.5435047 {[PositionPose;]} w
+e 5 0.07040604427 52.5594901 6 0.569965173 223.2241026 {[PositionPrise & VitesseNulle;]} n
+e 4 0.9592322413 54.27073337 5 0.4595915576 163.2329624 {[PinceFermee;]} n
+e 3 0.8632322367 47.8604743 4 0.3639870702 143.1782106 {[DescentePrise;]} ne
+e 2 0.75 48.75 3 0.2511287396 141.0035461 {[PositionPrise;]} e
+e 1 0.6339991675 46.92081095 2 0.1338776056 139.5170241 {[Time>5s;]} e
+e 9 0.5044198341 36.01388621 1 0.00279190557 228.035085 {[PosiotionPose & VitesseNulle;]} n
+h main_commande_1_bras
+
+

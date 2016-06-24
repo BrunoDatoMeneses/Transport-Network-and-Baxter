@@ -11,21 +11,26 @@
 
 ## TO DO
 
-1. **In ~/ ... /Ligne_transitique_MONTRAC/ros_ws/src/commande/src :**
+1. **In ~/ ... /Working_Folder_MONTRAC/ros_ws/src/commande/src :**
 
-	- replace the file *main_commande.cpp* by *main_commande baxter 2 bras.cpp*
-	- rename *main_commande baxter 2 bras.cpp* by *main_commande.cpp*
+	- replace the file *main_commande.cpp* by *main_commande baxter 2 bras ligne transitique.cpp*
+	- rename *main_commande baxter 2 bras ligne transitique.cpp* by *main_commande.cpp*
+
+2. **In ~/ ... /Working_Folder_Baxter/ros_ws/src/commande/src :**
+
+	- replace the file *main_commande.cpp* by *main_commande_baxter.cpp*
+	- rename *main_commande_baxter.cpp* by *main_commande.cpp*
 
 
-2. **Don't launch roscore this time, you will use the master of Baxter which is always running once he is turned on**
+3. **Don't launch roscore this time, you will use the master of Baxter which is always running once he is turned on**
 
 
-3. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
+4. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Working_Folder_MONTRAC/ros_ws**
 
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ catkin_make
 
-3. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Baxter/ros_ws**
+5. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Working_Folder_Baxter/ros_ws**
 
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ catkin_make
@@ -34,7 +39,7 @@
 
 ## IF YOU USE THE SIMULATION
 
-4. **To run the simulation using Baxter's master, in a new terminal, in ~/ ... /Ligne_transitique_MONTRAC**
+6. **To run the simulation using Baxter's master, in a new terminal, in ~/ ... /Working_Folder_MONTRAC**
 
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
 	- $ ./simulation  2 4 6		(we use 3 shuttles for this command)
@@ -43,16 +48,16 @@
 
 ## IF YOU USE THE REAL TRANSPORT NETWORK
 
-4. **To run the real transport network using Baxter's master**
+7. **To run the real transport network using Baxter's master**
 
 	- Before executing the following programs, make sure that you have configured all the PLC (Programmable Logic Controller, API in french) using PL7 PRO (see README at ~/ ... /Ligne_transitique_MONTRAC/Documentation/TER Commande d'une ligne transitique MONTRAC 2016/PL7)
 
-	- in a new terminal, in ~/ ... /Ligne_transitique_MONTRAC/ros_ws
+	- in a new terminal, in ~/ ... /Working_Folder_MONTRAC/ros_ws
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun automate connect
 
-	- in a new terminal, still in ~/ ... /Ligne_transitique_MONTRAC/ros_ws 
+	- in a new terminal, still in ~/ ... /Working_Folder_MONTRAC/ros_ws 
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun communication start
@@ -60,16 +65,16 @@
 
 ## ONCE THE SIMULATION OR THE REAL TRANPORT NETWORK IS RUNNING
 
-5. **To run Baxter**
+8. **To run Baxter**
 
-	- in a new terminal, in ~/ ... /Baxter/ros_ws
+	- in a new terminal, in ~/ ... /Working_Folder_Baxter/ros_ws
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun baxter run
 
 	
 
-6. **DO NOT MAKE THIS STEP IF BOTH THE SIMULATION AND THE REAL TRANSPORT NETWORK ARE RUNNING !!! In a new terminal, in ~/ ... /Ligne_transitique_MONTRAC/ros_ws**
+9. **DO NOT MAKE THIS STEP IF BOTH THE SIMULATION AND THE REAL TRANSPORT NETWORK ARE RUNNING !!! In a new terminal, in ~/ ... /Working_Folder_MONTRAC/ros_ws**
 
 	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
