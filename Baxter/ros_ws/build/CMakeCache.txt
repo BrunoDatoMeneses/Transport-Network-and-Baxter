@@ -420,6 +420,12 @@ sensor_msgs_DIR:PATH=/opt/ros/jade/share/sensor_msgs/cmake
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/jade/share/std_msgs/cmake
 
+//Value Computed by CMake
+tests_baxter_BINARY_DIR:STATIC=/home/etudiant/M1_ISTR/Baxter/ros_ws/build/tests_baxter
+
+//Value Computed by CMake
+tests_baxter_SOURCE_DIR:STATIC=/home/etudiant/M1_ISTR/Baxter/ros_ws/src/tests_baxter
+
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/jade/share/trajectory_msgs/cmake
 
@@ -531,7 +537,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=12
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -1,0 +1,175 @@
+#include <ros/ros.h>
+#include "baxter_left_arm.h" 
+
+#include "baxter_core_msgs/JointCommand.h"
+#include "baxter_core_msgs/EndEffectorCommand.h"
+
+#include "sensor_msgs/Range.h"
+#include "sensor_msgs/JointState.h"
+#include "baxter_core_msgs/EndpointState.h"
+#include "baxter_core_msgs/EndEffectorState.h"
+
+#include "baxter_core_msgs/SolvePositionIK.h"
+#include "geometry_msgs/PoseStamped.h"
+#include "geometry_msgs/Pose.h"
+#include "geometry_msgs/Point.h"
+#include "geometry_msgs/Quaternion.h"
+
+// Constructeur
+Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
+{
+	//Pub
+	pub_joint_cmd = noeud.advertise<baxter_core_msgs::JointCommand>("/robot/limb/left/joint_command", 1);
+	pub_gripper_cmd = noeud.advertise<baxter_core_msgs::EndEffectorCommand>("/robot/end_effector/left_gripper/command", 1);
+
+	//Sub
+	sub_joint_states = noeud.subscribe("/robot/joint_states", 1, &Baxter_left_arm::Callback_joint_states,this);
+	sub_endpoint_state = noeud.subscribe("/robot/limb/left/endpoint_state", 1, &Baxter_left_arm::Callback_endpoint_state,this);
+	sub_gripper_state = noeud.subscribe("/robot/end_effector/left_gripper/state", 1, &Baxter_left_arm::Callback_gripper_state,this);
+	sub_ir_range = noeud.subscribe("/robot/range/left_hand_range", 1, &Baxter_left_arm::Callback_ir_range,this);
+
+
+	//Srv
+	client_inverse_kinematics = noeud.serviceClient<baxter_core_msgs::SolvePositionIK>("/ExternalTools/left/PositionKinematicsNode/IKService");
+
+	// command in position mode
+	msg_JointCommand.mode = baxter_core_msgs::JointCommand::POSITION_MODE;
+	//POSITION_MODE / VELOCITY_MODE / TORQUE_MODE / RAW_POSITION_MODE
+
+	// command joints in the order shown in baxter_interface
+  	msg_JointCommand.names.push_back("left_s0");
+  	msg_JointCommand.names.push_back("left_s1");
+  	msg_JointCommand.names.push_back("left_e0");
+  	msg_JointCommand.names.push_back("left_e1");
+  	msg_JointCommand.names.push_back("left_w0");
+  	msg_JointCommand.names.push_back("left_w1");
+  	msg_JointCommand.names.push_back("left_w2");
+	
+	msg_JointCommand.command.resize(msg_JointCommand.names.size());
+
+	for(size_t i = 0; i < msg_JointCommand.names.size(); i++) msg_JointCommand.command[i] = 0.0;
+
+	// commande gripper
+	msg_EndEffectorCommand.id = 65538;
+  	msg_EndEffectorCommand.command = msg_EndEffectorCommand.CMD_RELEASE;
+    
+}
+
+
+// Destructeur
+Baxter_left_arm::~Baxter_left_arm()
+{
+}
+
+
+
+void Baxter_left_arm::Callback_joint_states(const sensor_msgs::JointState& msg)
+{
+	//std::cout<<msg<<std::endl;
+}
+
+void Baxter_left_arm::Callback_endpoint_state(const baxter_core_msgs::EndpointState& msg)
+{
+	//std::cout<<msg<<std::endl;
+}
+
+
+void Baxter_left_arm::Callback_gripper_state(const baxter_core_msgs::EndEffectorState& msg)
+{
+	//std::cout<<msg<<std::endl;
+}
+
+void Baxter_left_arm::Callback_ir_range(const sensor_msgs::Range& msg)
+{
+	//std::cout<<msg<<std::endl;
+}
+
+
+
+
+void Baxter_left_arm::Update()
+{
+	pub_joint_cmd.publish(msg_JointCommand);
+	pub_gripper_cmd.publish(msg_EndEffectorCommand);
+}
+
+
+
+
+
+
+void Baxter_left_arm::Position(float left_s0, float left_s1, float left_e0, float left_e1, float left_w0, float left_w1, float left_w2)
+{
+	msg_JointCommand.command[0] = left_s0;
+	msg_JointCommand.command[1] = left_s1;
+	msg_JointCommand.command[2] = left_e0;
+	msg_JointCommand.command[3] = left_e1;
+	msg_JointCommand.command[4] = left_w0;
+	msg_JointCommand.command[5] = left_w1;
+	msg_JointCommand.command[6] = left_w2;
+}
+
+void Baxter_left_arm::Position1(){Baxter_left_arm::Position(-0.6, -0.6, 0, 1.2, 0, 1, 0.2);}
+void Baxter_left_arm::Position12(){Baxter_left_arm::Position(-0.6, -0.5, 0, 1.4, 0, 0.6, 0.2);}
+void Baxter_left_arm::Position2(){Baxter_left_arm::Position(-1.2, -0.6, 0, 1.2, 0, 1, -0.3);}
+void Baxter_left_arm::Position22(){Baxter_left_arm::Position(-1.2, -0.5, 0, 1.4, 0, 0.6, -0.3);}
+
+void Baxter_left_arm::Grip(){msg_EndEffectorCommand.command = msg_EndEffectorCommand.CMD_GRIP;}
+void Baxter_left_arm::Release(){msg_EndEffectorCommand.command = msg_EndEffectorCommand.CMD_RELEASE;}
+
+
+
+
+void Baxter_left_arm::IK(float x, float y, float z, float psy, float teta, float phi)
+{
+	baxter_core_msgs::SolvePositionIK srv;
+	sensor_msgs::JointState JointState ;
+
+	geometry_msgs::PoseStamped PoseStamped;
+
+	PoseStamped.pose.position.x = x ;
+	PoseStamped.pose.position.y = y ;
+	PoseStamped.pose.position.z = z ;
+
+	//c1=cos(psy/2)
+	//c2=cos(teta/2)
+	//c3=cos(phi/2)
+
+	//s1=sin(psy/2)
+	//s2=sin(teta/2)
+	//s3=sin(phi/2)
+
+	PoseStamped.pose.orientation.x = (sin(psy/2)*sin(teta/2)*cos(phi/2)) - (cos(psy/2)*cos(teta/2)*sin(phi/2)) ;
+	PoseStamped.pose.orientation.y = (sin(psy/2)*cos(teta/2)*cos(phi/2)) - (cos(psy/2)*sin(teta/2)*sin(phi/2)) ;
+	PoseStamped.pose.orientation.z = (cos(psy/2)*sin(teta/2)*cos(phi/2)) - (sin(psy/2)*cos(teta/2)*sin(phi/2)) ;
+	PoseStamped.pose.orientation.w = (cos(psy/2)*cos(teta/2)*cos(phi/2)) - (sin(psy/2)*sin(teta/2)*sin(phi/2)) ;
+
+	std::cout<<PoseStamped.pose.orientation.x<<std::endl;
+	std::cout<<PoseStamped.pose.orientation.y<<std::endl;
+	std::cout<<PoseStamped.pose.orientation.z<<std::endl;
+	std::cout<<PoseStamped.pose.orientation.w<<std::endl;
+
+	PoseStamped.header.seq = 0 ;
+	PoseStamped.header.stamp.sec = 0 ;
+	PoseStamped.header.frame_id = "base" ;
+
+	srv.request.pose_stamp.resize(1);
+	srv.request.pose_stamp[0] = PoseStamped;
+	srv.request.seed_mode  = srv.request.SEED_AUTO;
+
+	if (client_inverse_kinematics.call(srv)) 
+	{	
+		std::cout<<srv.response<<std::endl;
+		msg_JointCommand.command = srv.response.joints[0].position;
+	}
+	else {ROS_ERROR("Failed to call service IK");}
+}
+
+
+
+
+
+
+
+
+

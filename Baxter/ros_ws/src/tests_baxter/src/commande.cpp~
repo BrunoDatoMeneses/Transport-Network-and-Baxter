@@ -1,0 +1,182 @@
+#include "baxter.h"
+#include "baxter_left_arm.h" 
+#include "baxter_right_arm.h" 
+
+#include <cmath>
+
+#include <ros/ros.h>
+
+#define PI 3.1416
+
+
+void Position_attente(Baxter_left_arm *Bras_gauche, Baxter_right_arm *Bras_droit)
+{
+	Bras_gauche->IK(0.5,0.7,0.5,PI,0,0); 
+	Bras_droit->IK(0.5,-0.7,0.5,PI,0,0); 
+
+	//Bras_gauche.Position(1, -1, -1.5,  1.5, 0.2, 1.5, 0.0);
+	//Bras_droit.Position(-1, -1, +1.5,  1.5, -0.2, 1.5, -0.0);
+}
+
+void Position_prise(Baxter_right_arm *Bras_droit)
+{
+	Bras_droit->IK(0.3,-0.9,0.5,PI,0,0);
+}
+
+void Descente_prise(Baxter_right_arm *Bras_droit)
+{
+	Bras_droit->IK(0.3,-0.9,0.2,PI,0,0);
+}
+
+void Prise(Baxter_right_arm *Bras_droit)
+{
+	Bras_droit->msg_EndEffectorCommand.command = Bras_droit->msg_EndEffectorCommand.CMD_GRIP;
+}
+
+void Prise_effectuee(Baxter_right_arm *Bras_droit)
+{
+	Bras_droit->msg_prise_effectuee.data = true ;
+}
+
+void Position_pose(Baxter_right_arm *Bras_droit)
+{
+	Bras_droit->IK(0.5,-0.5,0.5,PI,0,0);
+}
+
+void Descente_pose(Baxter_right_arm *Bras_droit)
+{
+	Bras_droit->msg_prise_effectuee.data = false ;
+	Bras_droit->IK(0.5,-0.5,0.2,PI,0,0);
+}
+
+void Pose(Baxter_right_arm *Bras_droit)
+{
+	Bras_droit->msg_EndEffectorCommand.command = Bras_droit->msg_EndEffectorCommand.CMD_RELEASE;
+}
+
+
+
+
+
+
+
+bool Position(Baxter_right_arm Bras_droit,float x, float y, float z)
+{
+	std::vector<bool> position(3,0);
+	bool test=1;
+	int j=0;
+
+	position[0] = (fabs(Bras_droit.endpointState.pose.position.x) - fabs(x)) < (0.05*fabs(x)) ;
+	position[1] = (fabs(Bras_droit.endpointState.pose.position.y) - fabs(y)) < (0.05*fabs(y)) ;
+	position[2] = (fabs(Bras_droit.endpointState.pose.position.z) - fabs(z)) < (0.05*fabs(z)) ;
+
+	//std::cout<< fabs(Bras_droit.endpointState.pose.position.x) <<" <<    --    >> "<< fabs(x) <<std::endl;
+	//std::cout<< fabs(Bras_droit.endpointState.pose.position.y) <<" <<    --    >> "<< fabs(y) <<std::endl;
+	//std::cout<< fabs(Bras_droit.endpointState.pose.position.z) <<" <<    --    >> "<< fabs(z) <<std::endl;
+
+	while(j<3) 
+	{
+		test*=position[j];
+		j++;
+		//std::cout<<"test	"<<test<<" --- >"<<position[j-1]<<std::endl;
+	}
+
+	return test;
+}
+
+
+
+bool Position_prise_OK(Baxter_right_arm Bras_droit)
+{
+	return Position(Bras_droit,0.3,-0.9,0.5);
+}
+
+bool Descente_prise_OK(Baxter_right_arm Bras_droit)
+{
+	return Position(Bras_droit,0.3,-0.9,0.2);
+}
+
+bool Position_pose_OK(Baxter_right_arm Bras_droit)
+{
+	return Position(Bras_droit,0.5,-0.5,0.5);
+}
+
+bool Descente_pose_OK(Baxter_right_arm Bras_droit)
+{
+	return Position(Bras_droit,0.5,-0.5,0.2);
+}
+
+
+
+
+
+bool Prise_demmandee(Baxter_right_arm* Bras_droit)
+{
+	if (Bras_droit->msg_prise_demandee.data == true) 
+	{
+		Bras_droit->msg_prise_demandee.data = false ;
+		return true ;
+	}
+	else return false ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bool vitesse_nulle(Baxter_left_arm Bras_gauche, Baxter_right_arm Bras_droit)
+{
+	std::vector<bool> vitesse(17,0);
+	bool test=1;
+	int j=0;
+
+	for(size_t i = 0; i < 17; i++) 
+	{
+		vitesse[i] = Bras_gauche.jointState.velocity[i] < 0.03 ;
+		//std::cout<<vitesse[i]<<std::endl;
+	}
+
+	while(j<17) 
+	{
+		test*=vitesse[j];
+		j++;
+		//std::cout<<"test"<<test<<std::endl;
+	}
+
+	return test;
+}
+
+bool Pince_fermee(Baxter_right_arm Bras_droit)
+{
+	return Bras_droit.endEffectorState.gripping ;
+}
+
+bool Pince_fermee_pos(Baxter_right_arm Bras_droit)
+{
+	return Bras_droit.endEffectorState.position < 50 ;
+}
+
+bool Pince_ouverte(Baxter_right_arm Bras_droit)
+{
+	return Bras_droit.endEffectorState.position > 90 ;
+}
+
+
+
+
+
+

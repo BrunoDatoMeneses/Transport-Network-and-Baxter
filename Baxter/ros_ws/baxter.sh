@@ -27,7 +27,7 @@ your_ip="192.168.0.135"
 #your_hostname="my_computer.local"
 
 # Specify ROS distribution (e.g. indigo, hydro, etc.)
-ros_version="indigo"
+ros_version="jade"
 #-----------------------------------------------------------------------------#
 
 tf=$(mktemp)

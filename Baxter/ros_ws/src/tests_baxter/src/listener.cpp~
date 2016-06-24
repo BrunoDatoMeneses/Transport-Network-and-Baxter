@@ -1,0 +1,73 @@
+#include "ros/ros.h"
+#include "std_msgs/String.h"
+#include "baxter_core_msgs/AssemblyState.h"
+#include "sensor_msgs/JointState.h"
+#include "baxter_core_msgs/EndpointState.h"
+#include "baxter_core_msgs/EndEffectorState.h"
+#include "geometry_msgs/PoseStamped.h"
+
+#include <iostream> 
+using namespace std;
+
+
+
+
+void Callback_state(const baxter_core_msgs::AssemblyState& msg)
+{
+	std::cout<<msg<<std::endl;
+}
+
+void Callback_joint_states(const sensor_msgs::JointState& msg)
+{
+	std::cout<<msg<<std::endl;
+}
+
+void Callback_endpoint_state_left(const baxter_core_msgs::EndpointState& msg)
+{
+	std::cout<<msg<<std::endl;
+}
+
+void Callback_gripper_state_right(const baxter_core_msgs::EndEffectorState& msg)
+{
+	std::cout<<msg<<std::endl;
+}
+
+void Callback_gripper_state_left(const baxter_core_msgs::EndEffectorState& msg)
+{
+	std::cout<<msg<<std::endl;
+}
+
+
+
+
+
+int main(int argc, char **argv)
+{
+  
+  	ros::init(argc, argv, "listener");
+  	ros::NodeHandle n;
+
+ 	ros::Subscriber sub_state = n.subscribe("/robot/state", 1, Callback_state);
+
+	ros::Subscriber sub_joint_states = n.subscribe("/robot/joint_states", 1, Callback_joint_states);
+
+	ros::Subscriber sub_endpoint_state_left = n.subscribe("/robot/limb/left/endpoint_state", 1, Callback_endpoint_state_left);
+
+	ros::Subscriber sub_gripper_state_right = n.subscribe("/robot/end_effector/right_gripper/state", 1, Callback_gripper_state_right);
+
+	ros::Subscriber sub_gripper_state_left = n.subscribe("/robot/end_effector/left_gripper/state", 1, Callback_gripper_state_left);
+	
+	
+
+	ros::Rate loop_rate(1);
+
+	while(ros::ok())
+	{
+		ros::spinOnce();
+		loop_rate.sleep();
+	}
+
+  
+
+  return 0;
+}

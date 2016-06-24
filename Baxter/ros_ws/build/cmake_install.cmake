@@ -127,6 +127,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/etudiant/M1_ISTR/Baxter/ros_ws/build/baxter_tools/cmake_install.cmake")
   INCLUDE("/home/etudiant/M1_ISTR/Baxter/ros_ws/build/baxter_examples/cmake_install.cmake")
   INCLUDE("/home/etudiant/M1_ISTR/Baxter/ros_ws/build/commande_baxter/cmake_install.cmake")
+  INCLUDE("/home/etudiant/M1_ISTR/Baxter/ros_ws/build/tests_baxter/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

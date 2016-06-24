@@ -49,8 +49,8 @@ int main(int argc, char **argv)
 		
 		switch (EP1)
     		{
-        		case 1: if(Baxter.Bras_droit.Prise_demmandee()) ES1=2; break; 
-				//if(compteur >= 5) ES1=2; break; //
+        		case 1: //if(Baxter.Bras_droit.Prise_demmandee()) ES1=2; break; 
+				if(compteur>1) ES1=2; break; //
         		case 2: if(Baxter.Bras_droit.Position_prise_OK()) ES1=3; break;
         		case 3: if(Baxter.Bras_droit.Descente_prise_OK()) ES1=4; break;
         		case 4: if(Baxter.Bras_droit.Pince_fermee_pos()) ES1=5; break;
