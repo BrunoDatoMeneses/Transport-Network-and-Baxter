@@ -464,3 +464,12 @@
 /home/etudiant/M1_ISTR/Baxter/ros_ws/install/share/commande_baxter/cmake/commande_baxterConfig.cmake
 /home/etudiant/M1_ISTR/Baxter/ros_ws/install/share/commande_baxter/cmake/commande_baxterConfig-version.cmake
 /home/etudiant/M1_ISTR/Baxter/ros_ws/install/share/commande_baxter/package.xml
+/home/etudiant/M1_ISTR/Baxter/ros_ws/install/share/tests_baxter/cmake/tests_baxter-msg-paths.cmake
+/home/etudiant/M1_ISTR/Baxter/ros_ws/install/share/roseus/ros/tests_baxter/manifest.l
+/home/etudiant/M1_ISTR/Baxter/ros_ws/install/lib/python2.7/dist-packages/tests_baxter/__init__.py
+/home/etudiant/M1_ISTR/Baxter/ros_ws/install/lib/python2.7/dist-packages/tests_baxter/__init__.pyc
+/home/etudiant/M1_ISTR/Baxter/ros_ws/install/lib/pkgconfig/tests_baxter.pc
+/home/etudiant/M1_ISTR/Baxter/ros_ws/install/share/tests_baxter/cmake/tests_baxter-msg-extras.cmake
+/home/etudiant/M1_ISTR/Baxter/ros_ws/install/share/tests_baxter/cmake/tests_baxterConfig.cmake
+/home/etudiant/M1_ISTR/Baxter/ros_ws/install/share/tests_baxter/cmake/tests_baxterConfig-version.cmake
+/home/etudiant/M1_ISTR/Baxter/ros_ws/install/share/tests_baxter/package.xml

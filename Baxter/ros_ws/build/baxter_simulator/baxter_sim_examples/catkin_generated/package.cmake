@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "baxter_sim_examples")
+set(baxter_sim_examples_MAINTAINER "Rethink Robotics Inc. <rsdk.support@rethinkrobotics.com>")
+set(baxter_sim_examples_DEPRECATED "")
+set(baxter_sim_examples_VERSION "1.2.12")
+set(baxter_sim_examples_BUILD_DEPENDS "rospy" "rospack" "baxter_core_msgs" "baxter_gazebo" "baxter_interface" "baxter_tools" "gazebo_ros" "gazebo_msgs")
+set(baxter_sim_examples_RUN_DEPENDS "rospy" "rospack" "baxter_core_msgs" "baxter_gazebo" "baxter_interface" "baxter_tools" "gazebo_ros" "gazebo_msgs")
+set(baxter_sim_examples_BUILDTOOL_DEPENDS "catkin")

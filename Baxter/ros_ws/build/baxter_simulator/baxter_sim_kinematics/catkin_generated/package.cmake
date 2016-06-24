@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "baxter_sim_kinematics")
+set(baxter_sim_kinematics_MAINTAINER "Rethink Robotics Inc. <rsdk.support@rethinkrobotics.com>")
+set(baxter_sim_kinematics_DEPRECATED "")
+set(baxter_sim_kinematics_VERSION "1.2.12")
+set(baxter_sim_kinematics_BUILD_DEPENDS "baxter_core_msgs" "gazebo_msgs" "sensor_msgs" "kdl_parser" "tf" "tf_conversions" "cmake_modules")
+set(baxter_sim_kinematics_RUN_DEPENDS "moveit_ros_planning_interface" "std_msgs" "roscpp" "kdl_parser" "baxter_core_msgs" "gazebo_msgs" "sensor_msgs" "tf" "tf_conversions")
+set(baxter_sim_kinematics_BUILDTOOL_DEPENDS "catkin")

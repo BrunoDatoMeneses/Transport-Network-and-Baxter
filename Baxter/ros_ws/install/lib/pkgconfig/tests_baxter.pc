@@ -1,0 +1,8 @@
+prefix=/home/etudiant/M1_ISTR/Baxter/ros_ws/install
+
+Name: tests_baxter
+Description: Description of tests_baxter
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/etudiant/M1_ISTR/Baxter/ros_ws/install/lib 
+Requires: rospy roscpp xacro actionlib sensor_msgs control_msgs trajectory_msgs cv_bridge dynamic_reconfigure baxter_core_msgs baxter_interface

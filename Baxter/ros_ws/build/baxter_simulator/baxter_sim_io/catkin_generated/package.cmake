@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "baxter_sim_io")
+set(baxter_sim_io_MAINTAINER "Rethink Robotics Inc. <rsdk.support@rethinkrobotics.com>")
+set(baxter_sim_io_DEPRECATED "")
+set(baxter_sim_io_VERSION "1.2.12")
+set(baxter_sim_io_BUILD_DEPENDS "roscpp" "libqt4-dev" "baxter_core_msgs")
+set(baxter_sim_io_RUN_DEPENDS "roscpp" "libqt4-dev" "baxter_core_msgs")
+set(baxter_sim_io_BUILDTOOL_DEPENDS "catkin")

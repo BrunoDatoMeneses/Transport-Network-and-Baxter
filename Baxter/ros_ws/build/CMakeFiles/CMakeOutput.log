@@ -291,3 +291,32 @@ Linking C executable cmTryCompileExec1343837557
 make[1]: Leaving directory `/home/etudiant/M1_ISTR/Baxter/ros_ws/build/CMakeFiles/CMakeTmp'
 
 
+Determining if the Q_WS_X11 exist passed with the following output:
+Change Dir: /home/etudiant/M1_ISTR/Baxter/ros_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4240096513/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4240096513.dir/build.make CMakeFiles/cmTryCompileExec4240096513.dir/build
+make[1]: Entering directory `/home/etudiant/M1_ISTR/Baxter/ros_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/etudiant/M1_ISTR/Baxter/ros_ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4240096513.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec4240096513.dir/CheckSymbolExists.cxx.o -c /home/etudiant/M1_ISTR/Baxter/ros_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTryCompileExec4240096513
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4240096513.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec4240096513.dir/CheckSymbolExists.cxx.o  -o cmTryCompileExec4240096513 -rdynamic 
+make[1]: Leaving directory `/home/etudiant/M1_ISTR/Baxter/ros_ws/build/CMakeFiles/CMakeTmp'
+
+File /home/etudiant/M1_ISTR/Baxter/ros_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

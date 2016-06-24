@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "baxter_gazebo")
+set(baxter_gazebo_MAINTAINER "Rethink Robotics Inc. <rsdk.support@rethinkrobotics.com>")
+set(baxter_gazebo_DEPRECATED "")
+set(baxter_gazebo_VERSION "1.2.12")
+set(baxter_gazebo_BUILD_DEPENDS "roscpp" "baxter_core_msgs" "gazebo_ros_control" "controller_manager_msgs")
+set(baxter_gazebo_RUN_DEPENDS "roscpp" "tf2_ros" "baxter_core_msgs" "gazebo_ros_control" "controller_manager_msgs" "baxter_sim_hardware" "gazebo_ros" "baxter_description")
+set(baxter_gazebo_BUILDTOOL_DEPENDS "catkin")

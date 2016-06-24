@@ -1,6 +1,6 @@
 https://github.com/RethinkRobotics
 
-http://sdk.rethinkrobotics.com/wiki/Example_Programs         % Exemples
+http://sdk.rethinkrobotics.com/wiki/Example_Programs         
 
 http://sdk.rethinkrobotics.com/wiki/API_Reference#head-joints
 

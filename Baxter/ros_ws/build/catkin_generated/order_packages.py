@@ -2,4 +2,4 @@
 source_root_dir = "/home/etudiant/M1_ISTR/Baxter/ros_ws/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/home/etudiant/M1_ISTR/Baxter/ros_ws/devel;/home/etudiant/M1_ISTR/Ligne_tansitique_MONTRAC/ros_ws/devel;/opt/ros/jade".split(';') if "/home/etudiant/M1_ISTR/Baxter/ros_ws/devel;/home/etudiant/M1_ISTR/Ligne_tansitique_MONTRAC/ros_ws/devel;/opt/ros/jade" != "" else []
+underlay_workspaces = "/opt/ros/jade".split(';') if "/opt/ros/jade" != "" else []
