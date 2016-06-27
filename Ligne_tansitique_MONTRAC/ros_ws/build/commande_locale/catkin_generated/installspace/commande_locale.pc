@@ -1,8 +1,0 @@
-prefix=/home/etudiant/M1_ISTR/Ligne_tansitique_MONTRAC/ros_ws/install
-
-Name: commande_locale
-Description: Description of commande_locale
-Version: 3.1.2
-Cflags: -I/home/etudiant/M1_ISTR/Ligne_tansitique_MONTRAC/ros_ws/install/include
-Libs: -L/home/etudiant/M1_ISTR/Ligne_tansitique_MONTRAC/ros_ws/install/lib 
-Requires: message_runtime

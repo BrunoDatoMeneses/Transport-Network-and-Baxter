@@ -1,0 +1,10 @@
+Passer en mode administrateur
+
+apt-get install
+
+libmodbus-dev 
+(python-pymodbus)
+(python-pyasn1 python-twisted-conch)
+
+
+http://libmodbus.org/docs/v3.1.2/

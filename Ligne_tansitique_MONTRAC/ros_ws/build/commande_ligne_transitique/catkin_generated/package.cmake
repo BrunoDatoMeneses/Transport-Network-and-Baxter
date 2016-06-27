@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "commande_ligne_transitique")
-set(commande_ligne_transitique_MAINTAINER "Dato Bruno <etudiants-ups@univ-tlse3.fr>")
-set(commande_ligne_transitique_DEPRECATED "")
-set(commande_ligne_transitique_VERSION "0.0.0")
-set(commande_ligne_transitique_BUILD_DEPENDS "message_generation" "sensor_msgs" "libopencv-dev" "vrep_common" "roscpp" "rospy" "std_msgs")
-set(commande_ligne_transitique_RUN_DEPENDS "message_runtime" "roscpp" "rospy" "std_msgs")
-set(commande_ligne_transitique_BUILDTOOL_DEPENDS "catkin")

@@ -19,7 +19,7 @@ class Baxter
 private:
 
 	//Publishers
-	ros::Publisher pub_enable , pub_halo_led_green , pub_halo_led_red ;
+	ros::Publisher pub_enable ;
 
 	//Subscribers
 	ros::Subscriber sub_robot_state , sub_sonar , sub_halo_led_green , sub_halo_led_red ;
@@ -37,7 +37,6 @@ public:
 	// Commande	
 
 	std_msgs::Bool enableRobot;
-	std_msgs::Float32 set_halo_led_green , set_halo_led_red ;
 
 
 	// Capteurs
