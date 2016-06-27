@@ -1,3 +1,5 @@
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #include <ros/ros.h>
 #include "baxter_right_arm.h" 
 
@@ -25,6 +27,7 @@ Baxter_right_arm::Baxter_right_arm(ros::NodeHandle noeud)
 	//Pub
 	pub_joint_cmd = noeud.advertise<baxter_core_msgs::JointCommand>("/robot/limb/right/joint_command", 1);
 	pub_gripper_cmd = noeud.advertise<baxter_core_msgs::EndEffectorCommand>("/robot/end_effector/right_gripper/command", 1);
+
 	pub_prise_effectuee = noeud.advertise<std_msgs::Bool>("/pont_BaxterLigneTransitique/right_arm/prise_effectuee", 1);
 	pub_attente_prise = noeud.advertise<std_msgs::Bool>("/pont_BaxterLigneTransitique/right_arm/attente_prise", 1);
 
@@ -32,7 +35,7 @@ Baxter_right_arm::Baxter_right_arm(ros::NodeHandle noeud)
 	sub_joint_states = noeud.subscribe("/robot/joint_states", 1, &Baxter_right_arm::Callback_joint_states,this);
 	sub_endpoint_state = noeud.subscribe("/robot/limb/right/endpoint_state", 1, &Baxter_right_arm::Callback_endpoint_state,this);
 	sub_gripper_state = noeud.subscribe("/robot/end_effector/right_gripper/state", 1, &Baxter_right_arm::Callback_gripper_state,this);
-	sub_ir_range = noeud.subscribe("/robot/range/right_hand_range", 1, &Baxter_right_arm::Callback_ir_range,this);
+	
 	sub_prise_demandee = noeud.subscribe("/pont_BaxterLigneTransitique/right_arm/prise_demandee", 1, &Baxter_right_arm::Callback_prise_demandee,this);
 
 	//Srv
@@ -62,7 +65,6 @@ Baxter_right_arm::Baxter_right_arm(ros::NodeHandle noeud)
 
 
 	// Initialisation capteurs //
-
 	jointState.position.resize(17);
 	jointState.velocity.resize(17);
 	jointState.effort.resize(17);
@@ -87,7 +89,6 @@ Baxter_right_arm::~Baxter_right_arm()
 
 
 // Callbacks
-
 void Baxter_right_arm::Callback_joint_states(const sensor_msgs::JointState& msg)
 {
 	jointState = msg ;
@@ -107,11 +108,6 @@ void Baxter_right_arm::Callback_gripper_state(const baxter_core_msgs::EndEffecto
 	//std::cout<<msg<<std::endl;
 }
 
-void Baxter_right_arm::Callback_ir_range(const sensor_msgs::Range& msg)
-{
-	//std::cout<<msg<<std::endl;
-}
-
 void Baxter_right_arm::Callback_prise_demandee(const std_msgs::Bool& msg)
 {
 	msg_prise_demandee = msg ;
@@ -121,64 +117,10 @@ void Baxter_right_arm::Callback_prise_demandee(const std_msgs::Bool& msg)
 
 
 
-// Envoie des commandes
 
-void Baxter_right_arm::Update()
-{
-	pub_joint_cmd.publish(msg_JointCommand);
-	pub_gripper_cmd.publish(msg_EndEffectorCommand);
-	pub_prise_effectuee.publish(msg_prise_effectuee);
-	pub_attente_prise.publish(msg_attente_prise);
-}
+// Commande bras gauche
 
-
-
-// Commandes pince
-
-
-void Baxter_right_arm::Grip(){msg_EndEffectorCommand.command = msg_EndEffectorCommand.CMD_GRIP;} // Fermée
-void Baxter_right_arm::Release(){msg_EndEffectorCommand.command = msg_EndEffectorCommand.CMD_RELEASE;} // Ouverte
-
-// Commande bras
-
-void Baxter_right_arm::Position(float right_s0, float right_s1, float right_e0, float right_e1, float right_w0, float right_w1, float right_w2)
-{
-	// commande en mode position
-	msg_JointCommand.mode = baxter_core_msgs::JointCommand::POSITION_MODE;
-	
-	msg_JointCommand.command[0] = right_s0;
-	msg_JointCommand.command[1] = right_s1;
-	msg_JointCommand.command[2] = right_e0;
-	msg_JointCommand.command[3] = right_e1;
-	msg_JointCommand.command[4] = right_w0;
-	msg_JointCommand.command[5] = right_w1;
-	msg_JointCommand.command[6] = right_w2;
-}
-
-void Baxter_right_arm::Position(float angle,int num)
-{
-	for(size_t i = 9; i < 16; i++) msg_JointCommand.command[i-9] = jointState.position[i];
-	msg_JointCommand.command[num] = angle;
-}
-
-
-
-
-
-// Vague
-
-void Baxter_right_arm::Position_sinu(float position,float compteur)
-{
-	float d[3] ;
-
-	for(size_t i = 1; i <= 3; i++) d[i-1] = sin(compteur+(i*2*PI/3))/5;
-	
-	Baxter_right_arm::Position(-0, -position-0.5+0.5*d[0], +0, +position+0.4-0.8*d[1], -0, +position-5*d[2], -0);
-}
-
-
-
-
+// Modifie la position catésienne (x,y,z) et l'orientation : angles d'euler (psy,teta,phi)
 void Baxter_right_arm::IK(float x, float y, float z, float psy, float teta, float phi)
 {
 	baxter_core_msgs::SolvePositionIK srv;
@@ -225,13 +167,49 @@ void Baxter_right_arm::IK(float x, float y, float z, float psy, float teta, floa
 }
 
 
+// Modifie la position de tous les angles du bras
+void Baxter_right_arm::Position(float right_s0, float right_s1, float right_e0, float right_e1, float right_w0, float right_w1, float right_w2)
+{
+	// commande en mode position
+	msg_JointCommand.mode = baxter_core_msgs::JointCommand::POSITION_MODE;
+	
+	msg_JointCommand.command[0] = right_s0;
+	msg_JointCommand.command[1] = right_s1;
+	msg_JointCommand.command[2] = right_e0;
+	msg_JointCommand.command[3] = right_e1;
+	msg_JointCommand.command[4] = right_w0;
+	msg_JointCommand.command[5] = right_w1;
+	msg_JointCommand.command[6] = right_w2;
+}
+
+
+// Modifie la position d'un seul angle
+void Baxter_right_arm::Position(float angle,int num)
+{
+	for(size_t i = 9; i < 16; i++) msg_JointCommand.command[i-9] = jointState.position[i];
+	msg_JointCommand.command[num] = angle;
+}
+
+
+// Commande pince
+void Baxter_right_arm::Prise()
+{
+	// Ferme pince
+	msg_EndEffectorCommand.command = msg_EndEffectorCommand.CMD_GRIP;
+}
+
+void Baxter_right_arm::Pose()
+{
+	// Ouvre pince
+	msg_EndEffectorCommand.command = msg_EndEffectorCommand.CMD_RELEASE;
+}
+
+
+// Positions pour la MEF
 void Baxter_right_arm::Position_attente()
 {
 	IK(0.3,-0.8,0.5,PI,0,0);
 }
-
-
-
 
 void Baxter_right_arm::Position_prise()
 {
@@ -239,20 +217,9 @@ void Baxter_right_arm::Position_prise()
 	msg_attente_prise.data = true ;
 }
 
-
 void Baxter_right_arm::Descente_prise()
 {
 	IK(0.5,-0.2,0.2,PI,0,0);
-}
-
-void Baxter_right_arm::Prise()
-{
-	Grip();
-}
-
-void Baxter_right_arm::Prise_effectuee()
-{
-	msg_prise_effectuee.data = true ;
 }
 
 void Baxter_right_arm::Position_pose()
@@ -260,27 +227,80 @@ void Baxter_right_arm::Position_pose()
 	IK(0.1,-0.9,0.5,PI,0,0);
 }
 
-
 void Baxter_right_arm::Descente_pose()
 {
 	msg_prise_effectuee.data = false ;
 	IK(0.1,-0.9,0.2,PI,0,0);
 }
 
-void Baxter_right_arm::Pose()
-{
-	Release();
-}
 
+// Communication avec la ligne transitique 
+void Baxter_right_arm::Prise_effectuee()
+{
+	// permet de transmettre à la ligne transitique que la prise a été effectuée
+	msg_prise_effectuee.data = true ;
+}
 
 void Baxter_right_arm::Attente_prise()
 {
+	// permet de transmettre à la ligne transitique que le bras est en attente d'une prise
 	msg_attente_prise.data = true ;
 }
 
+bool Baxter_right_arm::Prise_demmandee()
+{
+	// permet de savoir si une prise a été demandée par la ligne transitique
+	if (msg_prise_demandee.data == true) 
+	{
+		msg_prise_demandee.data = false ;
+		return true ;
+	}
+	else return false ;
+}
 
 
+// Tests pour la MEF
+bool Baxter_right_arm::Pince_fermee()
+{
+	// à utiliser s'il y a prise d'un objet réel
+	return endEffectorState.gripping ;
+}
 
+bool Baxter_right_arm::Pince_fermee_pos()
+{
+	// à utiliser pour la prise d'un objet virtuel
+	return endEffectorState.position < 50 ;
+}
+
+bool Baxter_right_arm::Pince_ouverte()
+{
+	return endEffectorState.position > 90 ;
+}
+
+// Renvoie 1 la vitesse des angles est faible, c'est à dire que le bras ne bouge plus
+bool Baxter_right_arm::vitesse_nulle()
+{
+	std::vector<bool> vitesse(7,0);
+	bool test=1;
+	int j=0;
+
+	for(size_t i = 9; i < 16; i++) 
+	{
+		vitesse[i-9] = jointState.velocity[i] < 0.03 ;
+		//std::cout<<vitesse[i]<<std::endl;
+	}
+
+	while(j<7) 
+	{
+		test*=vitesse[j];
+		j++;
+		//std::cout<<"test"<<test<<std::endl;
+	}
+
+	return test;
+}
+
+// Renvoie 1 lorsque la position (x,y,z) est atteinte à 5% près
 bool Baxter_right_arm::Position(float x, float y, float z)
 {
 	std::vector<bool> position(3,0);
@@ -305,16 +325,7 @@ bool Baxter_right_arm::Position(float x, float y, float z)
 	return test;
 }
 
-bool Baxter_right_arm::Prise_demmandee()
-{
-	if (msg_prise_demandee.data == true) 
-	{
-		msg_prise_demandee.data = false ;
-		return true ;
-	}
-	else return false ;
-}
-
+// Ces fonctions permettent de vérifier si les positions sont atteintes
 bool Baxter_right_arm::Position_prise_OK()
 {
 	return Position(0.5,-0.2,0.5);
@@ -336,57 +347,15 @@ bool Baxter_right_arm::Descente_pose_OK()
 }
 
 
+// Envoie des commandes
 
-bool Baxter_right_arm::Pince_fermee()
+void Baxter_right_arm::Update()
 {
-	return endEffectorState.gripping ;
+	pub_joint_cmd.publish(msg_JointCommand);
+	pub_gripper_cmd.publish(msg_EndEffectorCommand);
+	pub_prise_effectuee.publish(msg_prise_effectuee);
+	pub_attente_prise.publish(msg_attente_prise);
 }
-
-bool Baxter_right_arm::Pince_fermee_pos()
-{
-	return endEffectorState.position < 50 ;
-}
-
-bool Baxter_right_arm::Pince_ouverte()
-{
-	return endEffectorState.position > 90 ;
-}
-
-
-
-bool Baxter_right_arm::vitesse_nulle()
-{
-	std::vector<bool> vitesse(17,0);
-	bool test=1;
-	int j=0;
-
-	for(size_t i = 0; i < 17; i++) 
-	{
-		vitesse[i] = jointState.velocity[i] < 0.03 ;
-		//std::cout<<vitesse[i]<<std::endl;
-	}
-
-	while(j<17) 
-	{
-		test*=vitesse[j];
-		j++;
-		//std::cout<<"test"<<test<<std::endl;
-	}
-
-	return test;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

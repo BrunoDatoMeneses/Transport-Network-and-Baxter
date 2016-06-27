@@ -1,14 +1,8 @@
-/*
- * ************************************* *
- * Copyright 2016, STAGE BAXTETR         *
- * All rights reserved.  	         *
- * ************************************* *
-*/
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III ****/
 
 #include "baxter.h"
 #include "baxter_left_arm.h" 
 #include "baxter_right_arm.h" 
-#include "commande.h"
 #include <ros/ros.h>
 
 #include <iostream> 
@@ -23,81 +17,73 @@ int main(int argc, char **argv)
 {	
 
 //initialisation du noeud ros et création d'un handle associé au noeud
-	ros::init(argc, argv, "commande");	
+	ros::init(argc, argv, "commande_baxter");	
 	ros::NodeHandle noeud;
 
-	Baxter Baxter(noeud);
-	Baxter_left_arm Bras_gauche(noeud);
-	Baxter_right_arm Bras_droit(noeud);
-
 	float compteur = 0 ;
+
+	// Déclaration objet Baxter
+	Baxter Baxter(noeud);
+
+	// Déclaration états présent et suivant pour la MEF
 	int EP , ES ;
 
 	// Fréquence doit être supérieure à 5Hz
-  	ros::Rate loop_rate(50);
-
+  	ros::Rate loop_rate(100);
 
 	// Initialisation ROBOT //
-
+	Baxter.Init();
 	
-	Position_attente(&Bras_gauche,&Bras_droit);
-
-
 	// Initialisation MEF //
-
-	EP = 1 ; ES = 1 ;
-
-	
-	
-	
+	EP = 1 ; ES = 1 ; 
 
 	while (ros::ok())
 	{
-		std::cout<<EP<<"	"<<compteur<<"		"<<vitesse_nulle(Bras_gauche,Bras_droit)<<"	"<<Bras_droit.endEffectorState.position<<std::endl;
-		//Descente_prise(&Bras_droit);
-		
-		switch (EP)
 
+		//std::cout<<EP<<<<std::endl;
+	
+		// MEF //	
+		switch (EP)
     		{
-        		case 1: if(compteur > 3) ES=2; break; // Simulation événement
-        		case 2: if(vitesse_nulle(Bras_gauche,Bras_droit)) ES=3; break;
-        		case 3: if(vitesse_nulle(Bras_gauche,Bras_droit)) ES=4; break;
-        		case 4: if(vitesse_nulle(Bras_gauche,Bras_droit) && Pince_fermee_pos(Bras_droit)) ES=5; break;
-        		case 5: if(vitesse_nulle(Bras_gauche,Bras_droit)) ES=6; break;
-        		case 6: if(vitesse_nulle(Bras_gauche,Bras_droit)) ES=7; break;
-        		case 7: if(vitesse_nulle(Bras_gauche,Bras_droit)) ES=8; break;
-        		case 8: if(vitesse_nulle(Bras_gauche,Bras_droit) && Pince_ouverte(Bras_droit)) ES=9; break;
-        		case 9: if(vitesse_nulle(Bras_gauche,Bras_droit)) ES=1; break;
+        		case 1: if(compteur>5) ES=2; break; 
+        		case 2: if(Baxter.Bras_droit.Position_prise_OK()) ES=3; break;
+        		case 3: if(Baxter.Bras_droit.Descente_prise_OK()) ES=4; break;
+        		case 4: if(Baxter.Bras_droit.Pince_fermee_pos()) ES=5; break;
+        		case 5: if(Baxter.Bras_droit.Position_prise_OK() && Baxter.Bras_droit.vitesse_nulle()) ES=6; break;
+        		case 6: if(Baxter.Bras_droit.Position_pose_OK()) ES=7; break;
+        		case 7: if(Baxter.Bras_droit.Descente_pose_OK()) ES=8; break;
+        		case 8: if(Baxter.Bras_droit.Pince_ouverte()) ES=9; break;
+        		case 9: if(Baxter.Bras_droit.Position_pose_OK() && Baxter.Bras_droit.vitesse_nulle()) ES=1; break;
         		default: break;
 
     		}
 	
+		// Etat présent <- Etat suivant
 		EP = ES ;
 
+		// Actionneurs //
 		switch (EP)
-
     		{
-        		case 1: Position_attente(&Bras_gauche,&Bras_droit); break;
-        		case 2: Position_prise(&Bras_droit); break;
-        		case 3: Descente_prise(&Bras_droit); break;
-        		case 4: Prise(&Bras_droit); break;
-        		case 5: Position_prise(&Bras_droit); break;
-        		case 6: Position_pose(&Bras_droit); break;
-        		case 7: Descente_pose(&Bras_droit); break;
-        		case 8: Pose(&Bras_droit); break;
-        		case 9: Position_pose(&Bras_droit); break;
+        		case 1: Baxter.Bras_droit.Position_attente(); Baxter.Bras_droit.Attente_prise(); break;
+        		case 2: Baxter.Bras_droit.Position_prise(); break;
+        		case 3: Baxter.Bras_droit.Descente_prise(); break;
+        		case 4: Baxter.Bras_droit.Prise(); break;
+        		case 5: Baxter.Bras_droit.Position_prise(); break;
+        		case 6: Baxter.Bras_droit.Prise_effectuee(); Baxter.Bras_droit.Position_pose(); break;
+        		case 7: Baxter.Bras_droit.Descente_pose(); break;
+        		case 8: Baxter.Bras_droit.Pose(); break;
+        		case 9: Baxter.Bras_droit.Position_pose(); break;
         		default: break;
 
     		}
 
+		// Envoi des commandes vers le robot Baxter
 		Baxter.Update();
-		Bras_gauche.Update();
-		Bras_droit.Update();
 
-		compteur += 0.05 ;
+		compteur += 0.01 ;
 
-		ros::spinOnce(); 
-		loop_rate.sleep(); 
+		ros::spinOnce(); // Lancement des fonctions callback 
+		loop_rate.sleep(); // Synchronisation avec la fréquence souhaitée
 
 	}
 	return 0;

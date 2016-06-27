@@ -1,9 +1,4 @@
-/*
- * ************************************* *
- * Copyright 2016, STAGE BAXTETR         *
- * All rights reserved.  	         *
- * ************************************* *
-*/
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
 
 #include "baxter.h"
 #include "baxter_left_arm.h" 
@@ -25,29 +20,32 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "commande_baxter");	
 	ros::NodeHandle noeud;
 
+	float compteur = 0 ;
+
+	// Déclaration objet Baxter
 	Baxter Baxter(noeud);
 
-	float compteur = 0 ;
+	// Déclaration états présents et suivant pour les 2 MEF
 	int EP1 , ES1 , EP2 , ES2 ;
 
 	// Fréquence doit être supérieure à 5Hz
-  	ros::Rate loop_rate(100);
+  	ros::Rate loop_rate(100); // 100 Hz
 
 	// Initialisation ROBOT //
-
 	Baxter.Init();
 	
 	// Initialisation MEF //
-
 	EP1 = 1 ; ES1 = 1 ; 
 	EP2 = 1 ; ES2 = 1 ; 
 
 	while (ros::ok())
 	{
 
-		//std::cout<<EP1<<<<std::endl;
-		//std::cout<<EP2<<<<std::endl;
+		//std::cout<<EP1<<"	"<<EP2<<std::endl;
 		
+		// MEF //
+
+		// Bras Droit
 		switch (EP1)
     		{
         		case 1: if(compteur > 5) ES1=2; break; 
@@ -63,9 +61,10 @@ int main(int argc, char **argv)
 
     		}
 
+		// Bras Gauche
 		switch (EP2)
     		{
-        		case 1: if(compteur > 5) ES2=2; break; 
+        		case 1: if(compteur > 7) ES2=2; break; 
         		case 2: if(Baxter.Bras_gauche.Position_prise_OK()) ES2=3; break;
         		case 3: if(Baxter.Bras_gauche.Descente_prise_OK()) ES2=4; break;
         		case 4: if(Baxter.Bras_gauche.Pince_fermee_pos()) ES2=5; break;
@@ -78,9 +77,13 @@ int main(int argc, char **argv)
 
     		}
 	
+		// Etat présent <- Etat suivant
 		EP1 = ES1 ;
 		EP2 = ES2 ;
 
+		// Actionneurs //
+
+		// Bras droit
 		switch (EP1)
     		{
         		case 1: Baxter.Bras_droit.Position_attente(); Baxter.Bras_droit.Attente_prise(); break;
@@ -96,6 +99,7 @@ int main(int argc, char **argv)
 
     		}
 
+		// Bras gauche
 		switch (EP2)
     		{
         		case 1: Baxter.Bras_gauche.Position_attente(); Baxter.Bras_gauche.Attente_prise(); break;
@@ -111,14 +115,13 @@ int main(int argc, char **argv)
 
     		}
 
-		
+		// Envoi des commandes vers le robot Baxter
 		Baxter.Update();
 
-		compteur += 0.01 ;
+		ros::spinOnce(); // Lancement des fonctions callback
+		loop_rate.sleep(); // Synchronisation avec la fréquence souhaitée
 
-		ros::spinOnce(); 
-		loop_rate.sleep(); 
-
+		compteur += 0.01;
 	}
 	return 0;
 }

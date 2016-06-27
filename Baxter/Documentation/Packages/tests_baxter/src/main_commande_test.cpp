@@ -1,9 +1,4 @@
-/*
- * ************************************* *
- * Copyright 2016, STAGE BAXTER          *
- * All rights reserved.  	         *
- * ************************************* *
-*/
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
 
 #include "baxter.h"
 #include "baxter_left_arm.h" 
@@ -25,6 +20,7 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "commande_baxter_test");	   
 	ros::NodeHandle nd;
 
+	// Déclaration de l'objet Baxter
 	Baxter Baxter(nd);
 
 	float compteur = 0 ;
@@ -33,22 +29,21 @@ int main(int argc, char **argv)
   	ros::Rate loop_rate(700);
 
 	// Initialisation ROBOT //
-
 	Baxter.Init();
 	
-
 	while (ros::ok())
 	{
-
+		// Vague pour les bras gauche et droit en déphasage de PI
 		Baxter.Bras_droit.Position_sinu(0.5,compteur+PI);
 		Baxter.Bras_gauche.Position_sinu(0.5,compteur);
 
+		// Envoi des positions vers Baxter
 		Baxter.Update();
 
 		compteur += 0.003 ;
 
-		ros::spinOnce(); 
-		loop_rate.sleep(); 
+		ros::spinOnce(); // Lancement des fonctions callback
+		loop_rate.sleep(); // synchronisation avec la fréquence souhaitée
 
 	}
 	return 0;

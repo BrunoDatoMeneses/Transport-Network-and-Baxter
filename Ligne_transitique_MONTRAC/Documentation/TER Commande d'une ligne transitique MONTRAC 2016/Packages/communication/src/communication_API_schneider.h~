@@ -25,9 +25,6 @@ public:
 	void Callback_Entrees_api(const automates::Entrees msg);
 	void publish();
 
-	//int Get_Entrees();
-	//void Set_Sorties(int Sorties);
-
 };
 
 uint16_t MASK(uint16_t registre,int voie);

@@ -1,3 +1,5 @@
+/**** Bruno DATO, Abdellah ELGOURAIN, Evgeny SHULGA M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #include <ros/ros.h>
 #include "capteurs.h"
 #include <commande_locale/Msg_SensorState.h>

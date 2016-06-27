@@ -79,7 +79,7 @@ int main(int argc, char **argv)
 	ros::Subscriber sub_gripper_state_left = n.subscribe("/robot/end_effector/left_gripper/state", 1, Callback_gripper_state_left);
 	
 	
-	ros::Rate loop_rate(1);
+	ros::Rate loop_rate(1); //1 Hz
 
 	while(ros::ok())
 	{

@@ -1,3 +1,5 @@
+/**** Bruno DATO, Abdellah ELGOURAIN, Evgeny SHULGA M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #ifndef BAXT
 #define BAXT
 
@@ -27,6 +29,7 @@ public:
 	void Callback_prise_effectuee_bras_droit(const std_msgs::Bool& msg);
 	void Callback_prise_effectuee_bras_gauche(const std_msgs::Bool& msg);
 	void Callback_attente_prise_bras_gauche(const std_msgs::Bool& msg);
+	void Callback_attente_prise_bras_droit(const std_msgs::Bool& msg);
 
 	bool Prise_effectuee_bras_droit();
 	bool Prise_effectuee_bras_gauche();

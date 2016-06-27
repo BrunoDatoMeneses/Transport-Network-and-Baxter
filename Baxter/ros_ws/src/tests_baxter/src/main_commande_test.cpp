@@ -1,9 +1,4 @@
-/*
- * ************************************* *
- * Copyright 2016, STAGE BAXTER          *
- * All rights reserved.  	         *
- * ************************************* *
-*/
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
 
 #include "baxter.h"
 #include "baxter_left_arm.h" 

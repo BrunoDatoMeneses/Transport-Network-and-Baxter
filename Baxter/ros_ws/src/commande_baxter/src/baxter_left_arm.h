@@ -1,3 +1,5 @@
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #ifndef left_ARM
 #define left_ARM
 
@@ -26,7 +28,7 @@ private:
 	ros::Publisher pub_joint_cmd , pub_gripper_cmd, pub_prise_effectuee, pub_attente_prise ;
 
 	//Subscribers
-	ros::Subscriber sub_joint_states , sub_endpoint_state , sub_gripper_state , sub_ir_range , sub_prise_demandee ;
+	ros::Subscriber sub_joint_states , sub_endpoint_state , sub_gripper_state , sub_prise_demandee ;
 
 	//Client
 	ros::ServiceClient client_inverse_kinematics ;
@@ -48,45 +50,48 @@ public:
 	
 		// Méthodes //
 
-	
+	// Constructeur et desctructeur
 	Baxter_left_arm(ros::NodeHandle noeud);
 	~Baxter_left_arm();
 
 	// Callbacks
-
 	void Callback_joint_states(const sensor_msgs::JointState& msg);
 	void Callback_endpoint_state(const baxter_core_msgs::EndpointState& msg);
 	void Callback_gripper_state(const baxter_core_msgs::EndEffectorState& msg);
-	void Callback_ir_range(const sensor_msgs::Range& msg);
 	void Callback_prise_demandee(const std_msgs::Bool& msg);
 
-	// Commande bras
+	// Commande bras gauche
 
+	// Modifie la position catésienne (x,y,z) et l'orientation : angles d'euler (psy,teta,phi)
 	void IK(float x, float y, float z, float psy, float teta, float phi);
 
+	// Modifie la position de tous les angles du bras
 	void Position(float left_s0, float left_s1, float left_e0, float left_e1, float left_w0, float left_w1, float left_w2);
-	void Position_sinu(float position,float compteur);
+
+	// Modifie la position d'un seul angle
 	void Position(float angle,int num);
 
+	// Commande pince
+	void Prise();
+	void Pose();
 
+	// Positions pour la MEF
+	void Position_attente();
+	void Position_prise();
+	void Position_pose();
+	void Descente_prise();
+	void Descente_pose();
+
+	// Communication avec la ligne transitique 	
+	void Prise_effectuee();
+	void Attente_prise();
+	bool Prise_demmandee();
+
+	// Tests pour la MEF
 	bool Pince_fermee();
 	bool Pince_fermee_pos();
 	bool Pince_ouverte();
 
-	void Prise();
-	void Pose();
-
-	void Position_attente();
-	void Position_prise();
-	void Position_pose();
-
-	void Descente_prise();
-	void Descente_pose();
-
-	void Prise_effectuee();
-	void Attente_prise();
-
-	bool Prise_demmandee();
 	bool vitesse_nulle();
 	bool Position(float x, float y, float z);
 
@@ -95,16 +100,7 @@ public:
 	bool Descente_pose_OK();
 	bool Descente_prise_OK();
 
-	
-
-
-	// Commande pince
-
-	void Grip();
-	void Release();
-
 	// Envoi des commandes
-
 	void Update();
 };
 

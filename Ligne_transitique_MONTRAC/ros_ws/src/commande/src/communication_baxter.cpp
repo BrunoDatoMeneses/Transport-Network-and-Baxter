@@ -1,3 +1,5 @@
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #include <ros/ros.h>
 #include "communication_baxter.h"
 #include "std_msgs/Bool.h"

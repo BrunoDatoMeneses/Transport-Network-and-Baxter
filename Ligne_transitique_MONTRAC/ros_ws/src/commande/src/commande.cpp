@@ -1,3 +1,5 @@
+/**** Bruno DATO, Abdellah ELGOURAIN, Evgeny SHULGA M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #include "commande.h"
 #include "actionneurs.h" 
 #include "commande.h"

@@ -85,8 +85,6 @@ void Baxter::Callback_sonar(const sensor_msgs::PointCloud& msg)
 void Baxter::Update()
 {
 	pub_enable.publish(enableRobot);
-	pub_halo_led_green.publish(set_halo_led_green);
-	pub_halo_led_red.publish(set_halo_led_red);
 
 	Bras_droit.Update();
 	Bras_gauche.Update();

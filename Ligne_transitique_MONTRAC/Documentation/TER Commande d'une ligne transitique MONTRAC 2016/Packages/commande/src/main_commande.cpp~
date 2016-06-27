@@ -1,9 +1,4 @@
-/*
- * ************************************* *
- * Copyright 2016, TER Ligne Transitique *
- * All rights reserved.  	         * 
- * ************************************* *
-*/
+/**** Bruno DATO, Abdellah ELGOURAIN, Evgeny SHULGA M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
 
 
 #include "capteurs.h" 
@@ -61,7 +56,7 @@ int main(int argc, char **argv)
 			for (int i=0;i<=NOMBRE_PLACE;i++) M[i] = 0 ;
 
 			//Nombre de navettes
-			M[1]=6; 
+			M[1]=3; 
 
 			// Disponibilité aiguillages
 			M[10]=1;

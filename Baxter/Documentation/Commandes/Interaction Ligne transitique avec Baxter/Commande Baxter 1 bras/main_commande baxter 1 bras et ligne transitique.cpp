@@ -1,10 +1,4 @@
-/*
- * ************************************* *
- * Copyright 2016, TER Ligne Transitique *
- * All rights reserved.  	         * 
- * ************************************* *
-*/
-
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
 
 #include "capteurs.h" 
 #include "actionneurs.h"

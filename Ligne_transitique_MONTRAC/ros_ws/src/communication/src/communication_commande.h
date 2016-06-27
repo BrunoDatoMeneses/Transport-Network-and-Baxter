@@ -1,3 +1,5 @@
+/**** Bruno DATO, Abdellah ELGOURAIN, Evgeny SHULGA M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #ifndef communication_com
 #define communication_com
 

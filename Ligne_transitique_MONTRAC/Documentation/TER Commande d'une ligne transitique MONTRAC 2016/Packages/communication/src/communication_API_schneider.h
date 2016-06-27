@@ -1,3 +1,5 @@
+/**** Bruno DATO, Abdellah ELGOURAIN, Evgeny SHULGA M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #ifndef Communication_API_sch
 #define Communication_API_sch
 

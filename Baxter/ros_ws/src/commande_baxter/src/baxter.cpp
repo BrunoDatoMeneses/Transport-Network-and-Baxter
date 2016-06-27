@@ -1,3 +1,5 @@
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #include <ros/ros.h>
 #include "baxter.h"
 
@@ -18,22 +20,14 @@ Baxter::Baxter(ros::NodeHandle noeud) :
 	Bras_droit(noeud),
 	Bras_gauche(noeud),
 	
-	//Pub
+	//Publishers
 	pub_enable(noeud.advertise<std_msgs::Bool>("/robot/set_super_enable", 1)),
-	pub_halo_led_green(noeud.advertise<std_msgs::Float32>("/robot/sonar/lights/set_green_level", 1)),
-	pub_halo_led_red(noeud.advertise<std_msgs::Float32>("/robot/sonar/lights/set_red_level", 1)),
 
-	//Sub
+	//Subcribers
 	sub_robot_state(noeud.subscribe("/robot/state", 1, &Baxter::Callback_robot_state,this)),
 	sub_sonar(noeud.subscribe("/robot/sonar/head_sonar/state", 1, &Baxter::Callback_sonar,this)),
 	sub_halo_led_green(noeud.subscribe("/robot/sonar/head_sonar/lights/green_level", 1, &Baxter::Callback_halo_led_green,this)),
 	sub_halo_led_red(noeud.subscribe("/robot/sonar/head_sonar/lights/red_level", 1, &Baxter::Callback_halo_led_red,this))
-	
-
-	//Srv
-
-	
-	
 {
 }
 
@@ -44,14 +38,12 @@ Baxter::~Baxter()
 {
 }
 
-
+// Initialisation
 void Baxter::Init()
 {
     	enableRobot.data= 1 ;
-
-	//Bras_droit.Position(0,0,0,0,0,0,0);
-	//Bras_gauche.Position(0,0,0,0,0,0,0);	
 	
+	// Position et orientation des bras
 	Bras_droit.IK(0.3,-0.8,0.5,PI,0,0);
 	Bras_gauche.IK(0.3,+0.8,0.5,PI,0,0);
 }
@@ -74,7 +66,7 @@ void Baxter::Callback_halo_led_red(const std_msgs::Float32& msg)
 void Baxter::Callback_robot_state(const baxter_core_msgs::AssemblyState& msg)
 {
 	robotSate = msg ;
-	//std::cout<<msg<<std::endl;
+	//std::cout<<robotSate<<std::endl;
 }
 
 void Baxter::Callback_sonar(const sensor_msgs::PointCloud& msg)
@@ -90,16 +82,12 @@ void Baxter::Callback_sonar(const sensor_msgs::PointCloud& msg)
 void Baxter::Update()
 {
 	pub_enable.publish(enableRobot);
-	pub_halo_led_green.publish(set_halo_led_green);
-	pub_halo_led_red.publish(set_halo_led_red);
 
 	Bras_droit.Update();
 	Bras_gauche.Update();
 }
 
 
-
-// Commande 
 
 
 

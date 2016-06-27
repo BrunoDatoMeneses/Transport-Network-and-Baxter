@@ -1,3 +1,5 @@
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #include <ros/ros.h>
 #include "baxter.h"
 
@@ -20,8 +22,6 @@ Baxter::Baxter(ros::NodeHandle noeud) :
 	
 	//Pub
 	pub_enable(noeud.advertise<std_msgs::Bool>("/robot/set_super_enable", 1)),
-	pub_halo_led_green(noeud.advertise<std_msgs::Float32>("/robot/sonar/lights/set_green_level", 1)),
-	pub_halo_led_red(noeud.advertise<std_msgs::Float32>("/robot/sonar/lights/set_red_level", 1)),
 
 	//Sub
 	sub_robot_state(noeud.subscribe("/robot/state", 1, &Baxter::Callback_robot_state,this)),
@@ -48,9 +48,6 @@ Baxter::~Baxter()
 void Baxter::Init()
 {
     	enableRobot.data= 1 ;
-
-	//Bras_droit.Position(0,0,0,0,0,0,0);
-	//Bras_gauche.Position(0,0,0,0,0,0,0);	
 	
 	Bras_droit.IK(0.3,-0.8,0.5,PI,0,0);
 	Bras_gauche.IK(0.3,+0.8,0.5,PI,0,0);
@@ -90,8 +87,6 @@ void Baxter::Callback_sonar(const sensor_msgs::PointCloud& msg)
 void Baxter::Update()
 {
 	pub_enable.publish(enableRobot);
-	pub_halo_led_green.publish(set_halo_led_green);
-	pub_halo_led_red.publish(set_halo_led_red);
 
 	Bras_droit.Update();
 	Bras_gauche.Update();

@@ -37,7 +37,6 @@ public:
 	// Commande	
 
 	std_msgs::Bool enableRobot;
-	std_msgs::Float32 set_halo_led_green , set_halo_led_red ;
 
 
 	// Capteurs

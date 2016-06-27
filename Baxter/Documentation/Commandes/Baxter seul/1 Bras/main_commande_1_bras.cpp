@@ -1,9 +1,4 @@
-/*
- * ************************************* *
- * Copyright 2016, STAGE BAXTETR         *
- * All rights reserved.  	         *
- * ************************************* *
-*/
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
 
 #include "baxter.h"
 #include "baxter_left_arm.h" 
@@ -25,27 +20,29 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "commande_baxter");	
 	ros::NodeHandle noeud;
 
+	float compteur = 0 ;
+
+	// Déclaration objet Baxter
 	Baxter Baxter(noeud);
 
-	float compteur = 0 ;
+	// Déclaration états présent et suivant pour la MEF
 	int EP , ES ;
 
 	// Fréquence doit être supérieure à 5Hz
   	ros::Rate loop_rate(100);
 
 	// Initialisation ROBOT //
-
 	Baxter.Init();
 	
 	// Initialisation MEF //
-
 	EP = 1 ; ES = 1 ; 
 
 	while (ros::ok())
 	{
 
 		//std::cout<<EP<<<<std::endl;
-		
+	
+		// MEF //	
 		switch (EP)
     		{
         		case 1: if(compteur>5) ES=2; break; 
@@ -61,8 +58,10 @@ int main(int argc, char **argv)
 
     		}
 	
+		// Etat présent <- Etat suivant
 		EP = ES ;
 
+		// Actionneurs //
 		switch (EP)
     		{
         		case 1: Baxter.Bras_droit.Position_attente(); Baxter.Bras_droit.Attente_prise(); break;
@@ -78,14 +77,13 @@ int main(int argc, char **argv)
 
     		}
 
-
-		
+		// Envoi des commandes vers le robot Baxter
 		Baxter.Update();
 
 		compteur += 0.01 ;
 
-		ros::spinOnce(); 
-		loop_rate.sleep(); 
+		ros::spinOnce(); // Lancement des fonctions callback 
+		loop_rate.sleep(); // Synchronisation avec la fréquence souhaitée
 
 	}
 	return 0;

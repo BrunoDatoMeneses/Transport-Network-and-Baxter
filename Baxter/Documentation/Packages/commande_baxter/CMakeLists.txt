@@ -16,7 +16,6 @@ find_package(catkin REQUIRED COMPONENTS
   baxter_interface
 )
 
- generate_messages(DEPENDENCIES std_msgs)
 
 
 catkin_package(
@@ -38,8 +37,6 @@ catkin_package(
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
-
-
 
 
 add_executable(run src/main_commande.cpp src/baxter_left_arm.cpp src/baxter_right_arm.cpp src/baxter.cpp)
