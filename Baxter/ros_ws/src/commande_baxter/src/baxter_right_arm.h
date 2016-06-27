@@ -69,10 +69,6 @@ public:
 	void Position(float angle,int num);
 
 
-	bool Pince_fermee();
-	bool Pince_fermee_pos();
-	bool Pince_ouverte();
-
 	void Prise();
 	void Pose();
 
@@ -86,6 +82,12 @@ public:
 	void Prise_effectuee();
 	void Attente_prise();
 
+
+
+	bool Pince_fermee();
+	bool Pince_fermee_pos();
+	bool Pince_ouverte();
+
 	bool Prise_demmandee();
 	bool vitesse_nulle();
 	bool Position(float x, float y, float z);
@@ -96,7 +98,6 @@ public:
 	bool Descente_prise_OK();
 
 	
-
 
 	// Commande pince
 

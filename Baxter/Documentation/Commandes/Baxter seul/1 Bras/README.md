@@ -20,8 +20,6 @@
 
 
 3. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Working_Folder_Baxter/ros_ws**
-
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ catkin_make
 
 
@@ -29,7 +27,6 @@
 
 	- in a new terminal, in ~/ ... /Working_Folder_Baxter/ros_ws
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun baxter run
 
 

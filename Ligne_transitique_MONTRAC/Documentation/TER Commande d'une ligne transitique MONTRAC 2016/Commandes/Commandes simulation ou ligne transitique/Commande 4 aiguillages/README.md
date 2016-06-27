@@ -22,7 +22,6 @@
 
 3. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Working_Folder_Montrac/ros_ws**
 
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ catkin_make
 
 
@@ -36,16 +35,13 @@
 
 	- Before executing the following programs, make sure that you have configured all the PLC (Programmable Logic Controller, API in french) using PL7 PRO (see README at ~/ ... /Ligne_transitique_MONTRAC/Documentation/TER Commande d'une ligne transitique MONTRAC 2016/PL7)
 	- in a new terminal, in ~/ ... /Working_Folder_Montrac/ros_ws
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun automates connect
 	- in a new terminal, still in ~/ ... /Working_Folder_Montrac/ros_ws 
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun communication start
 	
 
 6. **DO NOT MAKE THIS STEP IF BOTH THE SIMULATION AND THE REAL TRANSPORT NETWORK ARE RUNNING !!! In a new terminal, in ~/ ... /Working_Folder_Montrac/ros_ws**
 
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun commande run
 
 	- if your are using the simulation, once it is detected :  SIMULATION ON and LIGNE TRANSITIQUE OFF, press play on the simulation (try not to be too long)

@@ -23,27 +23,26 @@ class Baxter_left_arm
 private:
 
 	//Publishers
-	ros::Publisher pub_joint_cmd , pub_gripper_cmd, pub_prise_effectuee, pub_attente_prise ;
+	ros::Publisher pub_joint_cmd  ;
 
 	//Subscribers
-	ros::Subscriber sub_joint_states , sub_endpoint_state , sub_gripper_state , sub_ir_range , sub_prise_demandee ;
+	ros::Subscriber sub_joint_states ;
 
 	//Client
 	ros::ServiceClient client_inverse_kinematics ;
+
 
 public:
 
 	// Commande	
 
 	baxter_core_msgs::JointCommand msg_JointCommand ;
-	baxter_core_msgs::EndEffectorCommand msg_EndEffectorCommand;
-	std_msgs::Bool msg_prise_demandee , msg_prise_effectuee, msg_attente_prise;
+	
 
 	// Capteurs
 
 	sensor_msgs::JointState jointState ;
-	baxter_core_msgs::EndpointState endpointState ;
-	baxter_core_msgs::EndEffectorState endEffectorState;
+
 
 	
 		// Méthodes //
@@ -55,53 +54,16 @@ public:
 	// Callbacks
 
 	void Callback_joint_states(const sensor_msgs::JointState& msg);
-	void Callback_endpoint_state(const baxter_core_msgs::EndpointState& msg);
-	void Callback_gripper_state(const baxter_core_msgs::EndEffectorState& msg);
-	void Callback_ir_range(const sensor_msgs::Range& msg);
-	void Callback_prise_demandee(const std_msgs::Bool& msg);
 
 	// Commande bras
 
-	void IK(float x, float y, float z, float psy, float teta, float phi);
 
 	void Position(float left_s0, float left_s1, float left_e0, float left_e1, float left_w0, float left_w1, float left_w2);
 	void Position_sinu(float position,float compteur);
 	void Position(float angle,int num);
 
+	void IK(float x, float y, float z, float psy, float teta, float phi);
 
-	bool Pince_fermee();
-	bool Pince_fermee_pos();
-	bool Pince_ouverte();
-
-	void Prise();
-	void Pose();
-
-	void Position_attente();
-	void Position_prise();
-	void Position_pose();
-
-	void Descente_prise();
-	void Descente_pose();
-
-	void Prise_effectuee();
-	void Attente_prise();
-
-	bool Prise_demmandee();
-	bool vitesse_nulle();
-	bool Position(float x, float y, float z);
-
-	bool Position_prise_OK();
-	bool Position_pose_OK();
-	bool Descente_pose_OK();
-	bool Descente_prise_OK();
-
-	
-
-
-	// Commande pince
-
-	void Grip();
-	void Release();
 
 	// Envoi des commandes
 

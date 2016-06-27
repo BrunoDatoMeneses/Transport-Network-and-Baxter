@@ -1541,123 +1541,6 @@ baxter_examples_xacro_generated_to_devel_space_/fast:
 .PHONY : baxter_examples_xacro_generated_to_devel_space_/fast
 
 #=============================================================================
-# Target rules for targets named commande_baxter_gencpp
-
-# Build rule for target.
-commande_baxter_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 commande_baxter_gencpp
-.PHONY : commande_baxter_gencpp
-
-# fast build rule for target.
-commande_baxter_gencpp/fast:
-	$(MAKE) -f commande_baxter/CMakeFiles/commande_baxter_gencpp.dir/build.make commande_baxter/CMakeFiles/commande_baxter_gencpp.dir/build
-.PHONY : commande_baxter_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named commande_baxter_generate_messages
-
-# Build rule for target.
-commande_baxter_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 commande_baxter_generate_messages
-.PHONY : commande_baxter_generate_messages
-
-# fast build rule for target.
-commande_baxter_generate_messages/fast:
-	$(MAKE) -f commande_baxter/CMakeFiles/commande_baxter_generate_messages.dir/build.make commande_baxter/CMakeFiles/commande_baxter_generate_messages.dir/build
-.PHONY : commande_baxter_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named commande_baxter_generate_messages_cpp
-
-# Build rule for target.
-commande_baxter_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 commande_baxter_generate_messages_cpp
-.PHONY : commande_baxter_generate_messages_cpp
-
-# fast build rule for target.
-commande_baxter_generate_messages_cpp/fast:
-	$(MAKE) -f commande_baxter/CMakeFiles/commande_baxter_generate_messages_cpp.dir/build.make commande_baxter/CMakeFiles/commande_baxter_generate_messages_cpp.dir/build
-.PHONY : commande_baxter_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named commande_baxter_generate_messages_eus
-
-# Build rule for target.
-commande_baxter_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 commande_baxter_generate_messages_eus
-.PHONY : commande_baxter_generate_messages_eus
-
-# fast build rule for target.
-commande_baxter_generate_messages_eus/fast:
-	$(MAKE) -f commande_baxter/CMakeFiles/commande_baxter_generate_messages_eus.dir/build.make commande_baxter/CMakeFiles/commande_baxter_generate_messages_eus.dir/build
-.PHONY : commande_baxter_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named commande_baxter_generate_messages_lisp
-
-# Build rule for target.
-commande_baxter_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 commande_baxter_generate_messages_lisp
-.PHONY : commande_baxter_generate_messages_lisp
-
-# fast build rule for target.
-commande_baxter_generate_messages_lisp/fast:
-	$(MAKE) -f commande_baxter/CMakeFiles/commande_baxter_generate_messages_lisp.dir/build.make commande_baxter/CMakeFiles/commande_baxter_generate_messages_lisp.dir/build
-.PHONY : commande_baxter_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named commande_baxter_generate_messages_py
-
-# Build rule for target.
-commande_baxter_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 commande_baxter_generate_messages_py
-.PHONY : commande_baxter_generate_messages_py
-
-# fast build rule for target.
-commande_baxter_generate_messages_py/fast:
-	$(MAKE) -f commande_baxter/CMakeFiles/commande_baxter_generate_messages_py.dir/build.make commande_baxter/CMakeFiles/commande_baxter_generate_messages_py.dir/build
-.PHONY : commande_baxter_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named commande_baxter_geneus
-
-# Build rule for target.
-commande_baxter_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 commande_baxter_geneus
-.PHONY : commande_baxter_geneus
-
-# fast build rule for target.
-commande_baxter_geneus/fast:
-	$(MAKE) -f commande_baxter/CMakeFiles/commande_baxter_geneus.dir/build.make commande_baxter/CMakeFiles/commande_baxter_geneus.dir/build
-.PHONY : commande_baxter_geneus/fast
-
-#=============================================================================
-# Target rules for targets named commande_baxter_genlisp
-
-# Build rule for target.
-commande_baxter_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 commande_baxter_genlisp
-.PHONY : commande_baxter_genlisp
-
-# fast build rule for target.
-commande_baxter_genlisp/fast:
-	$(MAKE) -f commande_baxter/CMakeFiles/commande_baxter_genlisp.dir/build.make commande_baxter/CMakeFiles/commande_baxter_genlisp.dir/build
-.PHONY : commande_baxter_genlisp/fast
-
-#=============================================================================
-# Target rules for targets named commande_baxter_genpy
-
-# Build rule for target.
-commande_baxter_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 commande_baxter_genpy
-.PHONY : commande_baxter_genpy
-
-# fast build rule for target.
-commande_baxter_genpy/fast:
-	$(MAKE) -f commande_baxter/CMakeFiles/commande_baxter_genpy.dir/build.make commande_baxter/CMakeFiles/commande_baxter_genpy.dir/build
-.PHONY : commande_baxter_genpy/fast
-
-#=============================================================================
 # Target rules for targets named commande_baxter_xacro_generated_to_devel_space_
 
 # Build rule for target.
@@ -1684,121 +1567,17 @@ run/fast:
 .PHONY : run/fast
 
 #=============================================================================
-# Target rules for targets named tests_baxter_gencpp
+# Target rules for targets named states
 
 # Build rule for target.
-tests_baxter_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests_baxter_gencpp
-.PHONY : tests_baxter_gencpp
+states: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 states
+.PHONY : states
 
 # fast build rule for target.
-tests_baxter_gencpp/fast:
-	$(MAKE) -f tests_baxter/CMakeFiles/tests_baxter_gencpp.dir/build.make tests_baxter/CMakeFiles/tests_baxter_gencpp.dir/build
-.PHONY : tests_baxter_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named tests_baxter_generate_messages
-
-# Build rule for target.
-tests_baxter_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests_baxter_generate_messages
-.PHONY : tests_baxter_generate_messages
-
-# fast build rule for target.
-tests_baxter_generate_messages/fast:
-	$(MAKE) -f tests_baxter/CMakeFiles/tests_baxter_generate_messages.dir/build.make tests_baxter/CMakeFiles/tests_baxter_generate_messages.dir/build
-.PHONY : tests_baxter_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named tests_baxter_generate_messages_cpp
-
-# Build rule for target.
-tests_baxter_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests_baxter_generate_messages_cpp
-.PHONY : tests_baxter_generate_messages_cpp
-
-# fast build rule for target.
-tests_baxter_generate_messages_cpp/fast:
-	$(MAKE) -f tests_baxter/CMakeFiles/tests_baxter_generate_messages_cpp.dir/build.make tests_baxter/CMakeFiles/tests_baxter_generate_messages_cpp.dir/build
-.PHONY : tests_baxter_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named tests_baxter_generate_messages_eus
-
-# Build rule for target.
-tests_baxter_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests_baxter_generate_messages_eus
-.PHONY : tests_baxter_generate_messages_eus
-
-# fast build rule for target.
-tests_baxter_generate_messages_eus/fast:
-	$(MAKE) -f tests_baxter/CMakeFiles/tests_baxter_generate_messages_eus.dir/build.make tests_baxter/CMakeFiles/tests_baxter_generate_messages_eus.dir/build
-.PHONY : tests_baxter_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named tests_baxter_generate_messages_lisp
-
-# Build rule for target.
-tests_baxter_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests_baxter_generate_messages_lisp
-.PHONY : tests_baxter_generate_messages_lisp
-
-# fast build rule for target.
-tests_baxter_generate_messages_lisp/fast:
-	$(MAKE) -f tests_baxter/CMakeFiles/tests_baxter_generate_messages_lisp.dir/build.make tests_baxter/CMakeFiles/tests_baxter_generate_messages_lisp.dir/build
-.PHONY : tests_baxter_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named tests_baxter_generate_messages_py
-
-# Build rule for target.
-tests_baxter_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests_baxter_generate_messages_py
-.PHONY : tests_baxter_generate_messages_py
-
-# fast build rule for target.
-tests_baxter_generate_messages_py/fast:
-	$(MAKE) -f tests_baxter/CMakeFiles/tests_baxter_generate_messages_py.dir/build.make tests_baxter/CMakeFiles/tests_baxter_generate_messages_py.dir/build
-.PHONY : tests_baxter_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named tests_baxter_geneus
-
-# Build rule for target.
-tests_baxter_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests_baxter_geneus
-.PHONY : tests_baxter_geneus
-
-# fast build rule for target.
-tests_baxter_geneus/fast:
-	$(MAKE) -f tests_baxter/CMakeFiles/tests_baxter_geneus.dir/build.make tests_baxter/CMakeFiles/tests_baxter_geneus.dir/build
-.PHONY : tests_baxter_geneus/fast
-
-#=============================================================================
-# Target rules for targets named tests_baxter_genlisp
-
-# Build rule for target.
-tests_baxter_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests_baxter_genlisp
-.PHONY : tests_baxter_genlisp
-
-# fast build rule for target.
-tests_baxter_genlisp/fast:
-	$(MAKE) -f tests_baxter/CMakeFiles/tests_baxter_genlisp.dir/build.make tests_baxter/CMakeFiles/tests_baxter_genlisp.dir/build
-.PHONY : tests_baxter_genlisp/fast
-
-#=============================================================================
-# Target rules for targets named tests_baxter_genpy
-
-# Build rule for target.
-tests_baxter_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests_baxter_genpy
-.PHONY : tests_baxter_genpy
-
-# fast build rule for target.
-tests_baxter_genpy/fast:
-	$(MAKE) -f tests_baxter/CMakeFiles/tests_baxter_genpy.dir/build.make tests_baxter/CMakeFiles/tests_baxter_genpy.dir/build
-.PHONY : tests_baxter_genpy/fast
+states/fast:
+	$(MAKE) -f tests_baxter/CMakeFiles/states.dir/build.make tests_baxter/CMakeFiles/states.dir/build
+.PHONY : states/fast
 
 #=============================================================================
 # Target rules for targets named tests_baxter_xacro_generated_to_devel_space_
@@ -1946,26 +1725,9 @@ help:
 	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... baxter_examples_gencfg"
 	@echo "... baxter_examples_xacro_generated_to_devel_space_"
-	@echo "... commande_baxter_gencpp"
-	@echo "... commande_baxter_generate_messages"
-	@echo "... commande_baxter_generate_messages_cpp"
-	@echo "... commande_baxter_generate_messages_eus"
-	@echo "... commande_baxter_generate_messages_lisp"
-	@echo "... commande_baxter_generate_messages_py"
-	@echo "... commande_baxter_geneus"
-	@echo "... commande_baxter_genlisp"
-	@echo "... commande_baxter_genpy"
 	@echo "... commande_baxter_xacro_generated_to_devel_space_"
 	@echo "... run"
-	@echo "... tests_baxter_gencpp"
-	@echo "... tests_baxter_generate_messages"
-	@echo "... tests_baxter_generate_messages_cpp"
-	@echo "... tests_baxter_generate_messages_eus"
-	@echo "... tests_baxter_generate_messages_lisp"
-	@echo "... tests_baxter_generate_messages_py"
-	@echo "... tests_baxter_geneus"
-	@echo "... tests_baxter_genlisp"
-	@echo "... tests_baxter_genpy"
+	@echo "... states"
 	@echo "... tests_baxter_xacro_generated_to_devel_space_"
 	@echo "... wave"
 .PHONY : help

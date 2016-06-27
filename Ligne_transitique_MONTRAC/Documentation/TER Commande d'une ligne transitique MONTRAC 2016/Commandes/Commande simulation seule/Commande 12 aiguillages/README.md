@@ -21,8 +21,6 @@
 
 
 3. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Working_Folder_Montrac/ros_ws**
-
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ catkin_make
 
 
@@ -33,8 +31,6 @@
 
 
 5. **In a new terminal, in ~/ ... /Working_Folder_Montrac/ros_ws**
-
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun commande run
 	- once the simulation is detected :  SIMULATION ON and LIGNE TRANSITIQUE OFF, press play on the simulation (try not to be too long)
 

@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/etudiant/M1_ISTR/Baxter/ros_ws/install/lib;/opt/ros/jade/lib)
+    foreach(path /home/etudiant/M1_ISTR/Baxter/ros_ws/install/lib;/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib;/opt/ros/jade/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(tests_baxter_EXPORTED_TARGETS "tests_baxter_generate_messages_cpp;tests_baxter_generate_messages_eus;tests_baxter_generate_messages_lisp;tests_baxter_generate_messages_py")
+set(tests_baxter_EXPORTED_TARGETS "")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${tests_baxter_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -182,7 +182,7 @@ foreach(depend ${depends})
   list(APPEND tests_baxter_EXPORTED_TARGETS ${${tests_baxter_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "tests_baxter-msg-extras.cmake")
+set(pkg_cfg_extras "")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${tests_baxter_DIR}/${extra})

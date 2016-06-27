@@ -12,8 +12,8 @@
 
 1. **In ~/ ... /Working_Folder_Baxter/ros_ws/src/commande/src :**
 
-	- replace the file *main_commande.cpp* by *main_commande baxter_1_bras.cpp*
-	- rename *main_commande_baxter_1_bras.cpp* by *main_commande.cpp*
+	- replace the file *main_commande.cpp* by *main_commande baxter_2_bras.cpp*
+	- rename *main_commande_baxter_2_bras.cpp* by *main_commande.cpp*
 
 
 2. **Don't launch roscore, you will use the master of Baxter which is always running once he is turned on**

@@ -26,13 +26,9 @@
 
 
 4. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Working_Folder_MONTRAC/ros_ws**
-
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ catkin_make
 
 5. **In a new terminal (CTRL+SHIFT+T), in ~/ ... /Working_Folder_Baxter/ros_ws**
-
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ catkin_make
 
 
@@ -54,12 +50,10 @@
 
 	- in a new terminal, in ~/ ... /Working_Folder_MONTRAC/ros_ws
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun automate connect
 
 	- in a new terminal, still in ~/ ... /Working_Folder_MONTRAC/ros_ws 
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun communication start
 
 
@@ -69,14 +63,12 @@
 
 	- in a new terminal, in ~/ ... /Working_Folder_Baxter/ros_ws
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun baxter run
 
 	
 
 9. **DO NOT MAKE THIS STEP IF BOTH THE SIMULATION AND THE REAL TRANSPORT NETWORK ARE RUNNING !!! In a new terminal, in ~/ ... /Working_Folder_MONTRAC/ros_ws**
 
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ ROS_MASTER_URI=http://baxter.local:11311	(to define the master which is Baxter's, only the first time you open the terminal)
 	- $ rosrun commande run
 

@@ -16,7 +16,6 @@ find_package(catkin REQUIRED COMPONENTS
   baxter_interface
 )
 
- generate_messages(DEPENDENCIES std_msgs)
 
 
 catkin_package(
@@ -46,7 +45,9 @@ add_executable(wave src/main_commande_test.cpp src/baxter_left_arm.cpp src/baxte
 target_link_libraries(wave ${catkin_LIBRARIES})
 add_dependencies(wave commande_baxter_generate_messages_cpp)
 
-
+add_executable(states src/listener.cpp)
+target_link_libraries(states ${catkin_LIBRARIES})
+add_dependencies(states commande_baxter_generate_messages_cpp)
 
 
 

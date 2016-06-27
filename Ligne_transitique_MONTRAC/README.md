@@ -19,7 +19,7 @@
 
 
 2. **In ~/ Create a folder named for example "Working_Folder_Montrac", it will contain your workspace**
-	- In this folder, copy the folders *img* and *V-REP* and the file *Simulation.ttt* (you can find them in ~/.../Ligne_transitique_MONTRAC)
+	- In this folder, copy the folders *img* and *V-REP* and the file *Simulation.ttt* (you can find them in ~/.../Ligne_transitique_MONTRAC, every time you will find "/.../" you have to replace this by the path that leads to a folder or a file on YOUR computer)
 
 
 3. **In ~/.bashrc, add these lines :**
@@ -32,37 +32,38 @@
 	- $ catkin_init_workspace
 	- $ cd ..
 	- $ catkin_make
-	- $ source devel/setup.bash
+
+5. **In ~/.bashrc, add this line :**
+	- source ~/ ... /Working_Folder_Montrac/ros_ws/devel/setup.bash (this line will avoid you to always write source devel/setup.bash every time you open a new terminal)
+	- if you are using another ros workspace in parallel, don't add this line in ~/.bashrc, you will have to write the command "source devel/setup.bash" every time that you open a new terminal and that you are in /ros_ws
 
 ## Add the packages
 
-5. **in ~/.../Working_Folder_Montrac/ros_ws/src**
+6. **in ~/.../Working_Folder_Montrac/ros_ws/src**
 	- copy the packages of ~/.../Ligne_transitique_MONTRAC/ros_ws/src (which are the folders *automates*, *commande*, *commande_locale*, *communication* and *vrep_common*)
 
-6. **in the packages automates, commande, commande_locale and communication :**
+7. **in the packages automates, commande, commande_locale and communication :**
 	- open the file *CMakeLists.txt*, comment the lines 21, 22 and 23 using the character "#" and save (they correspond to the creation of the executable files)
 
-7. **In ~/.../Working_Folder_Montrac/ros_ws/ :**
-	- $ source devel/setup.bash (if you opened a new terminal)
+8. **In ~/.../Working_Folder_Montrac/ros_ws/ :**
 	- catkin_make
 
-8. **Return to the file *CMakeLists.txt* of the package automates**
+9. **Return to the file *CMakeLists.txt* of the package automates**
 	- uncomment the lines 21, 22 and 23 and save
 	- in ~/.../Working_Folder_Montrac/ros_ws/ :
-	- $ source devel/setup.bash (if you opened a new terminal)
 	- $ catkin_make (a red line should appear which means that the executable have been created)
 	- repeat this step for all the other packages that you have commented (commande, commande_locale and communication)
 
 
 
 
-9.  **In a terminal, write the command "roscore" if you haven't done it yet to launch the local master**
+10.  **In a terminal, write the command "roscore" if you haven't done it yet to launch the local master**
 
 
 ## Run the simulation 
 
 
-10. **If you are using the real transport network, ignore this step. To run the simulation, in a new terminal, in ~/ ... /Working_Folder_Montrac**
+11. **If you are using the real transport network, ignore this step. To run the simulation, in a new terminal, in ~/ ... /Working_Folder_Montrac**
 
 	- ./simulation 1 2 5 6 (or any number of shuttle between 1 and 6 seperated with a space)
 	- if the simulation doesn't lauch successfully stop it by doing CTRL+C try a second time "$ ./simulation 1 2 5 6" before restarting all the steps
@@ -72,23 +73,20 @@
 ## Run the tranport network 
 
 
-11. **If you are using the simulation, ignore this step. To run the real transport network**
+12. **If you are using the simulation, ignore this step. To run the real transport network**
 
 	- Before executing the following programs, make sure that you have configured all the PLC (Programmable Logic Controller, API in french) using PL7 PRO (see README at ~/ ... /Ligne_transitique_MONTRAC/Documentation/TER Commande d'une ligne transitique MONTRAC 2016/PL7)
 	- in a new terminal, in ~/ ... /Working_Folder_Montrac/ros_ws
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun automates connect
 	- in a new terminal, still in ~/ ... /Working_Folder_Montrac/ros_ws 
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun communication start
 
 
 ## Run a command
 
 
-12. **DO NOT MAKE THIS STEP IF BOTH THE SIMULATION AND THE REAL TRANSPORT NETWORK ARE RUNNING !!! In a new terminal, in ~/ ... /Working_Folder_Montrac/ros_ws**
+13. **DO NOT MAKE THIS STEP IF BOTH THE SIMULATION AND THE REAL TRANSPORT NETWORK ARE RUNNING !!! In a new terminal, in ~/ ... /Working_Folder_Montrac/ros_ws**
 
-	- $ source devel/setup.bash	(only the first time you open the terminal)
 	- $ rosrun commande run
 	- This will run the command that is in ~/.../Workin_Folder/ros_ws/src/commande, you can choose the command you want to run in ~/ ... /Ligne_transitique_MONTRAC/Documentation/TER Commande d'une ligne transitique MONTRAC 2016/Commandes.
 

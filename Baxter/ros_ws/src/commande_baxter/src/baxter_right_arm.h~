@@ -84,6 +84,7 @@ public:
 	void Descente_pose();
 
 	void Prise_effectuee();
+	void Attente_prise();
 
 	bool Prise_demmandee();
 	bool vitesse_nulle();

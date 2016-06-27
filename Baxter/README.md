@@ -30,22 +30,25 @@
 	- $ cd ..
 	- $ catkin_make
 	- $ catkin_make install
-	- $ source devel/setup.bash
+
+5. **In ~/.bashrc, add this line :**
+	- source ~/ ... /Working_Folder_Baxter/ros_ws/devel/setup.bash (this line will avoid you to always write source devel/setup.bash every time you open a new terminal)
+	- if you are using another ros workspaces in parallel, don't add this line in ~/.bashrc, you will have to write the command "source devel/setup.bash" every time that you open a new terminal and that you are in /ros_ws
 
 
 ## Install Baxter Research Robot SDK
 
 
-5. **Install wstool :**
+6. **Install wstool :**
 	- $ sudo apt-get install python-wstool
 
-6. **Install Baxter SDK, in ~/.../Working_Folder_Baxter :**
+7. **Install Baxter SDK, in ~/.../Working_Folder_Baxter :**
 	- cd ros_ws/src
 	- $ wstool init .
 	- $ wstool merge https://raw.githubusercontent.com/RethinkRobotics/baxter/master/baxter_sdk.rosinstall
 	- $ wstool update
 
-7. **Build and install :**
+8. **Build and install :**
 	- $ cd ..
 	- $ catkin_make
 	- $ catkin_make install
@@ -54,11 +57,11 @@
 ## Configure Baxter Communication
 
 
-8. **Download the baxter.sh script, in ~/.../Working_Folder_Baxter/ros_ws :**
+9. **Download the baxter.sh script, in ~/.../Working_Folder_Baxter/ros_ws :**
 	- $ wget https://github.com/RethinkRobotics/baxter/raw/master/baxter.sh
 	- $ chmod u+x baxter.sh
 
-9. **Customize the baxter.sh script**
+10. **Customize the baxter.sh script**
 	- $ gedit baxter.sh
 	- Specify Baxter's hostname line 22 : baxter_hostname="baxter.local"
 	- Specify your IP adress line 26 : your_ip="192.168.XXX.XXX" 
@@ -69,19 +72,17 @@
 
 ## Add the packages
 
-10. **In ~/.../Working_Folder_Baxter/ros_ws/src :**
+11. **In ~/.../Working_Folder_Baxter/ros_ws/src :**
 	- Copy the folders *commande_baxter* and *tests_baxter* (you can find them in ~/.../Baxter/Documentation/Packages)
 	- In ~/.../Working_Folder_Baxter/ros_ws
-	- $ source devel/setup.bash (if you opened a new terminal)
 	- $ catkin_make (you should see 2 red lines for the 2 executables created)
 	- $ catkin_make install
 
 
 ## Test the communication
 
-11. **Initialize your SDK environment, in ~/.../Working_Folder_Baxter/ros_ws :**
+12. **Initialize your SDK environment, in ~/.../Working_Folder_Baxter/ros_ws :**
 	- $ . baxter.sh
-	- $ source devel/setup.bash (if you opened a new terminal)
 	- $ env | grep ROS (to check that your workspace is correctly initialized)
 	- $ rosrun tests_baxter wave (if the robot moves, the communication is well established) 
 	- CTRL+C to stop
@@ -90,7 +91,7 @@
 ## Run a command
 
 
-12. **In the same terminal, in ~/.../Working_Folder_Baxter/ros_ws :**
+13. **In the same terminal, in ~/.../Working_Folder_Baxter/ros_ws :**
 	- $ rosrun commande_baxter run
 
 
