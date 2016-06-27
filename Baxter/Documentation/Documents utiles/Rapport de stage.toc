@@ -1,0 +1,20 @@
+\select@language {french}
+\contentsline {section}{Remerciements}{2}{figure.caption.2}
+\contentsline {section}{Introduction}{4}{section*.4}
+\contentsline {section}{\numberline {1}Pr\IeC {\'e}sentation du stage}{5}{section.1}
+\contentsline {subsection}{\numberline {1.1}Projet global}{5}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Le robot Baxter}{5}{subsection.1.2}
+\contentsline {section}{\numberline {2}ROS}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Les topics de Baxter}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Les topics suppl\IeC {\'e}mentaires}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Le noeud Commande$\_$Baxter}{6}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}La classe Baxter}{6}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Les classes Baxter$\_$left$\_$arm et Baxter$\_$right$\_$arm}{6}{subsubsection.2.3.2}
+\contentsline {subsection}{\numberline {2.4}Le noeud Commande}{6}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}La classe Communication$\_$Baxter}{6}{subsubsection.2.4.1}
+\contentsline {section}{\numberline {3}Synth\IeC {\`e}se de commande}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Commande du robot seul}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Commande de la ligne transitique MONTRAC en int\IeC {\'e}ration avec le robot Baxter}{8}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Commande de la ligne transitique en interaction avec un des bras manipulateurs}{9}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Commande de la ligne transitique en interaction avec les deux bras manipulateurs}{10}{subsubsection.3.2.2}
+\contentsline {section}{Conclusion}{11}{figure.caption.11}

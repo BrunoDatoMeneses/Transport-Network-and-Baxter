@@ -1,7 +1,6 @@
-# TER M1 ISTR Université Paul Sabatier Toulouse France 2016
+# TER et STAGE M1 ISTR Université Paul Sabatier Toulouse France 2016
 
-> Command of a transport network and it simulation
-> Interaction of the transport networ with the robot Baxter
+> Command of a transport network and it simulation & Interaction of the transport networ with the robot Baxter
 
 ## Authors
 - __Bruno DATO__ -- bruno.dato.meneses@gmail.com
@@ -10,8 +9,6 @@
 
 
 # TO DO
-
-
 
 1. **To install the latest version of GIT, go to https://git-scm.com/download/linux and install the appropiate version for your platform**
 

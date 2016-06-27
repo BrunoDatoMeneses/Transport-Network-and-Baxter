@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{figure.caption.2}{Remerciements}{}% 1
+\BOOKMARK [1][-]{section*.4}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.1}{Pr\351sentation du stage}{}% 3
+\BOOKMARK [2][-]{subsection.1.1}{Projet global}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.2}{Le robot Baxter}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{ROS}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Les topics de Baxter}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.2}{Les topics suppl\351mentaires}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.3}{Le noeud Commande\137Baxter}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.1}{La classe Baxter}{subsection.2.3}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Les classes Baxter\137left\137arm et Baxter\137right\137arm}{subsection.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.4}{Le noeud Commande}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.4.1}{La classe Communication\137Baxter}{subsection.2.4}% 13
+\BOOKMARK [1][-]{section.3}{Synth\350se de commande}{}% 14
+\BOOKMARK [2][-]{subsection.3.1}{Commande du robot seul}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.2}{Commande de la ligne transitique MONTRAC en int\351ration avec le robot Baxter}{section.3}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Commande de la ligne transitique en interaction avec un des bras manipulateurs}{subsection.3.2}% 17
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Commande de la ligne transitique en interaction avec les deux bras manipulateurs}{subsection.3.2}% 18
+\BOOKMARK [1][-]{figure.caption.11}{Conclusion}{}% 19
