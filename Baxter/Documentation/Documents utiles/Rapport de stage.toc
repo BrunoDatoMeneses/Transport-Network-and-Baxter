@@ -1,20 +1,44 @@
 \select@language {french}
 \contentsline {section}{Remerciements}{2}{figure.caption.2}
-\contentsline {section}{Introduction}{4}{section*.4}
-\contentsline {section}{\numberline {1}Pr\IeC {\'e}sentation du stage}{5}{section.1}
-\contentsline {subsection}{\numberline {1.1}Projet global}{5}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Le robot Baxter}{5}{subsection.1.2}
-\contentsline {section}{\numberline {2}ROS}{6}{section.2}
-\contentsline {subsection}{\numberline {2.1}Les topics de Baxter}{6}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Les topics suppl\IeC {\'e}mentaires}{6}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Le noeud Commande$\_$Baxter}{6}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}La classe Baxter}{6}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Les classes Baxter$\_$left$\_$arm et Baxter$\_$right$\_$arm}{6}{subsubsection.2.3.2}
-\contentsline {subsection}{\numberline {2.4}Le noeud Commande}{6}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}La classe Communication$\_$Baxter}{6}{subsubsection.2.4.1}
-\contentsline {section}{\numberline {3}Synth\IeC {\`e}se de commande}{7}{section.3}
-\contentsline {subsection}{\numberline {3.1}Commande du robot seul}{7}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Commande de la ligne transitique MONTRAC en int\IeC {\'e}ration avec le robot Baxter}{8}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Commande de la ligne transitique en interaction avec un des bras manipulateurs}{9}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Commande de la ligne transitique en interaction avec les deux bras manipulateurs}{10}{subsubsection.3.2.2}
-\contentsline {section}{Conclusion}{11}{figure.caption.11}
+\contentsline {section}{Introduction}{6}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Pr\IeC {\'e}sentation du stage}{9}{chapter.1}
+\contentsline {section}{\numberline {1.1}Projet global}{9}{section.1.1}
+\contentsline {section}{\numberline {1.2}Le robot Baxter }{10}{section.1.2}
+\contentsline {section}{\numberline {1.3}Ligne transitique MONTRAC$^{\text {$\mathsurround \z@ \mathchar "472$}}$}{11}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Pr\IeC {\'e}sentation}{11}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Capteurs et actionneurs}{12}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Simulation de la ligne transitique}{15}{section.1.4}
+\contentsline {section}{\numberline {1.5}Probl\IeC {\'e}matique et solution mise en place}{16}{section.1.5}
+\contentsline {section}{\numberline {1.6}Pr\IeC {\'e}sentation du middleware ROS}{17}{section.1.6}
+\contentsline {chapter}{\numberline {2}ROS}{19}{chapter.2}
+\contentsline {section}{\numberline {2.1}Les topics et services de Baxter}{19}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Les topics des \IeC {\'e}tats}{19}{subsection.2.1.1}
+\contentsline {subsubsection}{/robot/state}{19}{section*.19}
+\contentsline {subsubsection}{/robot/joint$\_$states}{19}{section*.20}
+\contentsline {subsubsection}{/robot/limb/left/endpoint$\_$state et /robot/limb/right/endpoint$\_$state}{19}{section*.21}
+\contentsline {subsubsection}{/robot/end$\_$effector/left$\_$gripper/state et /robot/end$\_$effector/right$\_$gripper/state}{20}{section*.22}
+\contentsline {subsection}{\numberline {2.1.2}Les topics de commande}{20}{subsection.2.1.2}
+\contentsline {subsubsection}{/robot/set$\_$super$\_$enable}{20}{section*.23}
+\contentsline {subsubsection}{/robot/limb/left/joint$\_$command et /robot/limb/right/joint$\_$command}{20}{section*.24}
+\contentsline {subsubsection}{/robot/end$\_$effector/left$\_$gripper/command et /robot/end$\_$effector/right$\_$gripper/command}{20}{section*.25}
+\contentsline {subsection}{\numberline {2.1.3}Le service Inverse Kinematics}{20}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Les topics de communication entre Baxter et la ligne transitique}{21}{section.2.2}
+\contentsline {section}{\numberline {2.3}Le noeud Commande$\_$Baxter}{21}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}La classe Baxter}{21}{subsection.2.3.1}
+\contentsline {subsubsection}{Attributs}{21}{section*.26}
+\contentsline {subsubsection}{M\IeC {\'e}thodes}{21}{section*.27}
+\contentsline {subsection}{\numberline {2.3.2}Les classes Baxter$\_$left$\_$arm et Baxter$\_$right$\_$arm}{21}{subsection.2.3.2}
+\contentsline {subsubsection}{Attributs}{21}{section*.28}
+\contentsline {subsubsection}{M\IeC {\'e}thodes}{21}{section*.29}
+\contentsline {section}{\numberline {2.4}Le noeud Commande}{21}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Les classes Capteurs et Actionneurs}{21}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}La classe Communication$\_$Baxter}{21}{subsection.2.4.2}
+\contentsline {subsubsection}{Attributs}{21}{section*.30}
+\contentsline {subsubsection}{M\IeC {\'e}thodes}{21}{section*.31}
+\contentsline {chapter}{\numberline {3}Synth\IeC {\`e}se de commande}{23}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.3}Commande du robot seul}{23}{subsection.3.0.3}
+\contentsline {subsection}{\numberline {3.0.4}Commande de la ligne transitique MONTRAC en int\IeC {\'e}ration avec le robot Baxter}{24}{subsection.3.0.4}
+\contentsline {subsubsection}{Commande de la ligne transitique en interaction avec un des bras manipulateurs}{25}{section*.34}
+\contentsline {subsubsection}{Commande de la ligne transitique en interaction avec les deux bras manipulateurs}{26}{section*.36}
+\contentsline {section}{Conclusion}{27}{figure.caption.37}
+\contentsline {section}{Bibliographie}{28}{chapter*.38}
