@@ -14,9 +14,18 @@ find_package(catkin REQUIRED COMPONENTS
   dynamic_reconfigure
   baxter_core_msgs
   baxter_interface
+  message_generation
 )
 
+add_service_files(
+   FILES
+   bool_state.srv
+)
 
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
 
 catkin_package(
   CATKIN_DEPENDS

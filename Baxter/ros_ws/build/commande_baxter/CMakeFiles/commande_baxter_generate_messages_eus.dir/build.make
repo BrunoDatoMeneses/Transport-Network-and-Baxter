@@ -45,14 +45,23 @@ CMAKE_BINARY_DIR = /home/etudiant/M1_ISTR/Baxter/ros_ws/build
 # Include the progress variables for this target.
 include commande_baxter/CMakeFiles/commande_baxter_generate_messages_eus.dir/progress.make
 
+commande_baxter/CMakeFiles/commande_baxter_generate_messages_eus: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/srv/bool_state.l
 commande_baxter/CMakeFiles/commande_baxter_generate_messages_eus: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/manifest.l
 
-/home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/manifest.l: /opt/ros/jade/share/geneus/cmake/../../../lib/geneus/gen_eus.py
+/home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/srv/bool_state.l: /opt/ros/jade/share/geneus/cmake/../../../lib/geneus/gen_eus.py
+/home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/srv/bool_state.l: /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv
+/home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/srv/bool_state.l: /opt/ros/jade/share/std_msgs/cmake/../msg/Empty.msg
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/etudiant/M1_ISTR/Baxter/ros_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating EusLisp code from commande_baxter/bool_state.srv"
+	cd /home/etudiant/M1_ISTR/Baxter/ros_ws/build/commande_baxter && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv -Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg -p commande_baxter -o /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/srv
+
+/home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/manifest.l: /opt/ros/jade/share/geneus/cmake/../../../lib/geneus/gen_eus.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/etudiant/M1_ISTR/Baxter/ros_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating EusLisp manifest code for commande_baxter"
 	cd /home/etudiant/M1_ISTR/Baxter/ros_ws/build/commande_baxter && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter commande_baxter std_msgs
 
 commande_baxter_generate_messages_eus: commande_baxter/CMakeFiles/commande_baxter_generate_messages_eus
+commande_baxter_generate_messages_eus: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/srv/bool_state.l
 commande_baxter_generate_messages_eus: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/manifest.l
 commande_baxter_generate_messages_eus: commande_baxter/CMakeFiles/commande_baxter_generate_messages_eus.dir/build.make
 .PHONY : commande_baxter_generate_messages_eus

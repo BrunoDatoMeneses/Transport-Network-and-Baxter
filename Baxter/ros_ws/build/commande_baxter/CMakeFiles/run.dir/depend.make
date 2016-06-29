@@ -9,6 +9,9 @@ commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /home/etudiant/M1_ISTR/Baxt
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIK.h
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKRequest.h
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKResponse.h
+commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_state.h
+commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateRequest.h
+commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateResponse.h
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter.cpp
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter.h
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter_left_arm.h
@@ -82,6 +85,7 @@ commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /opt/ros/jade/include/senso
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /opt/ros/jade/include/sensor_msgs/PointCloud.h
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /opt/ros/jade/include/sensor_msgs/Range.h
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /opt/ros/jade/include/std_msgs/Bool.h
+commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /opt/ros/jade/include/std_msgs/Empty.h
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /opt/ros/jade/include/std_msgs/Float32.h
 commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o: /opt/ros/jade/include/std_msgs/Header.h
 
@@ -92,6 +96,9 @@ commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /home/etudiant/M1_
 commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIK.h
 commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKRequest.h
 commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKResponse.h
+commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_state.h
+commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateRequest.h
+commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateResponse.h
 commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter_left_arm.cpp
 commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter_left_arm.h
 commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /opt/ros/jade/include/XmlRpcDecl.h
@@ -160,6 +167,7 @@ commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /opt/ros/jade/incl
 commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /opt/ros/jade/include/sensor_msgs/JointState.h
 commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /opt/ros/jade/include/sensor_msgs/Range.h
 commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /opt/ros/jade/include/std_msgs/Bool.h
+commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /opt/ros/jade/include/std_msgs/Empty.h
 commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o: /opt/ros/jade/include/std_msgs/Header.h
 
 commande_baxter/CMakeFiles/run.dir/src/baxter_right_arm.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/EndEffectorCommand.h
@@ -247,6 +255,9 @@ commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_IS
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIK.h
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKRequest.h
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKResponse.h
+commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_state.h
+commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateRequest.h
+commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateResponse.h
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter.h
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter_left_arm.h
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter_right_arm.h
@@ -320,6 +331,7 @@ commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /opt/ros/jade/includ
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /opt/ros/jade/include/sensor_msgs/PointCloud.h
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /opt/ros/jade/include/sensor_msgs/Range.h
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /opt/ros/jade/include/std_msgs/Bool.h
+commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /opt/ros/jade/include/std_msgs/Empty.h
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /opt/ros/jade/include/std_msgs/Float32.h
 commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o: /opt/ros/jade/include/std_msgs/Header.h
 

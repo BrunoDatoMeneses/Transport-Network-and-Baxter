@@ -92,18 +92,6 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/actionneurs.cpp
-ros/ros.h
--
-actionneurs.h
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/actionneurs.h
-capteurs.h
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/capteurs.h
-commande_locale/Msg_StopControl.h
--
-commande_locale/Msg_SwitchControl.h
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/commande_locale/Msg_SwitchControl.h
-
 /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/actionneurs.h
 commande_locale/Msg_StopControl.h
 -
@@ -114,14 +102,6 @@ commande/Actionneurs.h
 ros/ros.h
 -
 
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/capteurs.cpp
-ros/ros.h
--
-capteurs.h
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/capteurs.h
-commande_locale/Msg_SensorState.h
--
-
 /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/capteurs.h
 commande_locale/Msg_SensorState.h
 -
@@ -130,31 +110,11 @@ commande/Capteurs.h
 ros/ros.h
 -
 
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/commande.cpp
-commande.h
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/commande.h
-actionneurs.h
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/actionneurs.h
-commande.h
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/commande.h
-ros/ros.h
--
-iostream
--
-
 /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/commande.h
 ros/ros.h
 -
 actionneurs.h
 /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/actionneurs.h
-
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/communication_baxter.cpp
-ros/ros.h
--
-communication_baxter.h
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/communication_baxter.h
-std_msgs/Bool.h
-/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/std_msgs/Bool.h
 
 /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/communication_baxter.h
 ros/ros.h

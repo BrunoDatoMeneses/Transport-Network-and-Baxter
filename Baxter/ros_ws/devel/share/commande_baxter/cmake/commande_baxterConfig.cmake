@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(commande_baxter_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include " STREQUAL " ")
   set(commande_baxter_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib;/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib;/opt/ros/jade/lib)
+    foreach(path /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib;/home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib;/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib;/opt/ros/jade/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(commande_baxter_EXPORTED_TARGETS "")
+set(commande_baxter_EXPORTED_TARGETS "commande_baxter_generate_messages_cpp;commande_baxter_generate_messages_eus;commande_baxter_generate_messages_lisp;commande_baxter_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${commande_baxter_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -182,7 +182,7 @@ foreach(depend ${depends})
   list(APPEND commande_baxter_EXPORTED_TARGETS ${${commande_baxter_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "commande_baxter-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${commande_baxter_DIR}/${extra})

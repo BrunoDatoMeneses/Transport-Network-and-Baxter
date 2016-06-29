@@ -1,8 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(WARNING "Invoking generate_messages() without having added any message or service file before.
-You should either add add_message_files() and/or add_service_files() calls or remove the invocation of generate_messages().")
-message(STATUS "commande_baxter: 0 messages, 0 services")
+message(STATUS "commande_baxter: 0 messages, 1 services")
 
 set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/jade/share/std_msgs/cmake/../msg")
 
@@ -18,6 +16,11 @@ add_custom_target(commande_baxter_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv" NAME_WE)
+add_custom_target(_commande_baxter_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "commande_baxter" "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv" "std_msgs/Empty"
+)
+
 #
 #  langs = gencpp;geneus;genlisp;genpy
 #
@@ -26,6 +29,12 @@ add_custom_target(commande_baxter_generate_messages ALL)
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_cpp(commande_baxter
+  "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/jade/share/std_msgs/cmake/../msg/Empty.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/commande_baxter
+)
 
 ### Generating Module File
 _generate_module_cpp(commande_baxter
@@ -39,6 +48,8 @@ add_custom_target(commande_baxter_generate_messages_cpp
 add_dependencies(commande_baxter_generate_messages commande_baxter_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv" NAME_WE)
+add_dependencies(commande_baxter_generate_messages_cpp _commande_baxter_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(commande_baxter_gencpp)
@@ -51,6 +62,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS commande_baxter_generate_messages_c
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_eus(commande_baxter
+  "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/jade/share/std_msgs/cmake/../msg/Empty.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/commande_baxter
+)
 
 ### Generating Module File
 _generate_module_eus(commande_baxter
@@ -64,6 +81,8 @@ add_custom_target(commande_baxter_generate_messages_eus
 add_dependencies(commande_baxter_generate_messages commande_baxter_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv" NAME_WE)
+add_dependencies(commande_baxter_generate_messages_eus _commande_baxter_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(commande_baxter_geneus)
@@ -76,6 +95,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS commande_baxter_generate_messages_e
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_lisp(commande_baxter
+  "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/jade/share/std_msgs/cmake/../msg/Empty.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/commande_baxter
+)
 
 ### Generating Module File
 _generate_module_lisp(commande_baxter
@@ -89,6 +114,8 @@ add_custom_target(commande_baxter_generate_messages_lisp
 add_dependencies(commande_baxter_generate_messages commande_baxter_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv" NAME_WE)
+add_dependencies(commande_baxter_generate_messages_lisp _commande_baxter_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(commande_baxter_genlisp)
@@ -101,6 +128,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS commande_baxter_generate_messages_l
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_py(commande_baxter
+  "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/jade/share/std_msgs/cmake/../msg/Empty.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/commande_baxter
+)
 
 ### Generating Module File
 _generate_module_py(commande_baxter
@@ -114,6 +147,8 @@ add_custom_target(commande_baxter_generate_messages_py
 add_dependencies(commande_baxter_generate_messages commande_baxter_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv" NAME_WE)
+add_dependencies(commande_baxter_generate_messages_py _commande_baxter_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(commande_baxter_genpy)

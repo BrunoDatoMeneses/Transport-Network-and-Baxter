@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = ""
+services_str = "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv"
 pkg_name = "commande_baxter"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;genpy"

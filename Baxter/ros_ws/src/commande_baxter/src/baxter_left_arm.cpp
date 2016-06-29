@@ -4,6 +4,7 @@
 #include "baxter_left_arm.h" 
 
 #include "std_msgs/Bool.h"
+#include "commande_baxter/bool_state.h" 
 
 #include "baxter_core_msgs/JointCommand.h"
 #include "baxter_core_msgs/EndEffectorCommand.h"
@@ -38,8 +39,14 @@ Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
 
 	sub_prise_demandee = noeud.subscribe("/pont_BaxterLigneTransitique/left_arm/prise_demandee", 1, &Baxter_left_arm::Callback_prise_demandee,this);
 
-	//Srv
+	//Client
 	client_inverse_kinematics = noeud.serviceClient<baxter_core_msgs::SolvePositionIK>("/ExternalTools/left/PositionKinematicsNode/IKService");
+	
+
+	//Server
+	srv_prise_effectuee = noeud.advertiseService("/pont_BaxterLigneTransitique/service/left_arm/prise_effectuee", &Baxter_left_arm::Srv_prise_effectuee,this);
+	srv_attente_prise = noeud.advertiseService("/pont_BaxterLigneTransitique/service/left_arm/attente_prise", &Baxter_left_arm::Srv_attente_prise,this);
+	
 
 	// Commande bras en mode position
 	msg_JointCommand.mode = baxter_core_msgs::JointCommand::POSITION_MODE;
@@ -114,6 +121,21 @@ void Baxter_left_arm::Callback_prise_demandee(const std_msgs::Bool& msg)
 {
 	msg_prise_demandee = msg ;
 	//std::cout<<msg<<std::endl;
+}
+
+// Services
+bool Baxter_left_arm::Srv_prise_effectuee(commande_baxter::bool_state::Request  &req,
+         commande_baxter::bool_state::Response &res)
+{
+  res.state = msg_prise_effectuee.data;
+  return true;
+}
+
+bool Baxter_left_arm::Srv_attente_prise(commande_baxter::bool_state::Request  &req,
+         commande_baxter::bool_state::Response &res)
+{
+  res.state = msg_attente_prise.data;
+  return true;
 }
 
 

@@ -41,6 +41,7 @@ cbc6b05b0afbdb0475d8552995e3fb1f /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/incl
 6c6da38a0adb5ae6c8ef1bcf5b9757c3 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_maintenance_msgs/UpdateSource.h
 1a1c9f89c4cd9d5c9ecbbf0de75b3a34 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_maintenance_msgs/UpdateSources.h
 a27a304377bf8b677518ed08bd5bfa7d /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_maintenance_msgs/UpdateStatus.h
+2d630170952625caa890393683b291bf /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_state.h
 2f791071c7bbd8dfe4cfb4ffead728a8 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib/python2.7/dist-packages/baxter_core_msgs/msg/_AnalogIOState.py
 77036977968563cdbd95c7ea5f2f1d0c /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib/python2.7/dist-packages/baxter_core_msgs/msg/_AnalogIOStates.py
 33e193409cf28ffe57233752ad337f9c /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib/python2.7/dist-packages/baxter_core_msgs/msg/_AnalogOutputCommand.py
@@ -80,6 +81,8 @@ cdab3efc463752d4325ae27b898a4376 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib/
 c269a7c1de39b61b7f3e25805787bf94 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_UpdateSources.py
 d194f7fda37198e38dcb0eadf6c625e9 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_UpdateStatus.py
 24081ac32ce46577fe99c21317887f15 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/__init__.py
+fe69fc38c7f47f10be455363890a6cc9 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib/python2.7/dist-packages/commande_baxter/srv/__init__.py
+bbc6a85b3b97f89e24e41c9ec31e71a9 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/lib/python2.7/dist-packages/commande_baxter/srv/_bool_state.py
 a4d104f8f509f4ec7fbf7b4048517ae1 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/common-lisp/ros/baxter_core_msgs/msg/AnalogIOState.lisp
 9ad8617f2793711971284c1a5f745c93 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/common-lisp/ros/baxter_core_msgs/msg/AnalogIOStates.lisp
 09e1a270d815392b6975c71c7ed46aed /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/common-lisp/ros/baxter_core_msgs/msg/AnalogOutputCommand.lisp
@@ -116,6 +119,7 @@ f8d28d0603dae81bd45b0121a9174d00 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/shar
 f06beb69233606b1056981708439a2eb /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/common-lisp/ros/baxter_maintenance_msgs/msg/UpdateSource.lisp
 e268adb45e1747b76d510759079124ea /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/common-lisp/ros/baxter_maintenance_msgs/msg/UpdateSources.lisp
 90af8caf67137980957f43d41ee5f0a2 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/common-lisp/ros/baxter_maintenance_msgs/msg/UpdateStatus.lisp
+8d898a795971e9a367fd6e0b8104fe1b /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/common-lisp/ros/commande_baxter/srv/bool_state.lisp
 f1ea5df732d9e299dbcf1559b5175121 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/baxter_core_msgs/manifest.l
 4aaf07be141a884a9dc16d31a1853136 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/baxter_core_msgs/msg/AnalogIOState.l
 ba0b4275140bfafb3d1143dbc0e822d1 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/baxter_core_msgs/msg/AnalogIOStates.l
@@ -155,6 +159,7 @@ b262d9a90f4bbdf4560911b1d73c2ef0 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/shar
 f6c03039aeefa9ed475371af58c44834 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/baxter_maintenance_msgs/msg/UpdateSources.l
 d484bb4ddeed7c3364e2cc9a76e8c84b /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/baxter_maintenance_msgs/msg/UpdateStatus.l
 4e76fa0121866eb8a5becc8193ba4819 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/manifest.l
+b92a93b55a22885454282da72939dba0 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/commande_baxter/srv/bool_state.l
 42422f3022f61f8d40e52481ee6cea28 /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/share/roseus/ros/tests_baxter/manifest.l
 65893ddf6b8ddb6f8d8a11c2a7d7e286 CMakeFiles/clean_test_results
 eb368f054262a3f2889512da982999a2 CMakeFiles/clean_test_results_Project
@@ -265,5 +270,15 @@ a447f7bcecd8ada319c52c70f2d494ad baxter_simulator/baxter_sim_io/include/baxter_s
 c0f94e279a8b823c0d466fc17a0d3387 baxter_simulator/baxter_sim_io/include/baxter_sim_io/moc_qnode.cxx
 a3c9e743af6b727a9f713cd8f50fb917 baxter_simulator/baxter_sim_io/qrc_sim_io.cxx
 6933895222705b855447fabaa9b37845 baxter_simulator/baxter_sim_io/ui_baxter_io.h
+dc1e093bc54b49b66c318a5b4187da7b commande_baxter/CMakeFiles/_commande_baxter_generate_messages_check_deps_bool_state
+cb917ae028d7788f9899638393d7abfd commande_baxter/CMakeFiles/commande_baxter_gencpp
+cb917ae028d7788f9899638393d7abfd commande_baxter/CMakeFiles/commande_baxter_generate_messages
+cb917ae028d7788f9899638393d7abfd commande_baxter/CMakeFiles/commande_baxter_generate_messages_cpp
+cb917ae028d7788f9899638393d7abfd commande_baxter/CMakeFiles/commande_baxter_generate_messages_eus
+cb917ae028d7788f9899638393d7abfd commande_baxter/CMakeFiles/commande_baxter_generate_messages_lisp
+cb917ae028d7788f9899638393d7abfd commande_baxter/CMakeFiles/commande_baxter_generate_messages_py
+cb917ae028d7788f9899638393d7abfd commande_baxter/CMakeFiles/commande_baxter_geneus
+cb917ae028d7788f9899638393d7abfd commande_baxter/CMakeFiles/commande_baxter_genlisp
+cb917ae028d7788f9899638393d7abfd commande_baxter/CMakeFiles/commande_baxter_genpy
 cb917ae028d7788f9899638393d7abfd commande_baxter/CMakeFiles/commande_baxter_xacro_generated_to_devel_space_
 d016cc74d844e49823d427ec575aebfe tests_baxter/CMakeFiles/tests_baxter_xacro_generated_to_devel_space_
