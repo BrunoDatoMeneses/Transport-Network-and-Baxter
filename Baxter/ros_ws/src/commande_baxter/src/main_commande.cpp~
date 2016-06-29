@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 	// Déclaration objet Baxter
 	Baxter Baxter(noeud);
 
-	// Déclaration états présents et suivant pour les 2 MEF
+	// Déclaration états présents et suivant pour les 2 MEF	
 	int EP1 , ES1 , EP2 , ES2 ;
 
 	// Fréquence doit être supérieure à 5Hz
@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 		// Bras Droit
 		switch (EP1)
     		{
-        		case 1: if(compteur > 5) ES1=2; break; 
+        		case 1: if(Baxter.Bras_droit.Prise_demmandee()) ES1=2; break; 
         		case 2: if(Baxter.Bras_droit.Position_prise_OK()) ES1=3; break;
         		case 3: if(Baxter.Bras_droit.Descente_prise_OK()) ES1=4; break;
         		case 4: if(Baxter.Bras_droit.Pince_fermee_pos()) ES1=5; break;
@@ -64,7 +64,7 @@ int main(int argc, char **argv)
 		// Bras Gauche
 		switch (EP2)
     		{
-        		case 1: if(compteur > 7) ES2=2; break; 
+        		case 1: if(Baxter.Bras_gauche.Prise_demmandee()) ES2=2; break; 
         		case 2: if(Baxter.Bras_gauche.Position_prise_OK()) ES2=3; break;
         		case 3: if(Baxter.Bras_gauche.Descente_prise_OK()) ES2=4; break;
         		case 4: if(Baxter.Bras_gauche.Pince_fermee_pos()) ES2=5; break;
@@ -118,10 +118,11 @@ int main(int argc, char **argv)
 		// Envoi des commandes vers le robot Baxter
 		Baxter.Update();
 
-		ros::spinOnce(); // Lancement des fonctions callback
+		compteur += 0.01 ;
+
+		ros::spinOnce(); // Lancement des fonctions callback 
 		loop_rate.sleep(); // Synchronisation avec la fréquence souhaitée
 
-		compteur += 0.01;
 	}
 	return 0;
 }
