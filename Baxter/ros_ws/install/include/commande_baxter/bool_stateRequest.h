@@ -15,7 +15,6 @@
 #include <ros/builtin_message_traits.h>
 #include <ros/message_operations.h>
 
-#include <std_msgs/Empty.h>
 
 namespace commande_baxter
 {
@@ -25,16 +24,16 @@ struct bool_stateRequest_
   typedef bool_stateRequest_<ContainerAllocator> Type;
 
   bool_stateRequest_()
-    : vide()  {
+    : query(false)  {
     }
   bool_stateRequest_(const ContainerAllocator& _alloc)
-    : vide(_alloc)  {
+    : query(false)  {
     }
 
 
 
-   typedef  ::std_msgs::Empty_<ContainerAllocator>  _vide_type;
-  _vide_type vide;
+   typedef uint8_t _query_type;
+  _query_type query;
 
 
 
@@ -113,12 +112,12 @@ struct MD5Sum< ::commande_baxter::bool_stateRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "182aedd557138cf6a8c544cc8c5f2ac8";
+    return "d56f052dde9259c4dd003e064bd410a0";
   }
 
   static const char* value(const ::commande_baxter::bool_stateRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x182aedd557138cf6ULL;
-  static const uint64_t static_value2 = 0xa8c544cc8c5f2ac8ULL;
+  static const uint64_t static_value1 = 0xd56f052dde9259c4ULL;
+  static const uint64_t static_value2 = 0xdd003e064bd410a0ULL;
 };
 
 template<class ContainerAllocator>
@@ -137,10 +136,7 @@ struct Definition< ::commande_baxter::bool_stateRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "std_msgs/Empty vide\n\
-\n\
-================================================================================\n\
-MSG: std_msgs/Empty\n\
+    return "bool query\n\
 ";
   }
 
@@ -159,7 +155,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.vide);
+      stream.next(m.query);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -178,9 +174,8 @@ struct Printer< ::commande_baxter::bool_stateRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::commande_baxter::bool_stateRequest_<ContainerAllocator>& v)
   {
-    s << indent << "vide: ";
-    s << std::endl;
-    Printer< ::std_msgs::Empty_<ContainerAllocator> >::stream(s, indent + "  ", v.vide);
+    s << indent << "query: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.query);
   }
 };
 

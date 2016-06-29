@@ -193,6 +193,9 @@ commande/CMakeFiles/run.dir/src/commande.cpp.o: /opt/ros/jade/include/ros/wall_t
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /opt/ros/jade/include/rosconsole/macros_generated.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /opt/ros/jade/include/std_msgs/Header.h
 
+commande/CMakeFiles/run.dir/src/communication_baxter.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_state.h
+commande/CMakeFiles/run.dir/src/communication_baxter.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_stateRequest.h
+commande/CMakeFiles/run.dir/src/communication_baxter.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_stateResponse.h
 commande/CMakeFiles/run.dir/src/communication_baxter.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/communication_baxter.cpp
 commande/CMakeFiles/run.dir/src/communication_baxter.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/communication_baxter.h
 commande/CMakeFiles/run.dir/src/communication_baxter.cpp.o: /opt/ros/jade/include/XmlRpcDecl.h
@@ -255,6 +258,9 @@ commande/CMakeFiles/run.dir/src/communication_baxter.cpp.o: /opt/ros/jade/includ
 
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande/Actionneurs.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande/Capteurs.h
+commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_state.h
+commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_stateRequest.h
+commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_stateResponse.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_locale/Msg_SensorState.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_locale/Msg_StopControl.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_locale/Msg_SwitchControl.h

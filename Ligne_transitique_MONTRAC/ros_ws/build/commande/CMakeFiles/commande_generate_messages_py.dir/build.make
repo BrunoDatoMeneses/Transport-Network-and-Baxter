@@ -48,6 +48,7 @@ include commande/CMakeFiles/commande_generate_messages_py.dir/progress.make
 commande/CMakeFiles/commande_generate_messages_py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg/_Actionneurs.py
 commande/CMakeFiles/commande_generate_messages_py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg/_Capteurs.py
 commande/CMakeFiles/commande_generate_messages_py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg/__init__.py
+commande/CMakeFiles/commande_generate_messages_py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/srv/__init__.py
 
 /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg/_Actionneurs.py: /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg/_Actionneurs.py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/msg/Actionneurs.msg
@@ -68,10 +69,18 @@ commande/CMakeFiles/commande_generate_messages_py: /home/etudiant/M1_ISTR/Ligne_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for commande"
 	cd /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/build/commande && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg --initpy
 
+/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/srv/__init__.py: /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/srv/__init__.py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg/_Actionneurs.py
+/home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/srv/__init__.py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg/_Capteurs.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python srv __init__.py for commande"
+	cd /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/build/commande && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/jade/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/srv --initpy
+
 commande_generate_messages_py: commande/CMakeFiles/commande_generate_messages_py
 commande_generate_messages_py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg/_Actionneurs.py
 commande_generate_messages_py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg/_Capteurs.py
 commande_generate_messages_py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/msg/__init__.py
+commande_generate_messages_py: /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/lib/python2.7/dist-packages/commande/srv/__init__.py
 commande_generate_messages_py: commande/CMakeFiles/commande_generate_messages_py.dir/build.make
 .PHONY : commande_generate_messages_py
 

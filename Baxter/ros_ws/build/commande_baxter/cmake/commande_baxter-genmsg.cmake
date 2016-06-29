@@ -18,7 +18,7 @@ add_custom_target(commande_baxter_generate_messages ALL)
 
 get_filename_component(_filename "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv" NAME_WE)
 add_custom_target(_commande_baxter_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "commande_baxter" "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv" "std_msgs/Empty"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "commande_baxter" "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv" ""
 )
 
 #
@@ -32,7 +32,7 @@ add_custom_target(_commande_baxter_generate_messages_check_deps_${_filename}
 _generate_srv_cpp(commande_baxter
   "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/jade/share/std_msgs/cmake/../msg/Empty.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/commande_baxter
 )
 
@@ -65,7 +65,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS commande_baxter_generate_messages_c
 _generate_srv_eus(commande_baxter
   "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/jade/share/std_msgs/cmake/../msg/Empty.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/commande_baxter
 )
 
@@ -98,7 +98,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS commande_baxter_generate_messages_e
 _generate_srv_lisp(commande_baxter
   "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/jade/share/std_msgs/cmake/../msg/Empty.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/commande_baxter
 )
 
@@ -131,7 +131,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS commande_baxter_generate_messages_l
 _generate_srv_py(commande_baxter
   "/home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/srv/bool_state.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/jade/share/std_msgs/cmake/../msg/Empty.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/commande_baxter
 )
 

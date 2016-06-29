@@ -14,49 +14,43 @@
 
 (in-package "ROS")
 
-(if (not (find-package "STD_MSGS"))
-  (ros::roseus-add-msgs "std_msgs"))
 
 
 
 
 (defclass commande_baxter::bool_stateRequest
   :super ros::object
-  :slots (_vide ))
+  :slots (_query ))
 
 (defmethod commande_baxter::bool_stateRequest
   (:init
    (&key
-    ((:vide __vide) (instance std_msgs::Empty :init))
+    ((:query __query) nil)
     )
    (send-super :init)
-   (setq _vide __vide)
+   (setq _query __query)
    self)
-  (:vide
-   (&rest __vide)
-   (if (keywordp (car __vide))
-       (send* _vide __vide)
-     (progn
-       (if __vide (setq _vide (car __vide)))
-       _vide)))
+  (:query
+   (&optional __query)
+   (if __query (setq _query __query)) _query)
   (:serialization-length
    ()
    (+
-    ;; std_msgs/Empty _vide
-    (send _vide :serialization-length)
+    ;; bool _query
+    1
     ))
   (:serialize
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; std_msgs/Empty _vide
-       (send _vide :serialize s)
+     ;; bool _query
+       (if _query (write-byte -1 s) (write-byte 0 s))
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; std_msgs/Empty _vide
-     (send _vide :deserialize buf ptr-) (incf ptr- (send _vide :serialization-length))
+   ;; bool _query
+     (setq _query (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;;
    self)
   )
@@ -102,7 +96,7 @@
   :super ros::object
   :slots ())
 
-(setf (get commande_baxter::bool_state :md5sum-) "6cc0de94f8bfe875bfa836356ccb5c41")
+(setf (get commande_baxter::bool_state :md5sum-) "c7a88ab7a85f83bcb882571b8469aebb")
 (setf (get commande_baxter::bool_state :datatype-) "commande_baxter/bool_state")
 (setf (get commande_baxter::bool_state :request) commande_baxter::bool_stateRequest)
 (setf (get commande_baxter::bool_state :response) commande_baxter::bool_stateResponse)
@@ -110,25 +104,19 @@
 (defmethod commande_baxter::bool_stateRequest
   (:response () (instance commande_baxter::bool_stateResponse :init)))
 
-(setf (get commande_baxter::bool_stateRequest :md5sum-) "6cc0de94f8bfe875bfa836356ccb5c41")
+(setf (get commande_baxter::bool_stateRequest :md5sum-) "c7a88ab7a85f83bcb882571b8469aebb")
 (setf (get commande_baxter::bool_stateRequest :datatype-) "commande_baxter/bool_stateRequest")
 (setf (get commande_baxter::bool_stateRequest :definition-)
-      "std_msgs/Empty vide
-
-================================================================================
-MSG: std_msgs/Empty
+      "bool query
 ---
 bool state
 
 ")
 
-(setf (get commande_baxter::bool_stateResponse :md5sum-) "6cc0de94f8bfe875bfa836356ccb5c41")
+(setf (get commande_baxter::bool_stateResponse :md5sum-) "c7a88ab7a85f83bcb882571b8469aebb")
 (setf (get commande_baxter::bool_stateResponse :datatype-) "commande_baxter/bool_stateResponse")
 (setf (get commande_baxter::bool_stateResponse :definition-)
-      "std_msgs/Empty vide
-
-================================================================================
-MSG: std_msgs/Empty
+      "bool query
 ---
 bool state
 
@@ -136,6 +124,6 @@ bool state
 
 
 
-(provide :commande_baxter/bool_state "6cc0de94f8bfe875bfa836356ccb5c41")
+(provide :commande_baxter/bool_state "c7a88ab7a85f83bcb882571b8469aebb")
 
 

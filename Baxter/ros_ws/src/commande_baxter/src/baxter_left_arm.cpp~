@@ -4,6 +4,7 @@
 #include "baxter_left_arm.h" 
 
 #include "std_msgs/Bool.h"
+#include "std_msgs/Empty.h"
 #include "commande_baxter/bool_state.h" 
 
 #include "baxter_core_msgs/JointCommand.h"
@@ -41,10 +42,11 @@ Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
 
 	//Client
 	client_inverse_kinematics = noeud.serviceClient<baxter_core_msgs::SolvePositionIK>("/ExternalTools/left/PositionKinematicsNode/IKService");
-	
+	client_prise_demandee = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/prise_demandee");
 
 	//Server
 	srv_prise_effectuee = noeud.advertiseService("/pont_BaxterLigneTransitique/service/left_arm/prise_effectuee", &Baxter_left_arm::Srv_prise_effectuee,this);
+	srv_attente_prise = noeud.advertiseService("/pont_BaxterLigneTransitique/service/left_arm/attente_prise", &Baxter_left_arm::Srv_attente_prise,this);
 	
 
 	// Commande bras en mode position
@@ -126,7 +128,14 @@ void Baxter_left_arm::Callback_prise_demandee(const std_msgs::Bool& msg)
 bool Baxter_left_arm::Srv_prise_effectuee(commande_baxter::bool_state::Request  &req,
          commande_baxter::bool_state::Response &res)
 {
-  res.state = msg_prise_effectuee.data;
+  res.state = msg_prise_effectuee.data * req.query;
+  return true;
+}
+
+bool Baxter_left_arm::Srv_attente_prise(commande_baxter::bool_state::Request  &req,
+         commande_baxter::bool_state::Response &res)
+{
+  res.state = msg_attente_prise.data * req.query;
   return true;
 }
 
@@ -264,6 +273,19 @@ void Baxter_left_arm::Attente_prise()
 bool Baxter_left_arm::Prise_demmandee()
 {
 	// permet de savoir si une prise a été demandée par la ligne transitique
+	commande_baxter::bool_state srv;
+	bool query =true;
+
+	srv.request.query = query;
+	
+	if (client_prise_demandee.call(srv)) 
+	{	
+		//std::cout<<srv.response<<std::endl;
+		msg_prise_demandee.data = srv.response.state;
+	}
+	else {ROS_ERROR("Failed to call service Prise_demmandee_gauche()");}	
+
+	
 	if (msg_prise_demandee.data == true) 
 	{
 		msg_prise_demandee.data = false ;

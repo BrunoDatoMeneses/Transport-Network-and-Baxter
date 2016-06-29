@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::commande_baxter::bool_state > {
   static const char* value()
   {
-    return "6cc0de94f8bfe875bfa836356ccb5c41";
+    return "c7a88ab7a85f83bcb882571b8469aebb";
   }
 
   static const char* value(const ::commande_baxter::bool_state&) { return value(); }

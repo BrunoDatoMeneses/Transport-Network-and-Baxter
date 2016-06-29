@@ -7,11 +7,11 @@
 ;//! \htmlinclude bool_state-request.msg.html
 
 (cl:defclass <bool_state-request> (roslisp-msg-protocol:ros-message)
-  ((vide
-    :reader vide
-    :initarg :vide
-    :type std_msgs-msg:Empty
-    :initform (cl:make-instance 'std_msgs-msg:Empty)))
+  ((query
+    :reader query
+    :initarg :query
+    :type cl:boolean
+    :initform cl:nil))
 )
 
 (cl:defclass bool_state-request (<bool_state-request>)
@@ -22,17 +22,17 @@
   (cl:unless (cl:typep m 'bool_state-request)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name commande_baxter-srv:<bool_state-request> is deprecated: use commande_baxter-srv:bool_state-request instead.")))
 
-(cl:ensure-generic-function 'vide-val :lambda-list '(m))
-(cl:defmethod vide-val ((m <bool_state-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader commande_baxter-srv:vide-val is deprecated.  Use commande_baxter-srv:vide instead.")
-  (vide m))
+(cl:ensure-generic-function 'query-val :lambda-list '(m))
+(cl:defmethod query-val ((m <bool_state-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader commande_baxter-srv:query-val is deprecated.  Use commande_baxter-srv:query instead.")
+  (query m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <bool_state-request>) ostream)
   "Serializes a message object of type '<bool_state-request>"
-  (roslisp-msg-protocol:serialize (cl:slot-value msg 'vide) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'query) 1 0)) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <bool_state-request>) istream)
   "Deserializes a message object of type '<bool_state-request>"
-  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'vide) istream)
+    (cl:setf (cl:slot-value msg 'query) (cl:not (cl:zerop (cl:read-byte istream))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<bool_state-request>)))
@@ -43,24 +43,24 @@
   "commande_baxter/bool_stateRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<bool_state-request>)))
   "Returns md5sum for a message object of type '<bool_state-request>"
-  "6cc0de94f8bfe875bfa836356ccb5c41")
+  "c7a88ab7a85f83bcb882571b8469aebb")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'bool_state-request)))
   "Returns md5sum for a message object of type 'bool_state-request"
-  "6cc0de94f8bfe875bfa836356ccb5c41")
+  "c7a88ab7a85f83bcb882571b8469aebb")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<bool_state-request>)))
   "Returns full string definition for message of type '<bool_state-request>"
-  (cl:format cl:nil "std_msgs/Empty vide~%~%================================================================================~%MSG: std_msgs/Empty~%~%~%"))
+  (cl:format cl:nil "bool query~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'bool_state-request)))
   "Returns full string definition for message of type 'bool_state-request"
-  (cl:format cl:nil "std_msgs/Empty vide~%~%================================================================================~%MSG: std_msgs/Empty~%~%~%"))
+  (cl:format cl:nil "bool query~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <bool_state-request>))
   (cl:+ 0
-     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'vide))
+     1
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <bool_state-request>))
   "Converts a ROS message object to a list"
   (cl:list 'bool_state-request
-    (cl:cons ':vide (vide msg))
+    (cl:cons ':query (query msg))
 ))
 ;//! \htmlinclude bool_state-response.msg.html
 
@@ -101,10 +101,10 @@
   "commande_baxter/bool_stateResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<bool_state-response>)))
   "Returns md5sum for a message object of type '<bool_state-response>"
-  "6cc0de94f8bfe875bfa836356ccb5c41")
+  "c7a88ab7a85f83bcb882571b8469aebb")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'bool_state-response)))
   "Returns md5sum for a message object of type 'bool_state-response"
-  "6cc0de94f8bfe875bfa836356ccb5c41")
+  "c7a88ab7a85f83bcb882571b8469aebb")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<bool_state-response>)))
   "Returns full string definition for message of type '<bool_state-response>"
   (cl:format cl:nil "bool state~%~%~%~%"))

@@ -5,6 +5,7 @@
 
 #include <ros/ros.h>
 #include "std_msgs/Bool.h"
+#include "commande_baxter/bool_state.h"
 
 
 class Communication_Baxter
@@ -16,6 +17,14 @@ private:
 
 	//Subscribers
 	ros::Subscriber sub_prise_effectuee_bras_droit , sub_prise_effectuee_bras_gauche, sub_attente_prise_bras_droit, sub_attente_prise_bras_gauche  ;
+
+	//Client
+	ros::ServiceClient client_prise_effectuee_bras_gauche, client_attente_prise_bras_gauche ;
+
+	//Server
+	ros::ServiceServer srv_prise_demandee_bras_gauche ;
+
+
 
 public:
 	
@@ -30,6 +39,9 @@ public:
 	void Callback_prise_effectuee_bras_gauche(const std_msgs::Bool& msg);
 	void Callback_attente_prise_bras_gauche(const std_msgs::Bool& msg);
 	void Callback_attente_prise_bras_droit(const std_msgs::Bool& msg);
+
+	bool Srv_prise_demandee_bras_gauche(commande_baxter::bool_state::Request  &req,
+         commande_baxter::bool_state::Response &res);
 
 	bool Prise_effectuee_bras_droit();
 	bool Prise_effectuee_bras_gauche();

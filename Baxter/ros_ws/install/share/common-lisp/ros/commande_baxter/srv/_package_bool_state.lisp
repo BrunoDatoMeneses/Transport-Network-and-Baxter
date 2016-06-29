@@ -1,6 +1,6 @@
 (cl:in-package commande_baxter-srv)
-(cl:export '(VIDE-VAL
-          VIDE
+(cl:export '(QUERY-VAL
+          QUERY
           STATE-VAL
           STATE
 ))
