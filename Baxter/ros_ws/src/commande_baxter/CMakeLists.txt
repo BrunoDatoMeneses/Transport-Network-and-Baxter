@@ -5,6 +5,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  genmsg
   xacro
   actionlib
   sensor_msgs
@@ -40,6 +41,7 @@ catkin_package(
   dynamic_reconfigure
   baxter_core_msgs
   baxter_interface
+  message_runtime
 )
 
 
@@ -50,7 +52,7 @@ include_directories(
 
 add_executable(run src/main_commande.cpp src/baxter_left_arm.cpp src/baxter_right_arm.cpp src/baxter.cpp)
 target_link_libraries(run ${catkin_LIBRARIES})
-add_dependencies(run commande_baxter_generate_messages_cpp)
+add_dependencies(run commande_baxter_generate_messages_cpp ${${commande_baxter}_EXPORTED_TARGETS})
 
 
 

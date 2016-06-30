@@ -5,6 +5,10 @@
 #include "std_msgs/Bool.h"
 #include "commande_baxter/bool_state.h"
 
+#define RESET   "\033[0m"
+#define BOLDYELLOW  "\033[1m\033[33m"      /* Bold Yellow */
+#define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
+#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
 
 // Constructeur
 Communication_Baxter::Communication_Baxter(ros::NodeHandle noeud)
@@ -23,8 +27,8 @@ Communication_Baxter::Communication_Baxter(ros::NodeHandle noeud)
 
 
 	//Client
-	client_prise_effectuee_bras_gauche = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/prise_effectuee");
-	client_attente_prise_bras_gauche = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/attente_prise");
+	client_prise_effectuee_bras_gauche = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/prise_effectuee",true);
+	client_attente_prise_bras_gauche = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/attente_prise",true);
 
 	//Server
 	srv_prise_demandee_bras_gauche = noeud.advertiseService("/pont_BaxterLigneTransitique/service/left_arm/prise_demandee", &Communication_Baxter::Srv_prise_demandee_bras_gauche,this);
@@ -51,12 +55,14 @@ Communication_Baxter::~Communication_Baxter()
 void Communication_Baxter::Callback_prise_effectuee_bras_droit(const std_msgs::Bool& msg)
 {
 	msg_prise_effectuee_bras_droit = msg ;
+	if (msg_prise_effectuee_bras_droit.data == 1) msg_prise_demandee_bras_droit.data = false;
 	//std::cout<<msg<<std::endl;
 }
 
 void Communication_Baxter::Callback_prise_effectuee_bras_gauche(const std_msgs::Bool& msg)
 {
 	msg_prise_effectuee_bras_gauche = msg ;
+	msg_prise_demandee_bras_gauche.data = false;
 	//std::cout<<msg<<std::endl;
 }
 
@@ -127,7 +133,7 @@ bool Communication_Baxter::Attente_prise_bras_droit()
 {
 	if( msg_attente_prise_bras_droit.data == true )
 	{
-		msg_attente_prise_bras_droit.data = false ;
+		//msg_attente_prise_bras_droit.data = false ;
 		return true;
 	}
 	else return false ;
@@ -140,21 +146,23 @@ bool Communication_Baxter::Attente_prise_bras_gauche()
 	
 	srv.request.query = query;	std::cout<<"2"<<std::endl;
 	
-	client_attente_prise_bras_gauche.call(srv);
-	std::cout<<srv.response<<std::endl;
-	/*if (client_attente_prise_bras_gauche.call(srv)) 
+	//std::cout<<client_attente_prise_bras_gauche.call(srv)<<std::endl;
+
+	//std::cout<<srv.response<<std::endl;
+
+	if (client_attente_prise_bras_gauche.call(srv)) 
 	{	
 			
-		//std::cout<<srv.response<<std::endl;
-		//msg_attente_prise_bras_gauche.data = srv.response.state;
+		std::cout<<srv.response<<std::endl;
+		msg_attente_prise_bras_gauche.data = srv.response.state; 
 	}
-	else {ROS_ERROR("Failed to call service Attente_prise_bras_gauche()");}*/
+	else {ROS_ERROR("Failed to call service Attente_prise_bras_gauche()");}
 
 		std::cout<<"4"<<std::endl;
 
 	if( msg_attente_prise_bras_gauche.data == true )
 	{
-		msg_attente_prise_bras_gauche.data = false ; 	std::cout<<"5"<<std::endl;
+		//msg_attente_prise_bras_gauche.data = false ; 	std::cout<<"5"<<std::endl;
 		return true;
 	}
 	else return false ;
@@ -163,11 +171,13 @@ bool Communication_Baxter::Attente_prise_bras_gauche()
 void Communication_Baxter::Demander_prise_bras_droit()
 {
 	msg_prise_demandee_bras_droit.data = true ;
+	msg_attente_prise_bras_droit.data = false ;
 }
 
 void Communication_Baxter::Demander_prise_bras_gauche()
 {
 	msg_prise_demandee_bras_gauche.data = true ;
+	msg_attente_prise_bras_gauche.data = false ;
 }
 	
 
@@ -176,5 +186,48 @@ void Communication_Baxter::Update()
 	pub_prise_demandee_bras_droit.publish(msg_prise_demandee_bras_droit);
 	pub_prise_demandee_bras_gauche.publish(msg_prise_demandee_bras_gauche);
 }
+
+
+
+//Affichage
+
+void Communication_Baxter::Afficher_Communication_Baxter()
+{
+	std::cout <<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<std::endl;
+	std::cout <<"~~~~~~~~~~~~~ "<< BOLDYELLOW <<"Communication BAXTER"<< RESET <<" ~~~~~~~~~~~~~~"<<std::endl;
+	std::cout <<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<std::endl<<std::endl;
+
+	std::cout << std::endl<<std::endl;
+
+	std::cout <<"~~~~~~~~~~~~~~~~~~ "<< BOLDYELLOW <<"Bras Droit"<< RESET <<" ~~~~~~~~~~~~~~~~~~~"<<std::endl<<std::endl;
+
+	
+	if (msg_attente_prise_bras_droit.data == 1) std::cout << BOLDGREEN << "attente prise" << RESET <<"     ";
+	else std::cout << BOLDRED << "attente prise" << RESET <<"     ";
+
+	if (msg_prise_demandee_bras_droit.data == 1) std::cout << BOLDGREEN << "prise demandée" << RESET <<"     ";
+	else std::cout << BOLDRED << "prise demandée" << RESET <<"     ";
+
+	if (msg_prise_effectuee_bras_droit.data == 1) std::cout << BOLDGREEN << "prise effectuée" << RESET <<"     ";
+	else std::cout << BOLDRED << "prise effectuée" << RESET <<"     ";
+
+	std::cout << std::endl<<std::endl;
+
+	std::cout <<"~~~~~~~~~~~~~~~~~~ "<< BOLDYELLOW <<"Bras Gauche"<< RESET <<" ~~~~~~~~~~~~~~~~~~"<<std::endl<<std::endl;
+
+	
+	if (msg_attente_prise_bras_gauche.data == 1) std::cout << BOLDGREEN << "attente prise" << RESET <<"     ";
+	else std::cout << BOLDRED << "attente prise" << RESET <<"     ";
+
+	if (msg_prise_demandee_bras_gauche.data == 1) std::cout << BOLDGREEN << "prise demandée" << RESET <<"     ";
+	else std::cout << BOLDRED << "prise demandée" << RESET <<"     ";
+
+	if (msg_prise_effectuee_bras_gauche.data == 1) std::cout << BOLDGREEN << "prise effectuée" << RESET <<"     ";
+	else std::cout << BOLDRED << "prise effectuée" << RESET <<"     ";
+
+	std::cout << std::endl<<std::endl;
+	std::cout << std::endl<<std::endl;
+}
+
 
 

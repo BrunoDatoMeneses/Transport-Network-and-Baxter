@@ -62,7 +62,7 @@ int main(int argc, char **argv)
 			
 			// Disponibilité bras baxter
 			M[15]=1; //Bras gauche
-			M[14]=1; //Bras droit
+			M[14]=0; //Bras droit
 
 			// Pour le positionnement initial des navettes sur simulation
 			int Deplacement_effectue=0;
@@ -177,6 +177,7 @@ int main(int argc, char **argv)
 		
 
 		Afficher_actionneurs(STx,RxD,RxG,Vx,Dx,PIx);
+		Baxter.Afficher_Communication_Baxter();
 
 		Baxter.Update();
 		Actionneurs.Envoyer(STx,RxD,RxG,Vx,Dx,PIx);

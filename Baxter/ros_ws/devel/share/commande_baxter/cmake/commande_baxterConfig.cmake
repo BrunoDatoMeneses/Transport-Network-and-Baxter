@@ -153,7 +153,7 @@ foreach(t ${commande_baxter_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "rospy;roscpp;xacro;actionlib;sensor_msgs;control_msgs;trajectory_msgs;cv_bridge;dynamic_reconfigure;baxter_core_msgs;baxter_interface")
+set(depends "rospy;roscpp;xacro;actionlib;sensor_msgs;control_msgs;trajectory_msgs;cv_bridge;dynamic_reconfigure;baxter_core_msgs;baxter_interface;message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

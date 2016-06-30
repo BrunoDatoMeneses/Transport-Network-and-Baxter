@@ -1,3 +1,5 @@
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #include <ros/ros.h>
 #include "baxter.h"
 
@@ -9,6 +11,11 @@
 #include "baxter_right_arm.h"
 
 #define PI 3.1416
+#define RESET   "\033[0m"
+#define BOLDYELLOW  "\033[1m\033[33m"      /* Bold Yellow */
+#define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
+#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
+#define BOLDBLUE    "\033[1m\033[34m"      /* Bold Blue */
 
 // Constructeur
 Baxter::Baxter(ros::NodeHandle noeud) :
@@ -88,10 +95,48 @@ void Baxter::Update()
 
 
 
+//Affichage
+
+void Baxter::Afficher_Etats(int EP1,int EP2)
+{
+	std::cout <<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<std::endl;
+	std::cout <<"~~~~~~~~~~~~~~~~~ "<< BOLDYELLOW <<"Etats BAXTER"<< RESET <<" ~~~~~~~~~~~~~~~~~~"<<std::endl;
+	std::cout <<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<std::endl<<std::endl;
+
+	std::cout << std::endl;
+
+	std::cout <<"~~~~~~~~~~~~~~~~~~ "<< BOLDYELLOW <<"Bras Droit"<< RESET <<" ~~~~~~~~~~~~~~~~~~~"<< BOLDBLUE <<"MEF -> "<<EP1<<RESET<<std::endl<<std::endl;
+
+	
+	if (Bras_droit.msg_attente_prise.data == 1) std::cout << BOLDGREEN << "attente prise" << RESET <<"     ";
+	else std::cout << BOLDRED << "attente prise" << RESET <<"     ";
+
+	if (Bras_droit.msg_prise_demandee.data == 1) std::cout << BOLDGREEN << "prise demandée" << RESET <<"     ";
+	else std::cout << BOLDRED << "prise demandée" << RESET <<"     ";
+
+	if (Bras_droit.msg_prise_effectuee.data == 1) std::cout << BOLDGREEN << "prise effectuée" << RESET <<"     ";
+	else std::cout << BOLDRED << "prise effectuée" << RESET <<"     ";
+
+	std::cout << std::endl<<std::endl;
+
+	std::cout <<"~~~~~~~~~~~~~~~~~~ "<< BOLDYELLOW <<"Bras Gauche"<< RESET <<" ~~~~~~~~~~~~~~~~~~"<< BOLDBLUE <<"MEF -> "<<EP2<<RESET<<std::endl<<std::endl;
+
+	
+	if (Bras_gauche.msg_attente_prise.data == 1) std::cout << BOLDGREEN << "attente prise" << RESET <<"     ";
+	else std::cout << BOLDRED << "attente prise" << RESET <<"     ";
+
+	if (Bras_gauche.msg_prise_demandee.data == 1) std::cout << BOLDGREEN << "prise demandée" << RESET <<"     ";
+	else std::cout << BOLDRED << "prise demandée" << RESET <<"     ";
+
+	if (Bras_gauche.msg_prise_effectuee.data == 1) std::cout << BOLDGREEN << "prise effectuée" << RESET <<"     ";
+	else std::cout << BOLDRED << "prise effectuée" << RESET <<"     ";
+
+	std::cout << std::endl<<std::endl;
+	std::cout << std::endl<<std::endl;
+}
 
 
-
-
+  
 
 
 

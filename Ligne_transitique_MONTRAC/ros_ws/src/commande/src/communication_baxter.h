@@ -53,6 +53,8 @@ public:
 	void Demander_prise_bras_gauche();
 
 	void Update();
+
+	void Afficher_Communication_Baxter();
 };
 
 

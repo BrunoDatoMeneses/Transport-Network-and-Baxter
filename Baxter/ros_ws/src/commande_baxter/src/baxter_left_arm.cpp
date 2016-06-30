@@ -42,7 +42,7 @@ Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
 
 	//Client
 	client_inverse_kinematics = noeud.serviceClient<baxter_core_msgs::SolvePositionIK>("/ExternalTools/left/PositionKinematicsNode/IKService");
-	client_prise_demandee = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/prise_demandee");
+	client_prise_demandee = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/prise_demandee",true);
 
 	//Server
 	srv_prise_effectuee = noeud.advertiseService("/pont_BaxterLigneTransitique/service/left_arm/prise_effectuee", &Baxter_left_arm::Srv_prise_effectuee,this);
@@ -121,6 +121,7 @@ void Baxter_left_arm::Callback_gripper_state(const baxter_core_msgs::EndEffector
 void Baxter_left_arm::Callback_prise_demandee(const std_msgs::Bool& msg)
 {
 	msg_prise_demandee = msg ;
+	if (msg_prise_demandee.data == 1) msg_attente_prise.data = false;
 	//std::cout<<msg<<std::endl;
 }
 
@@ -238,7 +239,7 @@ void Baxter_left_arm::Position_attente()
 void Baxter_left_arm::Position_prise()
 {
 	IK(0.5,+0.2,0.5,PI,0,0);
-	msg_attente_prise.data = false ; // Enlève l'état d'attente pour une prise
+	//msg_attente_prise.data = false ; // Enlève l'état d'attente pour une prise
 }
 
 void Baxter_left_arm::Descente_prise()
@@ -249,11 +250,11 @@ void Baxter_left_arm::Descente_prise()
 void Baxter_left_arm::Position_pose()
 {
 	IK(0.1,+0.9,0.5,PI,0,0);
+	msg_prise_effectuee.data = false ; // Enlève l'état de prise effectuée
 }
 
 void Baxter_left_arm::Descente_pose()
 {
-	msg_prise_effectuee.data = false ; // Enlève l'état de prise effectuée
 	IK(0.1,+0.9,0.2,PI,0,0);
 }
 
@@ -274,7 +275,7 @@ void Baxter_left_arm::Attente_prise()
 bool Baxter_left_arm::Prise_demmandee()
 {
 	// permet de savoir si une prise a été demandée par la ligne transitique
-	commande_baxter::bool_state srv;
+	/*commande_baxter::bool_state srv;
 	bool query =true;
 
 	srv.request.query = query;
@@ -284,12 +285,13 @@ bool Baxter_left_arm::Prise_demmandee()
 		//std::cout<<srv.response<<std::endl;
 		msg_prise_demandee.data = srv.response.state;
 	}
-	else {ROS_ERROR("Failed to call service Prise_demmandee_gauche()");}	
+	else {ROS_ERROR("Failed to call service Prise_demmandee_gauche()");}	*/ 
 
 	
 	if (msg_prise_demandee.data == true) 
 	{
-		msg_prise_demandee.data = false ;
+		//msg_prise_demandee.data = false ;
+		//msg_attente_prise.data = false ;
 		return true ;
 	}
 	else return false ;

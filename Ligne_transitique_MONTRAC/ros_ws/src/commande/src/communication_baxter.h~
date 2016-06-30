@@ -40,8 +40,8 @@ public:
 	void Callback_attente_prise_bras_gauche(const std_msgs::Bool& msg);
 	void Callback_attente_prise_bras_droit(const std_msgs::Bool& msg);
 
-	bool Srv_prise_demandee_bras_gauche(commande::bool_state::Request  &req,
-         commande::bool_state::Response &res);
+	bool Srv_prise_demandee_bras_gauche(commande_baxter::bool_state::Request  &req,
+         commande_baxter::bool_state::Response &res);
 
 	bool Prise_effectuee_bras_droit();
 	bool Prise_effectuee_bras_gauche();
@@ -53,6 +53,8 @@ public:
 	void Demander_prise_bras_gauche();
 
 	void Update();
+
+	void Afficher_Communication_Baxter()
 };
 
 

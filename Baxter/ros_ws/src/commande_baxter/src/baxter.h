@@ -64,6 +64,9 @@ public:
 	// Envoi des commandes
 
 	void Update();
+
+	// Affichage
+	void Afficher_Etats(int EP1,int EP2);
 };
 
 

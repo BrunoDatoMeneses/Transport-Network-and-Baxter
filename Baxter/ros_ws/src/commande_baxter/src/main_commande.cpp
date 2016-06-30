@@ -40,8 +40,7 @@ int main(int argc, char **argv)
 
 	while (ros::ok())
 	{
-
-		//std::cout<<EP1<<"	"<<EP2<<std::endl;
+		Baxter.Afficher_Etats(EP1,EP2);
 		
 		// MEF //
 
