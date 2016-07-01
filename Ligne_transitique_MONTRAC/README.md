@@ -18,14 +18,14 @@
 
 2. **Open a terminal and write**
 
-	- sudo apt-get install libmodbus-dev 
+	- $ sudo apt-get install libmodbus-dev 
 
 
 ## Create the workspace
 
 
-3. **In ~/ Create a folder named for example "Working_Folder_Montrac", it will contain your workspace**
-	- In this folder, copy the folders *img* and *V-REP* and the file *Simulation.ttt* (you can find them in ~/.../Ligne_transitique_MONTRAC, every time you will find "/.../" you have to replace this by the path that leads to a folder or a file on YOUR computer)
+3. **In ~/.../ Create a folder named for example "Working_Folder_Montrac", it will contain your workspace**
+	- In this folder, copy the folders *img* and *V-REP* and the file *Simulation.ttt* (you can find them in ~/.../Ligne_transitique_MONTRAC, every time you will find "/.../" you have to replace this by the path that leads to the folder or the file we are talking about on YOUR computer)
 
 
 4. **In ~/.bashrc, add these lines :**
@@ -52,13 +52,18 @@
 	- open the file *CMakeLists.txt*, comment the lines 21, 22 and 23 using the character "#" and save (they correspond to the creation of the executable files)
 
 9. **In ~/.../Working_Folder_Montrac/ros_ws/ :**
-	- catkin_make
+	- $ catkin_make
 
 10. **Return to the file *CMakeLists.txt* of the package automates**
 	- uncomment the lines 21, 22 and 23 and save
 	- in ~/.../Working_Folder_Montrac/ros_ws/ :
 	- $ catkin_make (a red line should appear which means that the executable have been created)
-	- repeat this step for all the other packages that you have commented (commande, commande_locale and communication)
+	- repeat this step for all the other packages that you have commented (in this ordre :communication, commande_locale and commande)
+
+	- if you encounter errors like : no such file or directory #include "automates/Entrees.h" , go to ~/.../Working_Folder_Montrac/ros_ws/devel/include/automates (for this file), copy Entrees.h and paste it in the folder "src" of the package that is causing problem
+	- then in every programme of the package, every time you find #include "automates/Entrees.h" replace it by #include "Entrees.h"
+
+ 	- if you have another of this errors, you can find all the files.h that you will need in ~/.../Working_Folder_Montrac/ros_ws/devel/include/
 
 
 
