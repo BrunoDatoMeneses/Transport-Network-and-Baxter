@@ -7,7 +7,6 @@
 
 
 #include "std_msgs/Bool.h"
-#include "commande_baxter/bool_state.h" 
 
 #include "baxter_core_msgs/JointCommand.h"
 #include "baxter_core_msgs/EndEffectorCommand.h"
@@ -32,10 +31,7 @@ private:
 	ros::Subscriber sub_joint_states, sub_endpoint_state, sub_gripper_state, sub_prise_demandee ;
 
 	//Client
-	ros::ServiceClient client_inverse_kinematics, client_prise_effectuee, client_attente_prise ;
-
-	//Server
-	ros::ServiceServer srv_prise_demandee ;
+	ros::ServiceClient client_inverse_kinematics ;
 
 
 public:
@@ -64,10 +60,6 @@ public:
 	void Callback_endpoint_state(const baxter_core_msgs::EndpointState& msg);
 	void Callback_gripper_state(const baxter_core_msgs::EndEffectorState& msg);
 	void Callback_prise_demandee(const std_msgs::Bool& msg);
-
-	// Services
-	bool Srv_prise_demmandee(commande_baxter::bool_state::Request  &req,
-         commande_baxter::bool_state::Response &res);
 
 	// Commande bras gauche
 

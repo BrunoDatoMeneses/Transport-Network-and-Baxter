@@ -24,7 +24,7 @@ private:
 	ros::Publisher pub_enable ;
 
 	//Subscribers
-	ros::Subscriber sub_robot_state , sub_sonar , sub_halo_led_green , sub_halo_led_red ;
+	ros::Subscriber sub_robot_state  ;
 
 	
 
@@ -42,8 +42,6 @@ public:
 	// Capteurs
 
 	baxter_core_msgs::AssemblyState robotSate ;
-	sensor_msgs::PointCloud sonar ;
-	std_msgs::Float32 halo_led_state_green , halo_led_state_red ;
 
 	
 		// Méthodes //
@@ -57,9 +55,6 @@ public:
 	// Callbacks
 
 	void Callback_robot_state(const baxter_core_msgs::AssemblyState& msg);
-	void Callback_sonar(const sensor_msgs::PointCloud& msg);
-	void Callback_halo_led_green(const std_msgs::Float32& msg);
-	void Callback_halo_led_red(const std_msgs::Float32& msg);
 
 	// Envoi des commandes
 

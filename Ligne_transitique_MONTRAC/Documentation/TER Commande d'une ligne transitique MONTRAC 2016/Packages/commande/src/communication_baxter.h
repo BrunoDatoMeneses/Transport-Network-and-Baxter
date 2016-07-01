@@ -40,6 +40,8 @@ public:
 	void Demander_prise_bras_droit();
 	void Demander_prise_bras_gauche();
 
+	void Afficher_Communication_Baxter();
+
 	void Update();
 };
 

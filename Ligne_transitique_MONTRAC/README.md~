@@ -14,6 +14,11 @@
 
 1. **To install the latest version of ROS, go to http://wiki.ros.org/ROS/Installation and install the appropiate version for your platform**
 
+## Install Modbus
+
+2. **Open a terminal and write**
+	-sudo apt-get install libmodbus-dev 
+
 
 ## Create the workspace
 
@@ -35,6 +40,7 @@
 
 5. **In ~/.bashrc, add this line :**
 	- source ~/ ... /Working_Folder_Montrac/ros_ws/devel/setup.bash (this line will avoid you to always write source devel/setup.bash every time you open a new terminal)
+	- if you are using another ros workspace in parallel, don't add this line in ~/.bashrc, you will have to write the command "source devel/setup.bash" every time that you open a new terminal and that you are in /ros_ws
 
 ## Add the packages
 

@@ -194,9 +194,6 @@ commande/CMakeFiles/run.dir/src/commande.cpp.o
  /opt/ros/jade/include/rosconsole/macros_generated.h
  /opt/ros/jade/include/std_msgs/Header.h
 commande/CMakeFiles/run.dir/src/communication_baxter.cpp.o
- /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_state.h
- /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_stateRequest.h
- /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_stateResponse.h
  /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/communication_baxter.cpp
  /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/src/commande/src/communication_baxter.h
  /opt/ros/jade/include/XmlRpcDecl.h
@@ -259,9 +256,6 @@ commande/CMakeFiles/run.dir/src/communication_baxter.cpp.o
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o
  /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande/Actionneurs.h
  /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande/Capteurs.h
- /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_state.h
- /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_stateRequest.h
- /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_baxter/bool_stateResponse.h
  /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_locale/Msg_SensorState.h
  /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_locale/Msg_StopControl.h
  /home/etudiant/M1_ISTR/Ligne_transitique_MONTRAC/ros_ws/devel/include/commande_locale/Msg_SwitchControl.h

@@ -4,6 +4,7 @@
 #include "baxter_left_arm.h" 
 
 #include "std_msgs/Bool.h"
+#include "std_msgs/Empty.h"
 
 #include "baxter_core_msgs/JointCommand.h"
 #include "baxter_core_msgs/EndEffectorCommand.h"
@@ -38,8 +39,9 @@ Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
 
 	sub_prise_demandee = noeud.subscribe("/pont_BaxterLigneTransitique/left_arm/prise_demandee", 1, &Baxter_left_arm::Callback_prise_demandee,this);
 
-	//Srv
+	//Client
 	client_inverse_kinematics = noeud.serviceClient<baxter_core_msgs::SolvePositionIK>("/ExternalTools/left/PositionKinematicsNode/IKService");
+	
 
 	// Commande bras en mode position
 	msg_JointCommand.mode = baxter_core_msgs::JointCommand::POSITION_MODE;
@@ -78,7 +80,8 @@ Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
 
 	msg_prise_demandee.data = false ;
 	msg_prise_effectuee.data = false ;  
-	msg_attente_prise.data = false ; 
+	msg_attente_prise.data = false ;
+ 
 }
 
 
@@ -113,6 +116,8 @@ void Baxter_left_arm::Callback_gripper_state(const baxter_core_msgs::EndEffector
 void Baxter_left_arm::Callback_prise_demandee(const std_msgs::Bool& msg)
 {
 	msg_prise_demandee = msg ;
+	// Mise à faux de attente prise si prise demandée
+	if (msg_prise_demandee.data == 1) msg_attente_prise.data = false;
 	//std::cout<<msg<<std::endl;
 }
 
@@ -214,7 +219,6 @@ void Baxter_left_arm::Position_attente()
 void Baxter_left_arm::Position_prise()
 {
 	IK(0.5,+0.2,0.5,PI,0,0);
-	msg_attente_prise.data = false ; // Enlève l'état d'attente pour une prise
 }
 
 void Baxter_left_arm::Descente_prise()
@@ -225,6 +229,7 @@ void Baxter_left_arm::Descente_prise()
 void Baxter_left_arm::Position_pose()
 {
 	IK(0.1,+0.9,0.5,PI,0,0);
+	
 }
 
 void Baxter_left_arm::Descente_pose()
@@ -249,10 +254,8 @@ void Baxter_left_arm::Attente_prise()
 
 bool Baxter_left_arm::Prise_demmandee()
 {
-	// permet de savoir si une prise a été demandée par la ligne transitique
 	if (msg_prise_demandee.data == true) 
 	{
-		msg_prise_demandee.data = false ;
 		return true ;
 	}
 	else return false ;
@@ -352,8 +355,9 @@ void Baxter_left_arm::Update()
 {
 	pub_joint_cmd.publish(msg_JointCommand);
 	pub_gripper_cmd.publish(msg_EndEffectorCommand);
-	pub_prise_effectuee.publish(msg_prise_effectuee);
+
 	pub_attente_prise.publish(msg_attente_prise);
+	pub_prise_effectuee.publish(msg_prise_effectuee);
 }
 
 

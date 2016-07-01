@@ -1,3 +1,5 @@
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #ifndef left_ARM
 #define left_ARM
 
@@ -23,13 +25,14 @@ class Baxter_left_arm
 private:
 
 	//Publishers
-	ros::Publisher pub_joint_cmd , pub_gripper_cmd, pub_prise_effectuee, pub_attente_prise ;
+	ros::Publisher pub_joint_cmd, pub_gripper_cmd, pub_prise_effectuee, pub_attente_prise ;
 
 	//Subscribers
-	ros::Subscriber sub_joint_states , sub_endpoint_state , sub_gripper_state , sub_prise_demandee ;
+	ros::Subscriber sub_joint_states, sub_endpoint_state, sub_gripper_state, sub_prise_demandee ;
 
 	//Client
 	ros::ServiceClient client_inverse_kinematics ;
+
 
 public:
 
@@ -57,6 +60,10 @@ public:
 	void Callback_endpoint_state(const baxter_core_msgs::EndpointState& msg);
 	void Callback_gripper_state(const baxter_core_msgs::EndEffectorState& msg);
 	void Callback_prise_demandee(const std_msgs::Bool& msg);
+
+	// Services
+	bool Srv_prise_demmandee(commande_baxter::bool_state::Request  &req,
+         commande_baxter::bool_state::Response &res);
 
 	// Commande bras gauche
 

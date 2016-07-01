@@ -78,7 +78,7 @@ Baxter_right_arm::Baxter_right_arm(ros::NodeHandle noeud)
 
 	msg_prise_demandee.data = false ;
 	msg_prise_effectuee.data = false ; 
-	msg_attente_prise.data = false ;   
+	msg_attente_prise.data = false ;  
 }
 
 
@@ -111,6 +111,7 @@ void Baxter_right_arm::Callback_gripper_state(const baxter_core_msgs::EndEffecto
 void Baxter_right_arm::Callback_prise_demandee(const std_msgs::Bool& msg)
 {
 	msg_prise_demandee = msg ;
+	// Mise à faux de attente prise si prise demandée
 	if (msg_prise_demandee.data == 1) msg_attente_prise.data = false;
 	//std::cout<<msg<<std::endl;
 }
@@ -352,8 +353,9 @@ void Baxter_right_arm::Update()
 {
 	pub_joint_cmd.publish(msg_JointCommand);
 	pub_gripper_cmd.publish(msg_EndEffectorCommand);
+
+	pub_attente_prise.publish(msg_attente_prise); 
 	pub_prise_effectuee.publish(msg_prise_effectuee);
-	pub_attente_prise.publish(msg_attente_prise);
 }
 
 

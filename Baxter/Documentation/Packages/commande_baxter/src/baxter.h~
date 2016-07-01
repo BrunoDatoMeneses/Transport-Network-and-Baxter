@@ -1,3 +1,5 @@
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+
 #ifndef BAX
 #define BAX
 
@@ -22,7 +24,7 @@ private:
 	ros::Publisher pub_enable ;
 
 	//Subscribers
-	ros::Subscriber sub_robot_state , sub_sonar , sub_halo_led_green , sub_halo_led_red ;
+	ros::Subscriber sub_robot_state  ;
 
 	
 
@@ -40,8 +42,6 @@ public:
 	// Capteurs
 
 	baxter_core_msgs::AssemblyState robotSate ;
-	sensor_msgs::PointCloud sonar ;
-	std_msgs::Float32 halo_led_state_green , halo_led_state_red ;
 
 	
 		// Méthodes //
@@ -62,6 +62,9 @@ public:
 	// Envoi des commandes
 
 	void Update();
+
+	// Affichage
+	void Afficher_Etats(int EP1,int EP2);
 };
 
 

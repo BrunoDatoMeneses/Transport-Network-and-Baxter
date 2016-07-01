@@ -29,10 +29,7 @@ Baxter::Baxter(ros::NodeHandle noeud) :
 	pub_enable(noeud.advertise<std_msgs::Bool>("/robot/set_super_enable", 1)),
 
 	//Subcribers
-	sub_robot_state(noeud.subscribe("/robot/state", 1, &Baxter::Callback_robot_state,this)),
-	sub_sonar(noeud.subscribe("/robot/sonar/head_sonar/state", 1, &Baxter::Callback_sonar,this)),
-	sub_halo_led_green(noeud.subscribe("/robot/sonar/head_sonar/lights/green_level", 1, &Baxter::Callback_halo_led_green,this)),
-	sub_halo_led_red(noeud.subscribe("/robot/sonar/head_sonar/lights/red_level", 1, &Baxter::Callback_halo_led_red,this))
+	sub_robot_state(noeud.subscribe("/robot/state", 1, &Baxter::Callback_robot_state,this))
 {
 }
 
@@ -55,39 +52,18 @@ void Baxter::Init()
 
 
 // Callbacks
-
-void Baxter::Callback_halo_led_green(const std_msgs::Float32& msg)
-{
-	halo_led_state_green = msg ;
-	//std::cout<<"msg green " <<msg<<std::endl;
-}
-
-void Baxter::Callback_halo_led_red(const std_msgs::Float32& msg)
-{
-	halo_led_state_red = msg ;
-	//std::cout<<"msg red " <<msg<<std::endl;
-}
-
 void Baxter::Callback_robot_state(const baxter_core_msgs::AssemblyState& msg)
 {
 	robotSate = msg ;
 	//std::cout<<robotSate<<std::endl;
 }
 
-void Baxter::Callback_sonar(const sensor_msgs::PointCloud& msg)
-{
-	sonar = msg ;
-	//std::cout<<sonar<<std::endl;
-}
-
 
 
 // Envoie des commandes
-
 void Baxter::Update()
 {
 	pub_enable.publish(enableRobot);
-
 	Bras_droit.Update();
 	Bras_gauche.Update();
 }
@@ -96,7 +72,6 @@ void Baxter::Update()
 
 
 //Affichage
-
 void Baxter::Afficher_Etats(int EP1,int EP2)
 {
 	std::cout <<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<std::endl;

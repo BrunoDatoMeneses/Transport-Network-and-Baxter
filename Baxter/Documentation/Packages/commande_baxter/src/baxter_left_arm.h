@@ -25,13 +25,14 @@ class Baxter_left_arm
 private:
 
 	//Publishers
-	ros::Publisher pub_joint_cmd , pub_gripper_cmd, pub_prise_effectuee, pub_attente_prise ;
+	ros::Publisher pub_joint_cmd, pub_gripper_cmd, pub_prise_effectuee, pub_attente_prise ;
 
 	//Subscribers
-	ros::Subscriber sub_joint_states , sub_endpoint_state , sub_gripper_state , sub_prise_demandee ;
+	ros::Subscriber sub_joint_states, sub_endpoint_state, sub_gripper_state, sub_prise_demandee ;
 
 	//Client
 	ros::ServiceClient client_inverse_kinematics ;
+
 
 public:
 

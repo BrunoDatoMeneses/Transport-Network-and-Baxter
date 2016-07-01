@@ -10,9 +10,6 @@ commande_baxter/CMakeFiles/run.dir/src/baxter.cpp.o
  /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIK.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKRequest.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKResponse.h
- /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_state.h
- /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateRequest.h
- /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateResponse.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter.cpp
  /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter_left_arm.h
@@ -96,9 +93,6 @@ commande_baxter/CMakeFiles/run.dir/src/baxter_left_arm.cpp.o
  /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIK.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKRequest.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKResponse.h
- /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_state.h
- /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateRequest.h
- /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateResponse.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter_left_arm.cpp
  /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter_left_arm.h
  /opt/ros/jade/include/XmlRpcDecl.h
@@ -255,9 +249,6 @@ commande_baxter/CMakeFiles/run.dir/src/main_commande.cpp.o
  /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIK.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKRequest.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/baxter_core_msgs/SolvePositionIKResponse.h
- /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_state.h
- /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateRequest.h
- /home/etudiant/M1_ISTR/Baxter/ros_ws/devel/include/commande_baxter/bool_stateResponse.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter_left_arm.h
  /home/etudiant/M1_ISTR/Baxter/ros_ws/src/commande_baxter/src/baxter_right_arm.h

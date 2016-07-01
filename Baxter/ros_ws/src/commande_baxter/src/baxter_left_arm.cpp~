@@ -5,7 +5,6 @@
 
 #include "std_msgs/Bool.h"
 #include "std_msgs/Empty.h"
-#include "commande_baxter/bool_state.h" 
 
 #include "baxter_core_msgs/JointCommand.h"
 #include "baxter_core_msgs/EndEffectorCommand.h"
@@ -42,12 +41,6 @@ Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
 
 	//Client
 	client_inverse_kinematics = noeud.serviceClient<baxter_core_msgs::SolvePositionIK>("/ExternalTools/left/PositionKinematicsNode/IKService");
-	client_prise_effectuee = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/prise_effectuee",true);
-	client_attente_prise = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/attente_prise",true);	
-
-
-	//Server
-	srv_prise_demandee = noeud.advertiseService("/pont_BaxterLigneTransitique/service/left_arm/prise_demandee",&Baxter_left_arm::Srv_prise_demmandee,this);
 	
 
 	// Commande bras en mode position
@@ -87,7 +80,8 @@ Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
 
 	msg_prise_demandee.data = false ;
 	msg_prise_effectuee.data = false ;  
-	msg_attente_prise.data = false ; 
+	msg_attente_prise.data = false ;
+ 
 }
 
 
@@ -122,17 +116,9 @@ void Baxter_left_arm::Callback_gripper_state(const baxter_core_msgs::EndEffector
 void Baxter_left_arm::Callback_prise_demandee(const std_msgs::Bool& msg)
 {
 	msg_prise_demandee = msg ;
+	// Mise à faux de attente prise si prise demandée
 	if (msg_prise_demandee.data == 1) msg_attente_prise.data = false;
 	//std::cout<<msg<<std::endl;
-}
-
-// Services
-bool Baxter_left_arm::Srv_prise_demmandee(commande_baxter::bool_state::Request  &req,
-         commande_baxter::bool_state::Response &res)
-{
-	msg_prise_demandee.data = req.query ;
-  	res.state =  1;
-  	return true;
 }
 
 
@@ -369,8 +355,8 @@ void Baxter_left_arm::Update()
 {
 	pub_joint_cmd.publish(msg_JointCommand);
 	pub_gripper_cmd.publish(msg_EndEffectorCommand);
-	pub_prise_effectuee.publish(msg_prise_effectuee);
 	pub_attente_prise.publish(msg_attente_prise);
+	pub_prise_effectuee.publish(msg_prise_effectuee);
 }
 
 

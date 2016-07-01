@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>baxter</name>
+  <name>commande_baxter</name>
   <version>1.0.0</version>
-  <description>The baxter package</description>
+  <description>The commande_baxter package</description>
 
   <maintainer email="bruno.dato.meneses@gmail.com">Bruno Dato M1 ISTR</maintainer>
   <license>BSD</license>

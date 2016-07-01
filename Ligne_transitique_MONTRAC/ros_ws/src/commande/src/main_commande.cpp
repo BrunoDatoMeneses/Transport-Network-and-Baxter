@@ -177,7 +177,6 @@ int main(int argc, char **argv)
 		
 
 		Afficher_actionneurs(STx,RxD,RxG,Vx,Dx,PIx);
-		Baxter.Afficher_Communication_Baxter();
 
 		Baxter.Update();
 		Actionneurs.Envoyer(STx,RxD,RxG,Vx,Dx,PIx);

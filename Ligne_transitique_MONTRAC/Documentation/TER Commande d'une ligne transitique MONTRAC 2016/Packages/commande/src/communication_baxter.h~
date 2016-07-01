@@ -1,4 +1,4 @@
-/**** Bruno DATO, Abdellah ELGOURAIN, Evgeny SHULGA M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
+/**** Bruno DATO M1 EEA ISTR Université Paul Sabatier Toulouse III 2016 ****/
 
 #ifndef BAXT
 #define BAXT
@@ -40,7 +40,7 @@ public:
 	void Demander_prise_bras_droit();
 	void Demander_prise_bras_gauche();
 
-	void Update();
+	void Afficher_Communication_Baxter();
 };
 
 
