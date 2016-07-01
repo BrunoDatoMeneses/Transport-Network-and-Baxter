@@ -19,10 +19,10 @@ private:
 	ros::Subscriber sub_prise_effectuee_bras_droit , sub_prise_effectuee_bras_gauche, sub_attente_prise_bras_droit, sub_attente_prise_bras_gauche  ;
 
 	//Client
-	ros::ServiceClient client_prise_effectuee_bras_gauche, client_attente_prise_bras_gauche ;
+	ros::ServiceClient client_prise_demandee_bras_gauche ;
 
 	//Server
-	ros::ServiceServer srv_prise_demandee_bras_gauche ;
+	ros::ServiceServer  srv_prise_effectuee_bras_gauche, srv_attente_prise_bras_gauche ;
 
 
 
@@ -40,7 +40,7 @@ public:
 	void Callback_attente_prise_bras_gauche(const std_msgs::Bool& msg);
 	void Callback_attente_prise_bras_droit(const std_msgs::Bool& msg);
 
-	bool Srv_prise_demandee_bras_gauche(commande_baxter::bool_state::Request  &req,
+	bool Srv_prise_effectuee_bras_gauche(commande_baxter::bool_state::Request  &req,
          commande_baxter::bool_state::Response &res);
 
 	bool Prise_effectuee_bras_droit();
@@ -54,7 +54,7 @@ public:
 
 	void Update();
 
-	void Afficher_Communication_Baxter()
+	void Afficher_Communication_Baxter();
 };
 
 

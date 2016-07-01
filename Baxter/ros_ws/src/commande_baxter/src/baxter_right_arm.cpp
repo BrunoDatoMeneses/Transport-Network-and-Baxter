@@ -111,6 +111,7 @@ void Baxter_right_arm::Callback_gripper_state(const baxter_core_msgs::EndEffecto
 void Baxter_right_arm::Callback_prise_demandee(const std_msgs::Bool& msg)
 {
 	msg_prise_demandee = msg ;
+	if (msg_prise_demandee.data == 1) msg_attente_prise.data = false;
 	//std::cout<<msg<<std::endl;
 }
 
@@ -214,7 +215,6 @@ void Baxter_right_arm::Position_attente()
 void Baxter_right_arm::Position_prise()
 {
 	IK(0.5,-0.2,0.5,PI,0,0);
-	msg_attente_prise.data = true ;
 }
 
 void Baxter_right_arm::Descente_prise()
@@ -229,7 +229,7 @@ void Baxter_right_arm::Position_pose()
 
 void Baxter_right_arm::Descente_pose()
 {
-	msg_prise_effectuee.data = false ;
+	msg_prise_effectuee.data = false ; // Enlève l'état de prise effectuée
 	IK(0.1,-0.9,0.2,PI,0,0);
 }
 
@@ -252,7 +252,6 @@ bool Baxter_right_arm::Prise_demmandee()
 	// permet de savoir si une prise a été demandée par la ligne transitique
 	if (msg_prise_demandee.data == true) 
 	{
-		msg_prise_demandee.data = false ;
 		return true ;
 	}
 	else return false ;

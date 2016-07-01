@@ -62,7 +62,7 @@ int main(int argc, char **argv)
 			
 			// Disponibilité bras baxter
 			M[15]=1; //Bras gauche
-			M[14]=0; //Bras droit
+			M[14]=1; //Bras droit
 
 			// Pour le positionnement initial des navettes sur simulation
 			int Deplacement_effectue=0;

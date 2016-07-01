@@ -32,10 +32,10 @@ private:
 	ros::Subscriber sub_joint_states, sub_endpoint_state, sub_gripper_state, sub_prise_demandee ;
 
 	//Client
-	ros::ServiceClient client_inverse_kinematics, client_prise_demandee ;
+	ros::ServiceClient client_inverse_kinematics, client_prise_effectuee, client_attente_prise ;
 
 	//Server
-	ros::ServiceServer srv_prise_effectuee, srv_attente_prise ;
+	ros::ServiceServer srv_prise_demandee ;
 
 
 public:
@@ -66,9 +66,7 @@ public:
 	void Callback_prise_demandee(const std_msgs::Bool& msg);
 
 	// Services
-	bool Srv_prise_effectuee(commande_baxter::bool_state::Request  &req,
-         commande_baxter::bool_state::Response &res);
-	bool Srv_prise_effectuee(commande_baxter::bool_state::Request  &req,
+	bool Srv_prise_demandee(commande_baxter::bool_state::Request  &req,
          commande_baxter::bool_state::Response &res);
 
 	// Commande bras gauche

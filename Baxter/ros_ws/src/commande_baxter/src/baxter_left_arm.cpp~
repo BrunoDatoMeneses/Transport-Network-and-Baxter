@@ -42,11 +42,12 @@ Baxter_left_arm::Baxter_left_arm(ros::NodeHandle noeud)
 
 	//Client
 	client_inverse_kinematics = noeud.serviceClient<baxter_core_msgs::SolvePositionIK>("/ExternalTools/left/PositionKinematicsNode/IKService");
-	client_prise_demandee = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/prise_demandee",true);
+	client_prise_effectuee = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/prise_effectuee",true);
+	client_attente_prise = noeud.serviceClient<commande_baxter::bool_state>("/pont_BaxterLigneTransitique/service/left_arm/attente_prise",true);	
+
 
 	//Server
-	srv_prise_effectuee = noeud.advertiseService("/pont_BaxterLigneTransitique/service/left_arm/prise_effectuee", &Baxter_left_arm::Srv_prise_effectuee,this);
-	srv_attente_prise = noeud.advertiseService("/pont_BaxterLigneTransitique/service/left_arm/attente_prise", &Baxter_left_arm::Srv_attente_prise,this);
+	srv_prise_demandee = noeud.advertiseService("/pont_BaxterLigneTransitique/service/left_arm/prise_demandee",&Baxter_left_arm::Srv_prise_demmandee,this);
 	
 
 	// Commande bras en mode position
@@ -126,19 +127,12 @@ void Baxter_left_arm::Callback_prise_demandee(const std_msgs::Bool& msg)
 }
 
 // Services
-bool Baxter_left_arm::Srv_prise_effectuee(commande_baxter::bool_state::Request  &req,
+bool Baxter_left_arm::Srv_prise_demmandee(commande_baxter::bool_state::Request  &req,
          commande_baxter::bool_state::Response &res)
 {
-  res.state = msg_prise_effectuee.data * req.query;
-  return true;
-}
-
-bool Baxter_left_arm::Srv_attente_prise(commande_baxter::bool_state::Request  &req,
-         commande_baxter::bool_state::Response &res)
-{
-  std::cout<<req<<std::endl;
-  res.state = msg_attente_prise.data * req.query;
-  return true;
+	msg_prise_demandee.data = req.query ;
+  	res.state =  1;
+  	return true;
 }
 
 
@@ -239,7 +233,6 @@ void Baxter_left_arm::Position_attente()
 void Baxter_left_arm::Position_prise()
 {
 	IK(0.5,+0.2,0.5,PI,0,0);
-	//msg_attente_prise.data = false ; // Enlève l'état d'attente pour une prise
 }
 
 void Baxter_left_arm::Descente_prise()
@@ -250,11 +243,12 @@ void Baxter_left_arm::Descente_prise()
 void Baxter_left_arm::Position_pose()
 {
 	IK(0.1,+0.9,0.5,PI,0,0);
-	msg_prise_effectuee.data = false ; // Enlève l'état de prise effectuée
+	
 }
 
 void Baxter_left_arm::Descente_pose()
 {
+	msg_prise_effectuee.data = false ; // Enlève l'état de prise effectuée
 	IK(0.1,+0.9,0.2,PI,0,0);
 }
 
@@ -274,24 +268,8 @@ void Baxter_left_arm::Attente_prise()
 
 bool Baxter_left_arm::Prise_demmandee()
 {
-	// permet de savoir si une prise a été demandée par la ligne transitique
-	/*commande_baxter::bool_state srv;
-	bool query =true;
-
-	srv.request.query = query;
-	
-	if (client_prise_demandee.call(srv)) 
-	{	
-		//std::cout<<srv.response<<std::endl;
-		msg_prise_demandee.data = srv.response.state;
-	}
-	else {ROS_ERROR("Failed to call service Prise_demmandee_gauche()");}	*/ 
-
-	
 	if (msg_prise_demandee.data == true) 
 	{
-		msg_prise_demandee.data = false ;
-		msg_attente_prise.data = false ;
 		return true ;
 	}
 	else return false ;
