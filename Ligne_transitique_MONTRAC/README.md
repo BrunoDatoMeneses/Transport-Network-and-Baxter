@@ -17,6 +17,7 @@
 ## Install Modbus
 
 2. **Open a terminal and write**
+
 	-sudo apt-get install libmodbus-dev 
 
 
