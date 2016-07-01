@@ -18,7 +18,7 @@
 
 2. **Open a terminal and write**
 
-	-sudo apt-get install libmodbus-dev 
+	- sudo apt-get install libmodbus-dev 
 
 
 ## Create the workspace
