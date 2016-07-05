@@ -115,6 +115,8 @@
 **If you want to see the simulation.ttt on VREP :**
    - Execute ~/ ... /Ligne_transitique_MONTRAC/V-Rep/vrep.sh ~/CelluleFlexible/Simulation.ttt
 
+**If you want more information about how to use the simulation go to https://github.com/ClementLeBihan/CelluleFlexible**
+
 **If you want more information about how to use ROS go to http://wiki.ros.org/fr/ROS/Tutorials**
 
 ## License
