@@ -46,9 +46,9 @@
 ## Add the packages
 
 7. **in ~/.../Working_Folder_Montrac/ros_ws/src**
-	- copy the packages of ~/.../Ligne_transitique_MONTRAC/ros_ws/src (which are the folders *automates*, *commande*, *commande_locale*, *communication* and *vrep_common*)
+	- copy the package *automates* of ~/.../Ligne_transitique_MONTRAC/ros_ws/src (which is the folder *automates*)
 
-8. **in the packages automates, commande, commande_locale and communication :**
+8. **in the packages automates**
 	- open the file *CMakeLists.txt*, comment the lines 21, 22 and 23 using the character "#" and save (they correspond to the creation of the executable files)
 
 9. **In ~/.../Working_Folder_Montrac/ros_ws/ :**
@@ -58,12 +58,13 @@
 	- uncomment the lines 21, 22 and 23 and save
 	- in ~/.../Working_Folder_Montrac/ros_ws/ :
 	- $ catkin_make (a red line should appear which means that the executable have been created)
-	- repeat this step for all the other packages that you have commented (in this ordre :communication, commande_locale and commande)
+	- repeat these steps for each of the packages that have an executable (communication, commande_locale and commande)
+	- Be carreful to add each package one by one, don't copy all the package at once to avoid errors.
 
 	- if you encounter errors like : no such file or directory #include "automates/Entrees.h" , go to ~/.../Working_Folder_Montrac/ros_ws/devel/include/automates (for this file), copy Entrees.h and paste it in the folder "src" of the package that is causing problem
 	- then in every programme of the package, every time you find #include "automates/Entrees.h" replace it by #include "Entrees.h"
 
- 	- if you have another of this errors, you can find all the files.h that you will need in ~/.../Working_Folder_Montrac/ros_ws/devel/include/
+ 	- if you have another of this errors, you can find all the files.h that you need in ~/.../Working_Folder_Montrac/ros_ws/devel/include/
 
 
 
