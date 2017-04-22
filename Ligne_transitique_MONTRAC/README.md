@@ -1,6 +1,6 @@
 # TER M1 ISTR Université Paul Sabatier Toulouse France 2016
 
-> Command of a transport network and it simulation
+> Command of a transport network and its simulation
 
 ## Authors
 - __Bruno DATO__ -- bruno.dato.meneses@gmail.com
