@@ -8,7 +8,7 @@
 - __Brisbare Kevin__ -- kevin.brisbare@gmail.com
 - __Orbach Mano__ -- orb.mano@gmail.com
 - __Monneret Viven__ -- vivien.monneret@univ-tlse3.fr
-- __Meliouh Yles__ -- ylesmeliouh@gmail.com"			
+- __Meliouh Yles__ -- ylesmeliouh@gmail.com
 
 
 # TO DO
