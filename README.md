@@ -1,11 +1,14 @@
-# TER et STAGE M1 ISTR Université Paul Sabatier Toulouse France 2016
+# Projet M2 IARF/RODECO Université Paul Sabatier Toulouse France 2019
 
-> Command of a transport network and it simulation & Interaction of the transport network with the robot Baxter
+> Fast reconfiguration of robotic systems production
 
 ## Authors
-- __Bruno DATO__ -- bruno.dato.meneses@gmail.com
-- __Abdellah ELGOURAIN__ -- elgourain@gmail.com
-- __Evgeny SHULGA__ -- hlebovod@mail.ru
+"- __Mekkid Oussama__ -- oussama.mekkid@gmail.com
+- __Moumene Malek__ -- malekmoumene@gmail.com
+- __Brisbare Kevin__ -- kevin.brisbare@gmail.com
+- __Orbach Mano__ -- orb.mano@gmail.com
+- __Monneret Viven__ -- vivien.monneret@univ-tlse3.fr
+- __Meliouh Yles__ -- ylesmeliouh@gmail.com"			
 
 
 # TO DO
@@ -18,7 +21,7 @@
 
 
 3. **Clone the repository M1_ISTR**
-	- $ git clone git://github.com/BrunoDatoMeneses/M1_ISTR.git
+	- $ git clone git://github.com/keke02/Transport-Network-and-Baxter.git
 
 ## MORE INFOS
 
