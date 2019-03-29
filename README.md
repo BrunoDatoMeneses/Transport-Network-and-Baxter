@@ -3,7 +3,7 @@
 > Fast reconfiguration of robotic systems production
 
 ## Authors
-"- __Mekkid Oussama__ -- oussama.mekkid@gmail.com
+- __Mekkid Oussama__ -- oussama.mekkid@gmail.com
 - __Moumene Malek__ -- malekmoumene@gmail.com
 - __Brisbare Kevin__ -- kevin.brisbare@gmail.com
 - __Orbach Mano__ -- orb.mano@gmail.com
