@@ -1,6 +1,6 @@
 # Projet M2 IARF/RODECO Université Paul Sabatier Toulouse France 2019
 
-> Fast reconfiguration of robotic systems production
+> Fast reconfiguration of robotic production systems
 
 ## Authors
 - __Mekkid Oussama__ -- oussama.mekkid@gmail.com
